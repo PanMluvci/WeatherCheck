@@ -380,6 +380,8 @@
                         <outlet property="descriptionLabel" destination="gom-IW-Zgv" id="VlA-EU-vnF"/>
                         <outlet property="maxTempLabel" destination="lTF-Cu-1GQ" id="Kux-GH-1QZ"/>
                         <outlet property="minTempLabel" destination="vzs-pW-RmP" id="mrr-0M-wM1"/>
+                        <outlet property="sunRiseLabel" destination="UyT-jo-E2J" id="rX5-Ua-Ucr"/>
+                        <outlet property="sunSetLabel" destination="3mU-Vi-uWb" id="god-Pc-1hR"/>
                         <outlet property="temperatureLabel" destination="kkg-Ji-eiy" id="DB9-N2-Ztu"/>
                         <outlet property="townLabel" destination="HEo-LK-aVg" id="x1i-EI-4cH"/>
                     </connections>

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -15,12 +16,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var townLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!
-    
     @IBOutlet var minTempLabel: UILabel!
-    
     @IBOutlet var maxTempLabel: UILabel!
-    
     @IBOutlet var descriptionLabel: UILabel!
+    
+    @IBOutlet var sunRiseLabel: UILabel!
+    @IBOutlet var sunSetLabel: UILabel!
+    
     
     let locationManager = CLLocationManager()
     let locValue = CLLocationCoordinate2D()
@@ -33,9 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
-
-        //getWeatherData("http://api.openweathermap.org/data/2.5/weather?lat=" + "\(locValue.latitude)" + "&lon=" + "\(locValue.longitude)")
-        
+        stringFromTimeInterval()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,26 +66,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func setLabels(weatherData: NSData) {
         var jsonError:NSError?
         
-        let json = NSJSONSerialization.JSONObjectWithData(weatherData, options: nil, error: &jsonError) as! NSDictionary
+        let jsona = NSJSONSerialization.JSONObjectWithData(weatherData, options: nil, error: &jsonError) as! NSDictionary
         
+        /*
+        println("\(json)")
         if let name = json["name"] as? String{
             townLabel.text = name
         }
         
+        
+        
         if let sys = json[("sys")] as? NSDictionary {
+        
             if let country = sys[("country")] as? String {
                 countryLabel.text = country
-                
             }
+            if let sunrise = sys[("sunrise")] as? Int {
+               // countryLabel.text = country
+            }
+            
+            
+            //sunrise
         }
-        if let weather = json[("weather")] as? NSDictionary {
-            //if let description = weather[("main")] {
-                townLabel.text = ("TEXT")
+        
+        //let json = JSONValue(dataFromNetworking)
+        if let userName = json[0]["weather"]["description"].string {
+            //Now you got your value
+        }
+        
+        if let description = json[("weather")] as? NSDictionary {
+            //if let description = weather[("description")] as? String {
+                descriptionLabel.text = ("TEXT")
                 
-          //  }
-        }
-        if let description = json["description"] as? NSDictionary{
-            townLabel.text = ("OK")
+           // }
         }
         
         if let main = json[("main")] as? NSDictionary {
@@ -115,7 +128,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         
-        
+        */
         
     }
     /*
@@ -134,6 +147,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("ERR " + error.localizedDescription)
         //dopsat handler
+    }
+    
+    func stringFromTimeInterval() {
+        let timestampAsInt: Int = 1436587010
+        
+        // and the method takes a Double, it needs to be
+        // explicitly converted to a Doubl
+        //var date = (NSDate(timeIntervalSince1970: int(timestampAsInt)))
+        /*let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "h:mm"
+        let date = dateFormatter.dateFromString(timestampAsDoubleb)
+        let calendar = NSCalendar.currentCalendar()
+        let comp = calendar.components((.CalendarUnitHour | .CalendarUnitMinute), fromDate: date!)
+        let hour = comp.hour
+        let minute = comp.minute*/
+       // println("\(date)")
     }
     
 }
