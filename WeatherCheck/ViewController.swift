@@ -9,9 +9,12 @@
 import UIKit
 import CoreLocation
 import Alamofire
+import SwiftyJSON
+
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    var weather: Weather?
     
     @IBOutlet var townLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
@@ -47,88 +50,44 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     *
     */
     func getWeatherData(urlString: String) {
-        let url = NSURL(string: urlString)
         
-        // print("This: " + urlString)
-        
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) in
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                self.setLabels(data!)
-            })
+        Alamofire.request(.GET, urlString, parameters: nil) .responseJSON { (req, res, json, error) in
+            if(error != nil) {
+                NSLog("Error: \(error)")
+            } else {
+                var weatherJson = JSON(json!)
+                
+                var id = weatherJson["id"].int
+                var cityName = weatherJson["name"].string
+                var temperature = weatherJson["main", "temp"].double
+                
+                var description = weatherJson["weather"][0]["description"].stringValue
+                
+                self.weather = Weather(id: id!, name: cityName!, temp: temperature!, desc: description)
+                self.setLabels()
+            }
         }
-        task.resume()
     }
     
     /*
-    *
+    *weatherData: NSData
     */
-    func setLabels(weatherData: NSData) {
-        var jsonError:NSError?
+    func setLabels() {
         
-        let jsona = NSJSONSerialization.JSONObjectWithData(weatherData, options: nil, error: &jsonError) as! NSDictionary
-        
-        /*
-        println("\(json)")
-        if let name = json["name"] as? String{
-            townLabel.text = name
+        if let name = self.weather?.name{
+            self.townLabel.text = name
         }
         
-        
-        
-        if let sys = json[("sys")] as? NSDictionary {
-        
-            if let country = sys[("country")] as? String {
-                countryLabel.text = country
-            }
-            if let sunrise = sys[("sunrise")] as? Int {
-               // countryLabel.text = country
-            }
-            
-            
-            //sunrise
+        if let description = self.weather?.desc{
+            self.descriptionLabel.text = description
         }
         
-        //let json = JSONValue(dataFromNetworking)
-        if let userName = json[0]["weather"]["description"].string {
-            //Now you got your value
+        if let temp = self.weather?.temp{
+            let celsiusTemp = ((temp - 273.15))
+            let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
+            let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
+            self.temperatureLabel.text = myStringRoundedCelsiusTemp + ("°C")
         }
-        
-        if let description = json[("weather")] as? NSDictionary {
-            //if let description = weather[("description")] as? String {
-                descriptionLabel.text = ("TEXT")
-                
-           // }
-        }
-        
-        if let main = json[("main")] as? NSDictionary {
-            if let temp = main[("temp")] as? Double {
-                //convert kelvin to celsius and rounding the double number
-                let celsiusTemp = ((temp - 273.15))
-                let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
-                let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
-                temperatureLabel.text = myStringRoundedCelsiusTemp + ("°C")
-                
-            }
-            if let minTemp = main[("temp_min")] as? Double {
-                //convert kelvin to celsius and rounding the double number
-                let celsiusTemp = ((minTemp - 273.15))
-                let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
-                let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
-                minTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
-                
-            }
-            if let maxTemp = main[("temp_max")] as? Double {
-                //convert kelvin to celsius and rounding the double number
-                let celsiusTemp = ((maxTemp - 273.15))
-                let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
-                let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
-                maxTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
-                
-            }
-        }
-        
-        */
         
     }
     /*

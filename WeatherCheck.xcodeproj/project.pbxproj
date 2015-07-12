@@ -14,6 +14,7 @@
 		CC5027A01B4FC94F008E89F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC50279F1B4FC94F008E89F8 /* Images.xcassets */; };
 		CC5027A31B4FC94F008E89F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5027A11B4FC94F008E89F8 /* LaunchScreen.xib */; };
 		CC5027AF1B4FC94F008E89F8 /* WeatherCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5027AE1B4FC94F008E89F8 /* WeatherCheckTests.swift */; };
+		CC9185521B526F6D00F16D2D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9185511B526F6D00F16D2D /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		CC5027A81B4FC94F008E89F8 /* WeatherCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5027AD1B4FC94F008E89F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5027AE1B4FC94F008E89F8 /* WeatherCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCheckTests.swift; sourceTree = "<group>"; };
+		CC9185511B526F6D00F16D2D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		F35B15D6E8733E1028C17A2B /* Pods-WeatherCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCheck.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 			children = (
 				CC5027981B4FC94F008E89F8 /* AppDelegate.swift */,
 				CC50279A1B4FC94F008E89F8 /* ViewController.swift */,
+				CC9185511B526F6D00F16D2D /* Weather.swift */,
 				CC50279C1B4FC94F008E89F8 /* Main.storyboard */,
 				CC50279F1B4FC94F008E89F8 /* Images.xcassets */,
 				CC5027A11B4FC94F008E89F8 /* LaunchScreen.xib */,
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC50279B1B4FC94F008E89F8 /* ViewController.swift in Sources */,
+				CC9185521B526F6D00F16D2D /* Weather.swift in Sources */,
 				CC5027991B4FC94F008E89F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
