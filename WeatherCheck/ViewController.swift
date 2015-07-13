@@ -22,10 +22,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var minTempLabel: UILabel!
     @IBOutlet var maxTempLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    
     @IBOutlet var sunRiseLabel: UILabel!
     @IBOutlet var sunSetLabel: UILabel!
     
+    @IBOutlet var srollingInfoLabel: UIScrollView!
     
     let locationManager = CLLocationManager()
     let locValue = CLLocationCoordinate2D()
@@ -38,7 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
-        stringFromTimeInterval()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,29 +59,54 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                 var id = weatherJson["id"].int
                 var cityName = weatherJson["name"].string
+                var country = weatherJson["sys", "country"].string
+                var sunRise = weatherJson["sys", "sunrise"].double
+                
+                var sunSet = weatherJson["sys", "sunset"].double
                 var temperature = weatherJson["main", "temp"].double
+                var minTemperature = weatherJson["main", "temp_min"].double
+                var maxTemperature = weatherJson["main", "temp_max"].double
                 
                 var description = weatherJson["weather"][0]["description"].stringValue
                 
-                self.weather = Weather(id: id!, name: cityName!, temp: temperature!, desc: description)
+                self.weather = Weather(id: id!, name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!)
                 self.setLabels()
             }
         }
     }
     
     /*
-    *weatherData: NSData
+    *   Seting values to labels in storyboard.
     */
     func setLabels() {
-        
+        //Name of city
         if let name = self.weather?.name{
             self.townLabel.text = name
+        }
+        //Cloudy, sunny etc.
+        if let country = self.weather?.coun{
+            self.countryLabel.text = country
         }
         
         if let description = self.weather?.desc{
             self.descriptionLabel.text = description
         }
         
+        if let minTemperature = self.weather?.minT{
+            let celsiusTemp = ((minTemperature - 273.15))
+            let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
+            let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
+            self.minTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
+        }
+        
+        if let maxTemperature = self.weather?.maxT{
+            let celsiusTemp = ((maxTemperature - 273.15))
+            let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
+            let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
+            self.maxTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
+        }
+        
+        //Temperature in city
         if let temp = self.weather?.temp{
             let celsiusTemp = ((temp - 273.15))
             let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
@@ -89,6 +114,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.temperatureLabel.text = myStringRoundedCelsiusTemp + ("°C")
         }
         
+        if let sunRise = self.weather?.sunR{
+            self.sunRiseLabel.text = stringFromTimeInterval(sunRise)
+            stringFromTimeInterval(sunRise)
+        }
+        if let sunSet = self.weather?.sunS{
+            self.sunSetLabel.text = stringFromTimeInterval(sunSet)
+        }
     }
     /*
     *   Store current location of device and calling ulr with position details -> getting all necessary information from
@@ -108,20 +140,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //dopsat handler
     }
     
-    func stringFromTimeInterval() {
-        let timestampAsInt: Int = 1436587010
-        
-        // and the method takes a Double, it needs to be
-        // explicitly converted to a Doubl
-        //var date = (NSDate(timeIntervalSince1970: int(timestampAsInt)))
-        /*let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "h:mm"
-        let date = dateFormatter.dateFromString(timestampAsDoubleb)
+    /*
+    *   var timeStamp will be converted to format (hour:minute)
+    */
+    func stringFromTimeInterval(timeStamp:NSTimeInterval) -> String {
+        let date = NSDate(timeIntervalSince1970: timeStamp)
         let calendar = NSCalendar.currentCalendar()
-        let comp = calendar.components((.CalendarUnitHour | .CalendarUnitMinute), fromDate: date!)
-        let hour = comp.hour
-        let minute = comp.minute*/
-       // println("\(date)")
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        let hour = components.hour
+        let minutes = components.minute
+    var hoursAndMinutes: String = "\(hour):\(minutes)"
+        return hoursAndMinutes
     }
     
 }
