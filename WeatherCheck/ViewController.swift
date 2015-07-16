@@ -15,7 +15,7 @@ import SwiftyJSON
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var weather: Weather?
-    
+
     @IBOutlet var townLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!
@@ -29,21 +29,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var humidityLabel: UILabel!
     @IBOutlet var cloudsLabel: UILabel!
     //@IBOutlet var visibilityLabel: UILabel!
-    
+    @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var statusImageView: UIImageView!
-    
     @IBOutlet var srollingInfoLabel: UIScrollView!
-    
-    
+
     @IBAction func navigationBtn(sender: AnyObject) {
         
         let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("LocationVC") as! LocationViewController
         self.navigationController?.pushViewController(openLocationVC, animated: true)
     }
     
-    
     let locationManager = CLLocationManager()
     let locValue = CLLocationCoordinate2D()
+    
+    var passingData = String("")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,26 +54,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
+       // self.locationManager.startUpdatingLocation()
         self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         self.navigationController!.toolbar.layer.borderWidth = 0.5
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
+        self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        var nav = self.navigationController?.navigationBar
-        nav?.barStyle = UIBarStyle.Black
-        nav?.tintColor = UIColor.whiteColor()
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
+        searchingForCity(passingData)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    /*
+    * Search for the city's weather status
+    */
+    func searchingForCity(data:String){
+        if(passingData.isEmpty == false){
+            getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
+        }else{
+            getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
+        }
+    }
     /*
     *
     */
@@ -174,11 +178,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         
     }
-    func imageWeatherSetter(imgForSet:String){
-        
-    }
-    
-    
     
     /*
     *   Store current location of device and calling ulr with position details -> getting all necessary information from
@@ -210,7 +209,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var hoursAndMinutes: String = "\(hour):\(minutes)"
         return hoursAndMinutes
     }
-    
-
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destViewController: LocationViewController = segue.destinationViewController as! LocationViewController
+        destViewController.data =
+    }
+    */
 }
 
