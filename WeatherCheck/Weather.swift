@@ -9,7 +9,7 @@
 import Foundation
 
 class Weather: NSObject {
-    var id: Int
+
     var name: String
     var temp: Double
     var desc: String
@@ -18,10 +18,13 @@ class Weather: NSObject {
     var maxT: Double
     var sunR: Double
     var sunS: Double
+    var pres: Int
+    var humi: Int
+    var wind: Double
+    var clou: Int
+    var img: String
     
-    
-    init(id: Int, name:String, temp:Double, desc: String, coun: String, minT:Double, maxT:Double, sunR: Double, sunS: Double ){
-        self.id = id
+    init(name: String, temp: Double, desc: String, coun: String, minT: Double, maxT: Double, sunR: Double, sunS: Double, pres: Int, humi: Int, wind: Double, clou: Int, img:String){
         self.name = name
         self.temp = temp
         self.desc = desc
@@ -30,6 +33,11 @@ class Weather: NSObject {
         self.maxT = maxT
         self.sunR = sunR
         self.sunS = sunS
+        self.pres = pres
+        self.humi = humi
+        self.wind = wind
+        self.clou = clou
+        self.img = img
         
         super.init()
     }

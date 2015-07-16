@@ -24,21 +24,50 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var sunRiseLabel: UILabel!
     @IBOutlet var sunSetLabel: UILabel!
+    @IBOutlet var windLabel: UILabel!
+    @IBOutlet var pressurelabel: UILabel!
+    @IBOutlet var humidityLabel: UILabel!
+    @IBOutlet var cloudsLabel: UILabel!
+    //@IBOutlet var visibilityLabel: UILabel!
+    
+    @IBOutlet var statusImageView: UIImageView!
     
     @IBOutlet var srollingInfoLabel: UIScrollView!
     
+    
+    @IBAction func navigationBtn(sender: AnyObject) {
+        
+        let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("LocationVC") as! LocationViewController
+        self.navigationController?.pushViewController(openLocationVC, animated: true)
+    }
+    
+    
     let locationManager = CLLocationManager()
     let locValue = CLLocationCoordinate2D()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBarHidden = true
+        srollingInfoLabel.contentSize.height = 500
+        descriptionLabel.layer.borderWidth = 0.5
+        descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
+        self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
+        self.navigationController!.toolbar.layer.borderWidth = 0.5
+        self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
         
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        var nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.Black
+        nav?.tintColor = UIColor.whiteColor()
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,19 +86,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 var weatherJson = JSON(json!)
                 
-                var id = weatherJson["id"].int
+                //var id = weatherJson["id"].int
                 var cityName = weatherJson["name"].string
                 var country = weatherJson["sys", "country"].string
                 var sunRise = weatherJson["sys", "sunrise"].double
-                
                 var sunSet = weatherJson["sys", "sunset"].double
                 var temperature = weatherJson["main", "temp"].double
                 var minTemperature = weatherJson["main", "temp_min"].double
                 var maxTemperature = weatherJson["main", "temp_max"].double
-                
                 var description = weatherJson["weather"][0]["description"].stringValue
+                var pressure = weatherJson["main", "pressure"].int
+                var humidity = weatherJson["main", "humidity"].int
+               // var visibility = weatherJson["visibility"].int
+                var wind = weatherJson["wind", "speed"].double
+                var clouds = weatherJson["clouds", "all"].int
+                var infoImage = weatherJson["weather"][0]["icon"].stringValue
+
                 
-                self.weather = Weather(id: id!, name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!)
+                self.weather = Weather(name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!, pres: pressure!, humi: humidity!, wind: wind!, clou:clouds!, img: infoImage)
+
                 self.setLabels()
             }
         }
@@ -116,12 +151,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if let sunRise = self.weather?.sunR{
             self.sunRiseLabel.text = stringFromTimeInterval(sunRise)
-            stringFromTimeInterval(sunRise)
         }
         if let sunSet = self.weather?.sunS{
             self.sunSetLabel.text = stringFromTimeInterval(sunSet)
         }
+        if let pressure = self.weather?.pres{
+            self.pressurelabel.text = ("\(pressure) kPa")
+        }
+        if let humidity = self.weather?.humi{
+            self.humidityLabel.text = ("\(humidity) %")
+        }
+        if let wind = self.weather?.wind {
+            self.windLabel.text = ("\(wind) km/h")
+        }
+        if let clouds = self.weather?.clou{
+            self.cloudsLabel.text = ("\(clouds) %")
+        }
+        if let img = self.weather?.img{
+            
+            statusImageView.image = UIImage(named: img)
+        }
+        
+        
     }
+    func imageWeatherSetter(imgForSet:String){
+        
+    }
+    
+    
+    
     /*
     *   Store current location of device and calling ulr with position details -> getting all necessary information from
     */
@@ -153,5 +211,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         return hoursAndMinutes
     }
     
+
 }
 
