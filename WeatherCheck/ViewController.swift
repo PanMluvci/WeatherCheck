@@ -15,7 +15,11 @@ import SwiftyJSON
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var weather: Weather?
-
+    var passingData = String("")
+    
+    let locationManager = CLLocationManager()
+    let locValue = CLLocationCoordinate2D()
+    
     @IBOutlet var townLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!
@@ -28,21 +32,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var pressurelabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!
     @IBOutlet var cloudsLabel: UILabel!
-    //@IBOutlet var visibilityLabel: UILabel!
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var statusImageView: UIImageView!
     @IBOutlet var srollingInfoLabel: UIScrollView!
 
-    @IBAction func navigationBtn(sender: AnyObject) {
+    @IBOutlet var searchCityBtn: UIBarButtonItem!
+    /*
+    *   Navigate and open LocationViewController after pressing the button
+    */
+    @IBAction func navigationBtnToLocationVC(sender: AnyObject) {
         
         let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("LocationVC") as! LocationViewController
         self.navigationController?.pushViewController(openLocationVC, animated: true)
     }
     
-    let locationManager = CLLocationManager()
-    let locValue = CLLocationCoordinate2D()
-    
-    var passingData = String("")
+    @IBAction func navigationBtnToStoredCityVC(sender: AnyObject) {
+        
+        let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("StoredCityVC") as! StoredCityPickerViewController
+        self.navigationController?.pushViewController(openLocationVC, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +68,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
         self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         
+        
         searchingForCity(passingData)
         
     }
@@ -70,13 +79,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     /*
-    * Search for the city's weather status
+    * Search for the city's weather status.
+    * If no start value in searched city, then use the current location.
     */
     func searchingForCity(data:String){
         if(passingData.isEmpty == false){
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
-            getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
+            self.locationManager.startUpdatingLocation()
         }
     }
     /*
@@ -115,7 +125,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     /*
-    *   Seting values to labels in storyboard.
+    *   Seting weather values get from class Weather.swift, to labels in storyboard.
     */
     func setLabels() {
         //Name of city
@@ -180,13 +190,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     /*
-    *   Store current location of device and calling ulr with position details -> getting all necessary information from
+    *   Store current location of device, then make and call ulr with position details. Then stop update location.
     */
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
         var locValue:CLLocationCoordinate2D = manager.location.coordinate
         getWeatherData("http://api.openweathermap.org/data/2.5/weather?lat=" + "\(locValue.latitude)" + "&lon=" + "\(locValue.longitude)")
-        
+        self.locationManager.stopUpdatingLocation()
     }
     
     /*
@@ -198,7 +208,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     /*
-    *   var timeStamp will be converted to format (hour:minute)
+    *   TimeStamp value will be converted to format (hour:minute)
     */
     func stringFromTimeInterval(timeStamp:NSTimeInterval) -> String {
         let date = NSDate(timeIntervalSince1970: timeStamp)
@@ -206,7 +216,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
         let hour = components.hour
         let minutes = components.minute
-    var hoursAndMinutes: String = "\(hour):\(minutes)"
+        let hoursAndMinutes: String = "\(hour):\(minutes)"
         return hoursAndMinutes
     }
     /*

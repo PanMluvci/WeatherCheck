@@ -6,10 +6,10 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="vXZ-lx-hvc" customClass="ViewController" customModule="WeatherCheck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="ViewController" customModule="WeatherCheck" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taX-mO-pOQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="taX-mO-pOQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElT-Xp-hNt" userLabel="TopView">
@@ -99,19 +99,19 @@
                                         <exclude reference="HEo-LK-aVg"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="34f-1U-033"/>
-                                        <exclude reference="8bd-6e-oV3"/>
-                                        <exclude reference="bmM-1a-BSB"/>
-                                        <exclude reference="q7A-XV-dGP"/>
                                         <exclude reference="3SO-SN-ctc"/>
                                         <exclude reference="cZV-37-Xrj"/>
                                         <exclude reference="iyd-VS-UmN"/>
                                         <exclude reference="lh5-TL-h3e"/>
+                                        <exclude reference="aq4-m2-Iuu"/>
+                                        <exclude reference="n7b-tU-G0D"/>
                                         <exclude reference="0Cc-TL-j8M"/>
                                         <exclude reference="MtC-IM-5x2"/>
                                         <exclude reference="vx4-Dm-OWD"/>
-                                        <exclude reference="aq4-m2-Iuu"/>
-                                        <exclude reference="n7b-tU-G0D"/>
+                                        <exclude reference="34f-1U-033"/>
+                                        <exclude reference="8bd-6e-oV3"/>
+                                        <exclude reference="bmM-1a-BSB"/>
+                                        <exclude reference="q7A-XV-dGP"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -122,19 +122,19 @@
                                         <include reference="HEo-LK-aVg"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="34f-1U-033"/>
-                                        <include reference="8bd-6e-oV3"/>
-                                        <include reference="bmM-1a-BSB"/>
-                                        <include reference="q7A-XV-dGP"/>
                                         <exclude reference="3SO-SN-ctc"/>
                                         <exclude reference="cZV-37-Xrj"/>
                                         <exclude reference="iyd-VS-UmN"/>
                                         <include reference="lh5-TL-h3e"/>
+                                        <include reference="aq4-m2-Iuu"/>
+                                        <include reference="n7b-tU-G0D"/>
                                         <include reference="0Cc-TL-j8M"/>
                                         <include reference="MtC-IM-5x2"/>
                                         <include reference="vx4-Dm-OWD"/>
-                                        <include reference="aq4-m2-Iuu"/>
-                                        <include reference="n7b-tU-G0D"/>
+                                        <include reference="34f-1U-033"/>
+                                        <include reference="8bd-6e-oV3"/>
+                                        <include reference="bmM-1a-BSB"/>
+                                        <include reference="q7A-XV-dGP"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -626,16 +626,22 @@
                         </variation>
                     </view>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8fZ-lS-BLA"/>
-                        <barButtonItem title="City" id="Z4z-f5-tyA">
+                        <barButtonItem systemItem="bookmarks" id="D8I-PN-41j" userLabel="storedCityPicker">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="navigationBtn:" destination="vXZ-lx-hvc" id="6Cx-aq-JTY"/>
+                                <action selector="navigationBtnToStoredCityVC:" destination="vXZ-lx-hvc" id="EA1-h3-aXH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8fZ-lS-BLA"/>
+                        <barButtonItem systemItem="search" id="Z4z-f5-tyA" userLabel="searchCity">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="navigationBtnToLocationVC:" destination="vXZ-lx-hvc" id="23q-zn-Lh5"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="yXS-0P-m6y"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Title" id="7eG-5H-ORn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="taX-mO-pOQ" id="z9e-fC-g5h"/>
                         <outlet property="cloudsLabel" destination="WPG-V4-3cc" id="stN-1g-ctz"/>
@@ -666,7 +672,7 @@
                         <viewControllerLayoutGuide type="top" id="0dK-oi-c2j"/>
                         <viewControllerLayoutGuide type="bottom" id="sId-BH-pcw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Y6V-BR-FyD" customClass="LocationViewCOntroller">
+                    <view key="view" contentMode="scaleToFill" id="Y6V-BR-FyD" customClass="LocationViewController">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -844,6 +850,7 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="zZZ-hR-tge"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="VHS-mB-Qdj" id="Pg8-VY-6lg"/>
                         <outlet property="cityInputTxtField" destination="hci-Dw-MN5" id="Vb9-pM-Mqe"/>
@@ -853,6 +860,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfL-wl-WVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1623" y="603.75"/>
+        </scene>
+        <!--Stored City Picker View Controller-->
+        <scene sceneID="6u5-x0-dg8">
+            <objects>
+                <viewController storyboardIdentifier="StoredCityVC" id="4yh-Dr-k0I" customClass="StoredCityPickerViewController" customModule="WeatherCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IQZ-TA-d5J"/>
+                        <viewControllerLayoutGuide type="bottom" id="yCX-iU-Pmj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cqz-q0-eSa">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1AM-1I-2CW" userLabel="backgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="1AM-1I-2CW" secondAttribute="centerY" id="3iS-sr-v1Q"/>
+                            <constraint firstAttribute="centerX" secondItem="1AM-1I-2CW" secondAttribute="centerX" id="XkZ-OF-ohS"/>
+                            <constraint firstAttribute="bottom" secondItem="1AM-1I-2CW" secondAttribute="bottom" id="fDR-IE-8kX"/>
+                            <constraint firstAttribute="trailing" secondItem="1AM-1I-2CW" secondAttribute="trailing" id="kpg-tq-vnr"/>
+                            <constraint firstItem="1AM-1I-2CW" firstAttribute="top" secondItem="cqz-q0-eSa" secondAttribute="top" id="tOy-On-1cR"/>
+                            <constraint firstItem="1AM-1I-2CW" firstAttribute="leading" secondItem="cqz-q0-eSa" secondAttribute="leading" id="uur-s5-t7W"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1AM-1I-2CW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3iS-sr-v1Q"/>
+                                <exclude reference="XkZ-OF-ohS"/>
+                                <exclude reference="fDR-IE-8kX"/>
+                                <exclude reference="kpg-tq-vnr"/>
+                                <exclude reference="tOy-On-1cR"/>
+                                <exclude reference="uur-s5-t7W"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1AM-1I-2CW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3iS-sr-v1Q"/>
+                                <include reference="XkZ-OF-ohS"/>
+                                <include reference="fDR-IE-8kX"/>
+                                <include reference="kpg-tq-vnr"/>
+                                <include reference="tOy-On-1cR"/>
+                                <include reference="uur-s5-t7W"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="cancel" id="RfJ-G2-kS1" userLabel="Bar Button Item">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="BKp-GQ-LEQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="urs-UL-EV8"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="1AM-1I-2CW" id="ARl-He-cjJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4SI-dP-oof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="603.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IhY-Xf-Xjy">
@@ -874,10 +950,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gom-In-eOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="603.75"/>
+            <point key="canvasLocation" x="117" y="603.75"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0j6-2g-46I"/>
+        <segue reference="BKp-GQ-LEQ"/>
     </inferredMetricsTieBreakers>
 </document>
