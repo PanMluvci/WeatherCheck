@@ -115,11 +115,24 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-tb-oGL" userLabel="Content View">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o73-PG-V5z">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun is shining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o73-PG-V5z">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="fQ1-bS-Nbt"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="fQ1-bS-Nbt"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="fQ1-bS-Nbt"/>
+                                                    </mask>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <constraints>
@@ -129,6 +142,8 @@
                                             <constraint firstAttribute="bottom" secondItem="Ec2-tb-oGL" secondAttribute="bottom" id="OFX-cA-m8h"/>
                                             <constraint firstAttribute="centerX" secondItem="Ec2-tb-oGL" secondAttribute="centerX" id="Pi3-4U-GHx"/>
                                             <constraint firstItem="Ec2-tb-oGL" firstAttribute="top" secondItem="Oem-wB-GPw" secondAttribute="top" id="dNn-Dq-Ns0"/>
+                                            <constraint firstAttribute="trailing" secondItem="o73-PG-V5z" secondAttribute="trailing" id="ghb-vB-S6Q"/>
+                                            <constraint firstItem="o73-PG-V5z" firstAttribute="leading" secondItem="Oem-wB-GPw" secondAttribute="leading" id="grm-gr-2an"/>
                                             <constraint firstAttribute="centerX" secondItem="o73-PG-V5z" secondAttribute="centerX" id="hZ1-w9-u8b"/>
                                             <constraint firstAttribute="centerY" secondItem="Ec2-tb-oGL" secondAttribute="centerY" id="iGi-JF-CQu"/>
                                         </constraints>
@@ -145,6 +160,8 @@
                                                 <exclude reference="dNn-Dq-Ns0"/>
                                                 <exclude reference="iGi-JF-CQu"/>
                                                 <exclude reference="K3s-uv-Z6c"/>
+                                                <exclude reference="ghb-vB-S6Q"/>
+                                                <exclude reference="grm-gr-2an"/>
                                                 <exclude reference="hZ1-w9-u8b"/>
                                             </mask>
                                         </variation>
@@ -161,6 +178,8 @@
                                                 <include reference="dNn-Dq-Ns0"/>
                                                 <include reference="iGi-JF-CQu"/>
                                                 <include reference="K3s-uv-Z6c"/>
+                                                <include reference="ghb-vB-S6Q"/>
+                                                <include reference="grm-gr-2an"/>
                                                 <include reference="hZ1-w9-u8b"/>
                                             </mask>
                                         </variation>
