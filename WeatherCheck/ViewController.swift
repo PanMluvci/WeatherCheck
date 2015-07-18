@@ -36,7 +36,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var statusImageView: UIImageView!
     @IBOutlet var srollingInfoLabel: UIScrollView!
 
-    @IBOutlet var searchCityBtn: UIBarButtonItem!
+   // @IBOutlet var searchCityBtn: UIBarButtonItem!
     /*
     *   Navigate and open LocationViewController after pressing the button
     */
@@ -56,9 +56,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = true
-        srollingInfoLabel.contentSize.height = 500
-        descriptionLabel.layer.borderWidth = 0.5
-        descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
+       // srollingInfoLabel.
+        srollingInfoLabel.contentSize.height = 600
+       // descriptionLabel.layer.borderWidth = 0.5
+       // descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
@@ -68,8 +69,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
         self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         
-        
-        searchingForCity(passingData)
+        self.navigationController!.toolbar.hidden = false
+        //searchingForCity(passingData)
         
     }
 
