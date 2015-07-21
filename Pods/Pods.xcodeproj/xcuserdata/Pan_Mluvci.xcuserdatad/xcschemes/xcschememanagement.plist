@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-WeatherCheck-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WeatherCheck-FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-WeatherCheck-SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>411A41A6BC914AA65DDE7781</key>
+		<key>02D603519484184BE628C3D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E2B205B59E4222F1EA2C459</key>
+		<key>12605331EBE2A0EEB605F371</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A446A277056D112B4404BFD2</key>
+		<key>1C3E142397B76E0808B71FCB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8080303865051F67970C9ACF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD97E8869EA3E3169AEBCAD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,13 +1,34 @@
 PODS:
   - Alamofire (1.2.3)
+  - Bolts (1.2.0):
+    - Bolts/AppLinks (= 1.2.0)
+    - Bolts/Tasks (= 1.2.0)
+  - Bolts/AppLinks (1.2.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.2.0)
+  - FBSDKCoreKit (4.4.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc (= 4.4.0)
+    - FBSDKCoreKit/no-arc (= 4.4.0)
+  - FBSDKCoreKit/arc (4.4.0):
+    - Bolts (~> 1.1)
+  - FBSDKCoreKit/no-arc (4.4.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc
+  - Firebase (2.3.3)
   - SwiftyJSON (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 1.2)
+  - FBSDKCoreKit
+  - Firebase (>= 2.3.3)
   - SwiftyJSON (~> 2.2)
 
 SPEC CHECKSUMS:
   Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
+  Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  FBSDKCoreKit: 75bdd75c980e811db218488d99dd93b7740f4474
+  Firebase: 2db60272f68ce40c7d47e5ae6eddc16977c65d4c
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
 
 COCOAPODS: 0.37.2

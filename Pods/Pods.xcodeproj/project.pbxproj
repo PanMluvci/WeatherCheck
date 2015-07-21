@@ -7,314 +7,1118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A00909B7B9070C4F80BFF40 /* Pods-WeatherCheck-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B220B15BBEFC2D76A8CC8B6F /* Pods-WeatherCheck-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A25FA01C88F664963FEDDA9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B8C43548EB9D95C6AB4F9 /* SwiftyJSON.swift */; };
-		3AC819D0F66B153080262BB2 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85F8B716EF27A5C48AFC96 /* Alamofire.swift */; };
-		409E5EF8E5828A4D5A21B7E3 /* Pods-WeatherCheck-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC4693A09A3887493F58926 /* Pods-WeatherCheck-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		623FF8984DB8E1E35361AC12 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE243AEF35D3A1BF29C5F1 /* Validation.swift */; };
-		6A668CD90253973BD3AFA1EE /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F44342A9402AA7F96EE68B /* Upload.swift */; };
-		8E1C92352CEEACDC104BD896 /* Pods-WeatherCheck-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBC9AFC83E0933C7B53D3DA1 /* Pods-WeatherCheck-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EF200AE24DB22975434BD22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882B1F049EDC8134939C9EAE /* Foundation.framework */; };
-		9B3468BAA4828E0ECBE4F0A7 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6B710C070B78F6FA6102E /* Download.swift */; };
-		AA721FD64391A1D668B628D6 /* Pods-WeatherCheck-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A9983DA95239D59EC8777 /* Pods-WeatherCheck-Alamofire-dummy.m */; };
-		AAE294F9F9CDE11B49932A0F /* Pods-WeatherCheck-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4993DDB1D63B5060A14FF189 /* Pods-WeatherCheck-dummy.m */; };
-		BD7B9B2821C14230D85E14D5 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA2B7F58E41A33AE0645DE /* Manager.swift */; };
-		C1675290DF9BBC9F0B1DB59F /* Pods-WeatherCheck-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1E2C2B98231221D3723CA /* Pods-WeatherCheck-SwiftyJSON-dummy.m */; };
-		C860D2371733431CAE462B20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882B1F049EDC8134939C9EAE /* Foundation.framework */; };
-		CB15B53FD2D3E00FD624DCE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882B1F049EDC8134939C9EAE /* Foundation.framework */; };
-		DB5FC75DF411C29C47F80F63 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDFC5DC7DD0175C2FC1C717 /* Request.swift */; };
-		EE66DB8743FBC0B2DE8E90E4 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88FBAD8C4B861C7DF76043 /* ResponseSerialization.swift */; };
-		F2BDD383FDAE1B480585F4E1 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6051C7211CE3E115D7944EE /* ParameterEncoding.swift */; };
+		00E0A0C01EF4F55472EA4913 /* FBSDKPaymentObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DBBDA7A25525010589CB7C /* FBSDKPaymentObserver.m */; };
+		01C153756743756F4FC45688 /* FBSDKViewImpressionTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 581698AC26E49BEB38C29F52 /* FBSDKViewImpressionTracker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		021D412A9C226EADED2736F4 /* FBSDKInternalUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E525E4ECCA3F2814028F12F /* FBSDKInternalUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		03AECB3EC00354BC3F7038C9 /* FBSDKAppEventsState.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F1E2F6AFF286EDBBFE56B9 /* FBSDKAppEventsState.m */; };
+		0421DE70DFC67D9412B9CFEC /* FBSDKAccessTokenCacheV3_17.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B6547660CC8A80B4BE11C3 /* FBSDKAccessTokenCacheV3_17.m */; };
+		04ACF6EB78DDA84E258484DD /* FBSDKGraphRequestBody.h in Headers */ = {isa = PBXBuildFile; fileRef = F77DA0C6CA8DE1162D975014 /* FBSDKGraphRequestBody.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0515C37ACBD7A97907DC90B2 /* FBSDKAppEventsDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D2BEDBDBF9DAC7D6029CE6E /* FBSDKAppEventsDeviceInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		06E3D5CF11EFB9957EBCA425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF98748A58F8A1AB57FB5DC /* Foundation.framework */; };
+		07909D9C4A20D832EC7A8712 /* Pods-WeatherCheck-FBSDKCoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D56A0487B12F8D053B2A1 /* Pods-WeatherCheck-FBSDKCoreKit-dummy.m */; };
+		08A5CA504B4C777F12D2D337 /* BFTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D03331A1CBD88295F85A81 /* BFTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EE6BBD1E3C2CCF4E22FC530 /* FBSDKBridgeAPIRequest+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FC7AFB9F7CB2642F103C57D /* FBSDKBridgeAPIRequest+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0F997EB4D85B006F1245CB0C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969310C7A3A0D54F872069EF /* SwiftyJSON.swift */; };
+		10B070758EB52C71F270FEB4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6518382B8B80D70877DDEA83 /* Bolts.framework */; };
+		114A870FE38CAABF0BC6A750 /* FBSDKTimeSpentData.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C71725AA204037923A31048 /* FBSDKTimeSpentData.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1275D52B5752DC6D725137AC /* FBSDKAppLinkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 526096E629666E6EA92A1ACC /* FBSDKAppLinkUtility.m */; };
+		12E3F42C529FA4DC1CD09843 /* FBSDKLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0844B3D789DE361F37B96D44 /* FBSDKLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		135A46FDD54CB06BA93B5F57 /* BFMeasurementEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A6828469D52D7022AB2F9669 /* BFMeasurementEvent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		14B569D7100F341060F20B2F /* BFCancellationTokenRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9988AE35740D2D3A337B8237 /* BFCancellationTokenRegistration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1586EF9EAB6D76B6208211F2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6518382B8B80D70877DDEA83 /* Bolts.framework */; };
+		16AA383C4498A9701EA688CA /* BFAppLinkReturnToRefererController.h in Headers */ = {isa = PBXBuildFile; fileRef = D5835308241269149B46FBD3 /* BFAppLinkReturnToRefererController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		171985BE64B44B47C6D1080C /* FBSDKGraphErrorRecoveryProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F2F7323FC982A10563B7DF /* FBSDKGraphErrorRecoveryProcessor.m */; };
+		17534003C31B3FD0115529AB /* FBSDKButton+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA7158FFDA7F7E3E3CF6F59 /* FBSDKButton+Subclass.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		177850D9510B290B629CFD9D /* FBSDKMutableCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F2372752861393187E2B27F /* FBSDKMutableCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		180B58470556DAE7D7BF73E3 /* FBSDKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D140DD722790C0BADC52A6E2 /* FBSDKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		197195E272AD2D4F090C972D /* Pods-WeatherCheck-Bolts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD971291F677E5BF960EED /* Pods-WeatherCheck-Bolts-dummy.m */; };
+		1EDCD9102238B537AB101221 /* BFCancellationToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B8C11B35E1612A920EDB0 /* BFCancellationToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1F45A7ECAD76C6FA279898BC /* FBSDKServerConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813514ABD9803CF3DB6AD38 /* FBSDKServerConfigurationManager.m */; };
+		1F466C4125188E089A03ABBA /* FBSDKLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 301A86A338CB4A11C0596390 /* FBSDKLogo.m */; };
+		21178A45E42367225BAAF4C1 /* FBSDKGraphErrorRecoveryProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1C85327BE16CD3032490F8 /* FBSDKGraphErrorRecoveryProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21A02407E757698C8E8101E6 /* FBSDKUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0FE9AE75233EBA35B622CD /* FBSDKUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		248AEC284A116AE83559F407 /* BFExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = B0926F79EC0148BC80C840A6 /* BFExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2531BB00B1D47FDB0170D620 /* FBSDKErrorConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE972D45F76F7EF6BBF36E7 /* FBSDKErrorConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E785E7F62E6DBAA7A3CD625 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0058F760245715B3C4F117C /* Alamofire.swift */; };
+		2F018E0E016EBF8F66D3AEAD /* FBSDKDialogConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ACB8A1245FA8F38C73FF5C /* FBSDKDialogConfiguration.m */; };
+		2F8B738C5F89095F1FA07F03 /* BFCancellationTokenRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = A23BC6C30257D88BC697BDD0 /* BFCancellationTokenRegistration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FC3293116226FD3CF1DADEB /* FBSDKProfile+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = CD739195536CF03C4AE694D1 /* FBSDKProfile+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		31972B8A34BB16D9A38EC0C4 /* FBSDKAppEventsUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 20A0C7A3E1202B588C8B468F /* FBSDKAppEventsUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		32D105A1A073B19161045B12 /* FBSDKBridgeAPIProtocolWebV2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A8D9C713455359987F2CD80 /* FBSDKBridgeAPIProtocolWebV2.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3341D33D9925F849973FDBFE /* FBSDKURLOpening.h in Headers */ = {isa = PBXBuildFile; fileRef = E27831A463DB1270A753BF20 /* FBSDKURLOpening.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		33C42F196B00F4DCBDDDDE39 /* Pods-WeatherCheck-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C541386EDCB45542D338F1D /* Pods-WeatherCheck-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3416644EC9F9880D145B801A /* BFExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A85FFA0F14A9006969DBB5 /* BFExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3428B46CCC6CCB20DD0AA0F4 /* FBSDKBridgeAPIProtocolNativeV1.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E2073D9A8EFDF56FAB06C2 /* FBSDKBridgeAPIProtocolNativeV1.m */; };
+		34B0FCF7AAA8134E1414055F /* BoltsVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D32F7E46BD9C6475AAB6EF2D /* BoltsVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35B8B18F51A8D1C6091A86BA /* FBSDKGraphRequestPiggybackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 28DE3672D7A96A52679B1497 /* FBSDKGraphRequestPiggybackManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3634BA4B1F0693205F1FAF07 /* FBSDKTriStateBOOL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B3BD9B0D6F6744FA3209E6F /* FBSDKTriStateBOOL.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		37EDA4F4335FE9511D704895 /* BFAppLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 01DF3EAC0C58CD3BCAE6D1BB /* BFAppLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38A60B2F73265675C7C923C8 /* Pods-WeatherCheck-FBSDKCoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFC1B6FEFE4B9526EFB8F747 /* Pods-WeatherCheck-FBSDKCoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D57598389575BB9F8ADC46D /* FBSDKAccessTokenCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7793F3041BD71DECDE59078A /* FBSDKAccessTokenCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E5A178935DBE5B9462E31E5 /* FBSDKCoreKit+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BAE65003919FD7EBFA8552C /* FBSDKCoreKit+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F4E5B2F36B5872C15352582 /* BFAppLinkReturnToRefererView_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0757AB02250015E0C6A52A0E /* BFAppLinkReturnToRefererView_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F6D7674B36041793D56C774 /* FBSDKBridgeAPIResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1585C43BBCC23620319736D8 /* FBSDKBridgeAPIResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3FA8E5BAAD2A353027324392 /* FBSDKApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C480D0B40B4F41986A02FC4 /* FBSDKApplicationDelegate.m */; };
+		3FFD2A2CE713E9D1F4DBCE44 /* FBSDKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = E3570D74B52CA5AD4CB6F9DD /* FBSDKIcon.m */; };
+		428ECA712C801F29D2988553 /* BFAppLinkResolving.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB92152765150318AAFCBC5 /* BFAppLinkResolving.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		429918DAC3A53ED19C10BB30 /* Pods-WeatherCheck-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E614A01AD468A45B8D5B7623 /* Pods-WeatherCheck-SwiftyJSON-dummy.m */; };
+		496314E421CD2DE2CE7F59B7 /* FBSDKError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7E87BF0D24513EED4CD941 /* FBSDKError.m */; };
+		498BAB144160D87D59DA53AD /* FBSDKBridgeAPIRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 08FB034E90578D9D9602CE7A /* FBSDKBridgeAPIRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4C51B4444509BF9D6CE1FF71 /* FBSDKProfilePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 755E5008BE638C552149DD2F /* FBSDKProfilePictureView.m */; };
+		4CB94ADA8AACA88347D6DC3D /* FBSDKSystemAccountStoreAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BB509E3DFAB215313273B0 /* FBSDKSystemAccountStoreAdapter.m */; };
+		5056152ACC90FD6F435D6F98 /* BFTaskCompletionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776833550EDA03A1D3867F5 /* BFTaskCompletionSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		50BD2D56B43CE15EC54AC59B /* BFAppLink_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2809FD74203F40371EDA9764 /* BFAppLink_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53422420EF842C9057A91B16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF98748A58F8A1AB57FB5DC /* Foundation.framework */; };
+		53E381B7BEB1FFFDD3F6C65A /* FBSDKWebDialogView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD3BE390C701A202B20D257 /* FBSDKWebDialogView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5451600754C5C8A01A1AD225 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6518382B8B80D70877DDEA83 /* Bolts.framework */; };
+		551660F0241119068E9D5286 /* FBSDKAccessToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A815E2A762F1CF53ED31CC /* FBSDKAccessToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5593F407480C91206F6D30E4 /* FBSDKUIUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C3E0718D88CA09B29DE083C /* FBSDKUIUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		579E26114C860B813CF6A2BF /* FBSDKWebDialogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A24AEEECF33DC851DC9ED61 /* FBSDKWebDialogView.m */; };
+		593DF97AB84CBBEAD43D9388 /* FBSDKURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8AAE4E63F993E5A62CB832 /* FBSDKURLConnection.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A313924ACAB6657B241F40D /* FBSDKLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E412B217F09B20A95AE400 /* FBSDKLogger.m */; };
+		5ACA4E6B4DAE22A13051CA7C /* FBSDKAppLinkUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 2010CCAFA4318CC8DD655984 /* FBSDKAppLinkUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CD747B84C64AEE8EE54D2B3 /* FBSDKBridgeAPIProtocolType.h in Headers */ = {isa = PBXBuildFile; fileRef = 525F4FAE59FFA11946A30D20 /* FBSDKBridgeAPIProtocolType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5E0EC777525E4BF861787880 /* FBSDKTimeSpentData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBEC78498D52A9653E81725 /* FBSDKTimeSpentData.m */; };
+		5FF67E7621F9F2C2F3B1751C /* FBSDKAccessTokenCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A555B7F22DC8E218A31E0D8 /* FBSDKAccessTokenCaching.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61F2549A84BC7A22AD40F23E /* FBSDKGraphRequestDataAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 250BFA73BC7AAE1EBDC8798E /* FBSDKGraphRequestDataAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6297020859A6DDC9F80E93CE /* FBSDKKeychainStoreViaBundleID.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D0E2CB201376223521367DD /* FBSDKKeychainStoreViaBundleID.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		63358952E36E39B43AB5F7BB /* FBSDKGraphRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E23D201C8D4E10C5FF11D6C /* FBSDKGraphRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		650111DCE9091678AA300150 /* FBSDKUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9085A2D42F770DA5B2431A /* FBSDKUtility.m */; };
+		65CFCD5228B3C62FD4140826 /* FBSDKTestUsersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 85088A4B583CBB3DD0EE208C /* FBSDKTestUsersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67A1AFE7504141EA352D572B /* FBSDKKeychainStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 20ED07D517B0B134F17D033C /* FBSDKKeychainStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		699D6D8B5018594B01861029 /* BFCancellationTokenSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C96FC295A5949A6D26B15 /* BFCancellationTokenSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6B841728C37F95EB846FB6D0 /* FBSDKConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AC16473EC1737F5C84222109 /* FBSDKConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C27FEC88B00AA28DC732A4A /* FBSDKAccessTokenCacheV3.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F47B255BC18EAB4013263 /* FBSDKAccessTokenCacheV3.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6CB845C3570A929B976AD265 /* FBSDKSystemAccountStoreAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB43D5473A583579F1A74F9 /* FBSDKSystemAccountStoreAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6CE118B7FE2C8B51F65940F7 /* FBSDKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = EB36A54FF05EE4ED691702FC /* FBSDKCrypto.m */; };
+		6D5808F71400C2A81A3950A3 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47F3FF4C8A7583AA400FB2 /* Download.swift */; };
+		6E1EAFDD88218AA8DD76AEB4 /* FBSDKBridgeAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5504D076B0B9C9BB556D73 /* FBSDKBridgeAPIResponse.m */; };
+		6E4C4FFA96C9C9DC01AD8BD1 /* FBSDKAppEvents+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3356D662815E1EAC9DB49122 /* FBSDKAppEvents+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6F2AD217F1779064A7BD9C7A /* BFAppLinkTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EDC536B351ED9C3EC49753D /* BFAppLinkTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70373F8BB6CAA01A39EC21FC /* FBSDKBridgeAPIProtocolWebV1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C99F1325DC2707EFA6B099 /* FBSDKBridgeAPIProtocolWebV1.m */; };
+		70B844F343D13B75C99019E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF98748A58F8A1AB57FB5DC /* Foundation.framework */; };
+		72637AC89FC1719271ADD319 /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3215492D75816FDD608E8582 /* BFTask.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		73424C608FB72D6E64A2D1C1 /* FBSDKBridgeAPIProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 86803DEE1A6A2C1FDC0A7067 /* FBSDKBridgeAPIProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		76439E5761C1326E4C42209F /* FBSDKApplicationDelegate+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 67634F5532A738B2C9721A11 /* FBSDKApplicationDelegate+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		772EE1CEE3863B86D1887621 /* FBSDKAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 810C8960EF192028D4BE7CD7 /* FBSDKAccessToken.m */; };
+		798DD07135FB50EFFA6D2FE5 /* FBSDKAppLinkResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = E35F942DA49060396A9AA6AC /* FBSDKAppLinkResolver.m */; };
+		79BED10DAED5C3560D5FCD6A /* BFMeasurementEvent_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = FB4FD33A25A0EEAE1736DFDE /* BFMeasurementEvent_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CB7730B884A8184C1F0BBAD /* FBSDKAppEventsDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C13C383736411308301A13 /* FBSDKAppEventsDeviceInfo.m */; };
+		7CD21F08D73AE9D16E227C1C /* FBSDKProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 9084D1E35FF100F98705B6F9 /* FBSDKProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CF23FB5577E6750E8AA0D0A /* FBSDKServerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 746EE45F31BD8DC4E16165E6 /* FBSDKServerConfiguration.m */; };
+		7D9F448D408A83288D28F02A /* FBSDKButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FFFCF46AEE4206C0FD6585 /* FBSDKButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F011ABDB740CCC7D9D15AA7 /* FBSDKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 3894223704C1DBB89FECBF45 /* FBSDKMath.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FF93A4A5D3AE12C8AC8BE07 /* FBSDKLogo.h in Headers */ = {isa = PBXBuildFile; fileRef = 955F84C7EBEA448C894D878F /* FBSDKLogo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		80CEE03F2E8854182BF23CCD /* FBSDKAppEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = C9079254CED120409C6C9AF0 /* FBSDKAppEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		843D5756F7F12E3D168EEC26 /* FBSDKErrorRecoveryConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F94ABD2117BB3D7ED144DBB4 /* FBSDKErrorRecoveryConfiguration.m */; };
+		8537D28D47CCA1BF3B2E3356 /* FBSDKAudioResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBE91B8DADB1A52600B74 /* FBSDKAudioResourceLoader.m */; };
+		87D5D6F8DA5E171AB348FA02 /* FBSDKBridgeAPIProtocolWebV1.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E80041F4C4833C457041CDE /* FBSDKBridgeAPIProtocolWebV1.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8B7FF6E6BCE65E3B1829B35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF98748A58F8A1AB57FB5DC /* Foundation.framework */; };
+		8C9E59AFD4826DD8E9B08597 /* FBSDKDialogConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 7197073A4EE7574EF87CB1EC /* FBSDKDialogConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CB99143086EEA6F6B904B34 /* FBSDKCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A10998C17B3AE9934939398 /* FBSDKCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D1CE5041F3823CBC5939D6D /* FBSDKSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D2925ED9BC0E780BE522AE /* FBSDKSettings.m */; };
+		8DB2A340CAABBCD7DA35BF2C /* FBSDKTypeUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9D9306825278AA36FF1DEE /* FBSDKTypeUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9269FDFF8C906792C171731D /* BFAppLinkReturnToRefererView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1A2D4CC9F775829ADF43 /* BFAppLinkReturnToRefererView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		92D839E74B6FA505107847D1 /* FBSDKBridgeAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F15E36C9D81A40F87C1B8EA /* FBSDKBridgeAPIRequest.m */; };
+		93872B1B1E32990C54D155CF /* FBSDKDynamicFrameworkLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE6770D3E63E56EC28F468 /* FBSDKDynamicFrameworkLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9398B098823CA8CB1E183E47 /* FBSDKGraphRequestMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E42022B8477121EF6E366E0 /* FBSDKGraphRequestMetadata.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9410B8945122932F06BC00AE /* FBSDKTestUsersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96301FB08969964BC1F416C6 /* FBSDKTestUsersManager.m */; };
+		9497C3D9FB0C57978D65D45B /* FBSDKSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = F0310466651285E533C45A79 /* FBSDKSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94F108AA388937DD9471F776 /* FBSDKAppEventsStateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C8FEA8ABEC7FC60C45E03A8 /* FBSDKAppEventsStateManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9569D93A084956CBFFD1F598 /* FBSDKAccessTokenCacheV3_21.h in Headers */ = {isa = PBXBuildFile; fileRef = EB58F3CA67B690A73F524EF3 /* FBSDKAccessTokenCacheV3_21.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		97268E3D83484CD905767C78 /* Pods-WeatherCheck-Bolts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BEB9D4C78E049748ED595A17 /* Pods-WeatherCheck-Bolts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97469E1635EA72BD9C9A92E1 /* FBSDKAccessTokenCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E9433D5801F2A1BC3673842D /* FBSDKAccessTokenCache.m */; };
+		9B18312157A612EEAA5B29A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF98748A58F8A1AB57FB5DC /* Foundation.framework */; };
+		9CE65B9063B587A94D867043 /* FBSDKCoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FC67BD590F9ADF3127DA164 /* FBSDKCoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F4892200B224FD15752636B /* FBSDKBoltsMeasurementEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = CE80D46FA9F70B7BD8867B00 /* FBSDKBoltsMeasurementEventListener.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F9E4B9AA28B4260F00354AD /* FBSDKWebDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = BC261F8F15B648889C860CA9 /* FBSDKWebDialog.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A073085BCEB1293D9BD43BEC /* BFAppLinkNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B951B7D1610C58D9A9B234D /* BFAppLinkNavigation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A0A36C784DE86CABC3DE7C92 /* FBSDKMaleSilhouetteIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F2B55650C1B76D1E56BBE2 /* FBSDKMaleSilhouetteIcon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A24EF390F7C7648F188D10D1 /* FBSDKServerConfigurationManager+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E73C09DABF26F162098740 /* FBSDKServerConfigurationManager+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A4EF4A064C2AABAB2C05E237 /* BFURL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A4BC6F0A11FA775C91E0401 /* BFURL_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5DCDAA5664C44136A8BC3BE /* FBSDKWebDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C319318CC9272C76751794 /* FBSDKWebDialog.m */; };
+		A72F53305B3D0C8CB3EA71B8 /* BFTaskCompletionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FC08D0F1F9B8577F9CD00ADC /* BFTaskCompletionSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7F6DDEF7F27B730D8BD8421 /* FBSDKURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE2B34148772EC40F36D731 /* FBSDKURLConnection.m */; };
+		A98B46B8255215D039691066 /* FBSDKGraphRequestMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF53D3892F01D92ADA1BA2 /* FBSDKGraphRequestMetadata.m */; };
+		AA863601E4A91998CC17CECB /* FBSDKAppEventsState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BEAE0CB4973E33DF322B7D1 /* FBSDKAppEventsState.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AB4E270A9D6ADD4F236CCBB7 /* FBSDKApplicationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DCDC4B823CA0C519E6C6B8 /* FBSDKApplicationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABF379399CAC574C6E28D297 /* FBSDKErrorRecoveryAttempter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AB20B4B079D759F88EC7F5E /* FBSDKErrorRecoveryAttempter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC5EBDB71A50E4189F62CBC3 /* FBSDKBridgeAPIProtocolWebV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBF82C1EC1CA8F26039BC8 /* FBSDKBridgeAPIProtocolWebV2.m */; };
+		ACA03F37596C8DE01FB4D146 /* BFMeasurementEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 528597545DEAE04389703B30 /* BFMeasurementEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACDCC03BACE357ED52A2C96D /* FBSDKAppEventsStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 630865EBC1F8207B6D504504 /* FBSDKAppEventsStateManager.m */; };
+		AF4E83BD62EAE0D4897998EC /* FBSDKBridgeAPICrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDC5DB9D3001E273A9C8F24 /* FBSDKBridgeAPICrypto.m */; };
+		AF73F9B55041F86F98D807B0 /* FBSDKErrorRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DD9AEA1AB282C94C4242C4 /* FBSDKErrorRecoveryAttempter.m */; };
+		B04C218892E7D4BDBE4F3267 /* FBSDKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B401178558F15F8C8F8493 /* FBSDKColor.m */; };
+		B230728C0CC62114984E2211 /* BFAppLinkTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = D41BE038590C2029D885A272 /* BFAppLinkTarget.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B303D3BDEBD9BFDB530A2A5F /* FBSDKAppEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = E753378A50B7181BBCB35185 /* FBSDKAppEvents.m */; };
+		B3FEEBB1EC08C7DBDBEBEB05 /* FBSDKGraphRequestConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7C7CB1ED6F6078657862D4 /* FBSDKGraphRequestConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4BFBE32FE6031441B3578BF /* FBSDKTriStateBOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2229D1CD3F7217DD69A8B8E7 /* FBSDKTriStateBOOL.m */; };
+		B5DD32D35C6F7A243EB4194D /* BFAppLinkNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6313750107FE5122E7956194 /* BFAppLinkNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8022DE519AE226E2A3FC4CE /* BFCancellationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1838B1F6D2228C5B3C45C8 /* BFCancellationToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B872AAE45F222DA1D13DD7B3 /* FBSDKGraphRequestBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F5A8031E1432535F50458A /* FBSDKGraphRequestBody.m */; };
+		B960B576979D90289F6D6858 /* FBSDKViewImpressionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A3F01CB86E8252FD94AD58 /* FBSDKViewImpressionTracker.m */; };
+		B9649884FB20127979CE3943 /* FBSDKKeychainStoreViaBundleID.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C64226977CF0C5B16B72F4 /* FBSDKKeychainStoreViaBundleID.m */; };
+		BA322A6A781925C59A8D0A1A /* FBSDKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5AB06DF5363DC67BC0A9E1 /* FBSDKButton.m */; };
+		BB9493E2EC0832CBDFEE36A6 /* Bolts.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C63623FF134A98A39C071D /* Bolts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB95C616D6A2FB6AE04FAD88 /* FBSDKGraphRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 974D6BDB3C488923A4A56686 /* FBSDKGraphRequest.m */; };
+		BCDABFC39CDCEA1C9CC59993 /* FBSDKBoltsMeasurementEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1748046FF13F08A3D2BF2 /* FBSDKBoltsMeasurementEventListener.m */; };
+		BF572D4DDBB34B1629B382B6 /* FBSDKKeychainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE2AE9F965F80EBFDF7D564 /* FBSDKKeychainStore.m */; };
+		BFAE74B7E2DBA27F356F5C61 /* FBSDKBridgeAPIProtocolNativeV1.h in Headers */ = {isa = PBXBuildFile; fileRef = A24DD32AACC4513A29F5FD69 /* FBSDKBridgeAPIProtocolNativeV1.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BFDCFEE3F054EE15DB0C4F89 /* BFURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F7B75D0417542979AF99F8 /* BFURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0A0762727E717671254F40C /* FBSDKCloseIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B8BE159491148FA4B9B1D5 /* FBSDKCloseIcon.m */; };
+		C4CBDAEBC727FF56E82B2099 /* FBSDKProfilePictureView.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE6AC27ADBAA98991A0D7DF /* FBSDKProfilePictureView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C638FEF351A4C56C79F27F1D /* FBSDKMaleSilhouetteIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = D7287C0B32BF7FFF97703505 /* FBSDKMaleSilhouetteIcon.m */; };
+		C814B0B5F60C6F67DDAB46AC /* BFCancellationTokenSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 262390D74375721CD345EA1D /* BFCancellationTokenSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C869A56EAFC8F01D7C4AE111 /* BFWebViewAppLinkResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C356AC8D9AB0064AF52245 /* BFWebViewAppLinkResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB1B7C57732A1DB9CBE870FF /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC454E4BCE4D8D72CB337C3 /* Validation.swift */; };
+		CEA0375348015D6E1A2DFFD5 /* FBSDKServerConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = FD87507A319B54930204D967 /* FBSDKServerConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D14DC21C9F64DF2AFE28E050 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CD8131077D576D2E6D0EF2 /* Upload.swift */; };
+		D165DDAAE136BB406B659F8A /* FBSDKAppEventsUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CED90C940347F828A4AFF0 /* FBSDKAppEventsUtility.m */; };
+		D459E2A7F9C095577D09EA8C /* FBSDKGraphRequest+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EA942186D8967F214230ED7 /* FBSDKGraphRequest+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D5038B6829E40C1A17FB546F /* FBSDKCloseIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = F000162A0DF6F7DC801CC0CD /* FBSDKCloseIcon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D7C2B25C5DFF34438550F7D6 /* FBSDKGraphRequestConnection+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = FB867272D5EAC81ABFE1007B /* FBSDKGraphRequestConnection+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D7DF8C0CE0AA69C554722370 /* FBSDKError.h in Headers */ = {isa = PBXBuildFile; fileRef = 69398652249E85A01FD994A9 /* FBSDKError.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D8433AE474E7395F0D05EB0F /* FBSDKAccessTokenCacheV3.m in Sources */ = {isa = PBXBuildFile; fileRef = 9094E68531FF49CEAC28DBB7 /* FBSDKAccessTokenCacheV3.m */; };
+		D8681B689855217C28EF3A80 /* _FBSDKTemporaryErrorRecoveryAttempter.h in Headers */ = {isa = PBXBuildFile; fileRef = DBEE65D208EA0BD885D3722D /* _FBSDKTemporaryErrorRecoveryAttempter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D8795BC1CA19A6B0052DD1D1 /* Pods-WeatherCheck-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7430DDCA4895DC1F4A86AA19 /* Pods-WeatherCheck-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2EE8D8C9A77629C0707D35 /* FBSDKAccessTokenCacheV4.h in Headers */ = {isa = PBXBuildFile; fileRef = B398475D2DDF5E7418E44AC0 /* FBSDKAccessTokenCacheV4.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DDDC95C3EDAB25C25C747D26 /* FBSDKInternalUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8764CA961252F75256DC41AB /* FBSDKInternalUtility.m */; };
+		DF1149F1AC523923332C8685 /* BFAppLinkReturnToRefererController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63AD070236B1D696B825391 /* BFAppLinkReturnToRefererController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DFADC1897E2CB424A1FD69BE /* FBSDKCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B21819C95D0A2D65F837C87 /* FBSDKCrypto.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E0586C168DF939344689F4BC /* BFURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9905D42359298D0F9E72E /* BFURL.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E22B8749F9A07F69262CA74F /* BFAppLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA05D8624B18FC4E7203A4C /* BFAppLink.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E359581AC1C9EA4FFE46FE8C /* FBSDKColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F38C0962D599D8EB4BB72F0 /* FBSDKColor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E3E0F1F0D6D9C0B83666FE74 /* FBSDKSettings+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8AF5BE41E0B88A6536AEA3 /* FBSDKSettings+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E629A46AEAB0A1BC5B4AE403 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F7E31A7FF2B26B38B7562 /* ResponseSerialization.swift */; };
+		E6BEF52C3E65DE513EC104C4 /* _FBSDKTemporaryErrorRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEC1E40636074E365FEB125 /* _FBSDKTemporaryErrorRecoveryAttempter.m */; };
+		E71B5C6EE3C5DBF05AB8E826 /* FBSDKErrorRecoveryConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 833592C15BD78740FF731A86 /* FBSDKErrorRecoveryConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E793D543EF87B82AB2B339DA /* FBSDKGraphRequestDataAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = D643232D964CEB0E5527559A /* FBSDKGraphRequestDataAttachment.m */; };
+		E7F62B965FBA7F8E0F7115F0 /* FBSDKAccessTokenCacheV4.m in Sources */ = {isa = PBXBuildFile; fileRef = DA339524F6A64424AEE96058 /* FBSDKAccessTokenCacheV4.m */; };
+		E812755995E4E788BA735458 /* FBSDKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB18BC2244FE27E7003C8DC /* FBSDKMath.m */; };
+		E962BE199C80A21D35EF28BC /* FBSDKAccessTokenCacheV3_21.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CFD69E17056ED03EBE7FBD /* FBSDKAccessTokenCacheV3_21.m */; };
+		EB15FF0D2E01BDF4ACC1837A /* Bolts.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F7AA4CD0EEE33F27D2DFF /* Bolts.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EB9E5FD64A99F44A483B6182 /* Pods-WeatherCheck-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9389E44E4577696E3B36B1E /* Pods-WeatherCheck-Alamofire-dummy.m */; };
+		EC95FA33C3D547595EA4166B /* FBSDKConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 264B147E3F534FD3A2F0E111 /* FBSDKConstants.m */; };
+		ECCC480BB2AEF74F3836A096 /* FBSDKGraphRequestPiggybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CFDF88185C61B186F5D4D /* FBSDKGraphRequestPiggybackManager.m */; };
+		ED9C09C0DF29F76FFACDCD6D /* FBSDKBridgeAPICrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E8E0F9F7095BDE9198A2D9D /* FBSDKBridgeAPICrypto.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EEA41CDD6BEB5076B8B8F4E0 /* FBSDKErrorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56766565DDCECADE85003E /* FBSDKErrorConfiguration.m */; };
+		EFF9C89CB2CB3708290334BA /* FBSDKGraphRequestConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE5DDE4A0B5F710AF75444A /* FBSDKGraphRequestConnection.m */; };
+		F0E7CFFFE639F3F39B53CABD /* FBSDKAppLinkResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 603EE6EA5B142AE60887194F /* FBSDKAppLinkResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1369431D7001A9CBAA9221F /* FBSDKProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 95184557355D15AD159080CA /* FBSDKProfile.m */; };
+		F191DAD503AE57B7A2915591 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430A101BF93505CBBCBBD39A /* Manager.swift */; };
+		F5308936B0E84FB31AFD0037 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967AF8A83D5D630EAEBE639 /* ParameterEncoding.swift */; };
+		F6F6B04B86D964C261FDCEED /* FBSDKAccessTokenCacheV3_17.h in Headers */ = {isa = PBXBuildFile; fileRef = 72C194484D74B8345297FAA5 /* FBSDKAccessTokenCacheV3_17.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F78BE49D8AA2EDE1E9E8BDCF /* FBSDKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = D01F79A715DBBB9301D0CC4A /* FBSDKIcon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F8D7A35B341FBDB945AA0478 /* FBSDKPaymentObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = AD97571A85C92C0910E1191A /* FBSDKPaymentObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F8E0051888CD1C2200553C92 /* BFAppLinkReturnToRefererView.h in Headers */ = {isa = PBXBuildFile; fileRef = C1ADD73BBDD982C0869A40BE /* BFAppLinkReturnToRefererView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9228ED87368D8AC29BDC6C6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87886D0A5E6360AE4D96380 /* Request.swift */; };
+		F9CE064D784F3BEE9E3DF9CE /* Pods-WeatherCheck-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8172E016C1C9C373600B18E6 /* Pods-WeatherCheck-dummy.m */; };
+		FA25D9760E6A09BF3DB33B76 /* FBSDKServerConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 855CD613428220F8C45DCA6A /* FBSDKServerConfigurationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB8AD8D39A5D92678CFA3ABE /* FBSDKBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = D90CFE87A2AC075CF62B1707 /* FBSDKBase64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FC6E864B47AD0CDBBB31BE80 /* FBSDKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E26A10DBA8146939005329 /* FBSDKBase64.m */; };
+		FCFFFC554FC6E03457971C86 /* FBSDKAudioResourceLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6707FC5C5E8E194174133501 /* FBSDKAudioResourceLoader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FD5879FAB0DB013EA8E41708 /* FBSDKTypeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1EFA31F436BF3189DE04C /* FBSDKTypeUtility.m */; };
+		FDF5FAB2F5DDAFB670AA0B71 /* Pods-WeatherCheck-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD40003C4376F2DD55CC4DAB /* Pods-WeatherCheck-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF6F1D22DAA3DBAD2B182D39 /* FBSDKDynamicFrameworkLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F1599F3DEF9ADEC8CC7867 /* FBSDKDynamicFrameworkLoader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FFF6D9489A7973B2697DD1B6 /* BFWebViewAppLinkResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = B03315EF8F7EAF655EEC86C1 /* BFWebViewAppLinkResolver.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3AEF76146F0270A4C0B092EB /* PBXContainerItemProxy */ = {
+		56B5A42F7116C3D679785CDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FE7718993EA76DF1B92A539 /* Project object */;
+			containerPortal = 189A57B4D0B1C488E522AEF1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 411A41A6BC914AA65DDE7781;
-			remoteInfo = "Pods-WeatherCheck-SwiftyJSON";
+			remoteGlobalIDString = 1C3E142397B76E0808B71FCB;
+			remoteInfo = "Pods-WeatherCheck-Bolts";
 		};
-		E80E4EE2AA5C7AE5463D9E0A /* PBXContainerItemProxy */ = {
+		6183D72ED53FC9BCA55C30E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FE7718993EA76DF1B92A539 /* Project object */;
+			containerPortal = 189A57B4D0B1C488E522AEF1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A446A277056D112B4404BFD2;
+			remoteGlobalIDString = 1C3E142397B76E0808B71FCB;
+			remoteInfo = "Pods-WeatherCheck-Bolts";
+		};
+		768D8F5A3B2A0CB6E3B5E15E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189A57B4D0B1C488E522AEF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02D603519484184BE628C3D8;
 			remoteInfo = "Pods-WeatherCheck-Alamofire";
+		};
+		A41AA0536FB3812A44EC7660 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189A57B4D0B1C488E522AEF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8080303865051F67970C9ACF;
+			remoteInfo = "Pods-WeatherCheck-FBSDKCoreKit";
+		};
+		F831C74A5CC77B2DB8108DA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189A57B4D0B1C488E522AEF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12605331EBE2A0EEB605F371;
+			remoteInfo = "Pods-WeatherCheck-SwiftyJSON";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		077E87B2DB2C5B118EE49334 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CDFC5DC7DD0175C2FC1C717 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		0EB43FAE7AA564DBBC0CA35C /* Pods-WeatherCheck-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
-		10362DD24C9FCFC0766A3C87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		144AD13871E408A0A68BC231 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1D85F8B716EF27A5C48AFC96 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		2D88FBAD8C4B861C7DF76043 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		2F538A487E836EA7037A3146 /* Pods_WeatherCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33A42B89F61D9F31A245A6BD /* Pods-WeatherCheck-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck-Alamofire.modulemap"; sourceTree = "<group>"; };
-		34EA2B7F58E41A33AE0645DE /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		3E2462DBDCF3D2F64C7DF36C /* Pods-WeatherCheck-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherCheck-acknowledgements.plist"; sourceTree = "<group>"; };
-		4993DDB1D63B5060A14FF189 /* Pods-WeatherCheck-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-dummy.m"; sourceTree = "<group>"; };
-		4D1B8C43548EB9D95C6AB4F9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		592A503338866E213BD3AA11 /* Pods-WeatherCheck-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeatherCheck-frameworks.sh"; sourceTree = "<group>"; };
-		66E626F7B79CAD0D62EBF022 /* Pods-WeatherCheck-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherCheck-acknowledgements.markdown"; sourceTree = "<group>"; };
-		68BA505DBFEE9DCAD95BE434 /* Pods-WeatherCheck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck.modulemap"; sourceTree = "<group>"; };
-		73D6BA56D1516A4F967FF9BE /* Pods-WeatherCheck-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		882B1F049EDC8134939C9EAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9B4620E27E5EED4F538A51E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D1860956FB1E3775729C9B6 /* Pods-WeatherCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck.debug.xcconfig"; sourceTree = "<group>"; };
-		A1262FBC1A14C89E0D486A0D /* Pods-WeatherCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck.release.xcconfig"; sourceTree = "<group>"; };
-		A4E05228CAFE921CDA21DD95 /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
-		B220B15BBEFC2D76A8CC8B6F /* Pods-WeatherCheck-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		B3B88D6DFFF94A4B158C0238 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6051C7211CE3E115D7944EE /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		BBC9AFC83E0933C7B53D3DA1 /* Pods-WeatherCheck-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		C9348869F0DCD7BD77D60BFD /* Pods-WeatherCheck-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
-		CFAE243AEF35D3A1BF29C5F1 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		D4D6B710C070B78F6FA6102E /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
-		D5F44342A9402AA7F96EE68B /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		D70D8CFEB77C1D36CF9EF18F /* Pods-WeatherCheck-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-environment.h"; sourceTree = "<group>"; };
-		DBC4693A09A3887493F58926 /* Pods-WeatherCheck-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-umbrella.h"; sourceTree = "<group>"; };
-		DBF4B24C91F6D02A453FE6FC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E46412329C155093956A8FC1 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
-		E8D1E2C2B98231221D3723CA /* Pods-WeatherCheck-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		EED5BAF5F038F9FB8A14A213 /* Pods-WeatherCheck-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		F069BEA95DAD4016CFE2D262 /* Pods-WeatherCheck-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeatherCheck-resources.sh"; sourceTree = "<group>"; };
-		F51A9983DA95239D59EC8777 /* Pods-WeatherCheck-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-Alamofire-dummy.m"; sourceTree = "<group>"; };
-		F6D3888B47684DAB2B22A76B /* Pods-WeatherCheck-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		01BB509E3DFAB215313273B0 /* FBSDKSystemAccountStoreAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKSystemAccountStoreAdapter.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKSystemAccountStoreAdapter.m; sourceTree = "<group>"; };
+		01DF3EAC0C58CD3BCAE6D1BB /* BFAppLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLink.h; path = Bolts/iOS/BFAppLink.h; sourceTree = "<group>"; };
+		04C71F9B514D112BA2691BE1 /* Pods-WeatherCheck-Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-Bolts-prefix.pch"; sourceTree = "<group>"; };
+		05D2925ED9BC0E780BE522AE /* FBSDKSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKSettings.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKSettings.m; sourceTree = "<group>"; };
+		0757AB02250015E0C6A52A0E /* BFAppLinkReturnToRefererView_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkReturnToRefererView_Internal.h; path = Bolts/iOS/BFAppLinkReturnToRefererView_Internal.h; sourceTree = "<group>"; };
+		07D03331A1CBD88295F85A81 /* BFTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTask.h; path = Bolts/Common/BFTask.h; sourceTree = "<group>"; };
+		0844B3D789DE361F37B96D44 /* FBSDKLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKLogger.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKLogger.h; sourceTree = "<group>"; };
+		08FB034E90578D9D9602CE7A /* FBSDKBridgeAPIRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIRequest.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPIRequest.h; sourceTree = "<group>"; };
+		0A555B7F22DC8E218A31E0D8 /* FBSDKAccessTokenCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessTokenCaching.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCaching.h; sourceTree = "<group>"; };
+		0AF9905D42359298D0F9E72E /* BFURL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFURL.m; path = Bolts/iOS/BFURL.m; sourceTree = "<group>"; };
+		0BEAE0CB4973E33DF322B7D1 /* FBSDKAppEventsState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppEventsState.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsState.h; sourceTree = "<group>"; };
+		0F7552BFA2DEF8685B78FCC5 /* Pods_WeatherCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB80EA2BAF069D24E2A0F71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F2B55650C1B76D1E56BBE2 /* FBSDKMaleSilhouetteIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKMaleSilhouetteIcon.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKMaleSilhouetteIcon.h; sourceTree = "<group>"; };
+		10FFD92F4C53BF699ED8DEAB /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11A815E2A762F1CF53ED31CC /* FBSDKAccessToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessToken.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.h; sourceTree = "<group>"; };
+		1585C43BBCC23620319736D8 /* FBSDKBridgeAPIResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIResponse.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPIResponse.h; sourceTree = "<group>"; };
+		15E2073D9A8EFDF56FAB06C2 /* FBSDKBridgeAPIProtocolNativeV1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPIProtocolNativeV1.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolNativeV1.m; sourceTree = "<group>"; };
+		19A87333EB4494C6C546A08E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B59804E4C7A4568C46FFACF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C3E0718D88CA09B29DE083C /* FBSDKUIUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKUIUtility.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKUIUtility.h; sourceTree = "<group>"; };
+		1C42D39370B22685741E906A /* Pods-WeatherCheck-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-environment.h"; sourceTree = "<group>"; };
+		1C71725AA204037923A31048 /* FBSDKTimeSpentData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKTimeSpentData.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKTimeSpentData.h; sourceTree = "<group>"; };
+		1E9085A2D42F770DA5B2431A /* FBSDKUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKUtility.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKUtility.m; sourceTree = "<group>"; };
+		1F15E36C9D81A40F87C1B8EA /* FBSDKBridgeAPIRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPIRequest.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPIRequest.m; sourceTree = "<group>"; };
+		2010CCAFA4318CC8DD655984 /* FBSDKAppLinkUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppLinkUtility.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkUtility.h; sourceTree = "<group>"; };
+		20A0C7A3E1202B588C8B468F /* FBSDKAppEventsUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppEventsUtility.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsUtility.h; sourceTree = "<group>"; };
+		20ED07D517B0B134F17D033C /* FBSDKKeychainStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKKeychainStore.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKKeychainStore.h; sourceTree = "<group>"; };
+		210F7E31A7FF2B26B38B7562 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		21CD8131077D576D2E6D0EF2 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		2229D1CD3F7217DD69A8B8E7 /* FBSDKTriStateBOOL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKTriStateBOOL.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKTriStateBOOL.m; sourceTree = "<group>"; };
+		22E449A416F7F3F2E4C0534B /* Pods-WeatherCheck-Bolts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-Bolts.xcconfig"; sourceTree = "<group>"; };
+		24C319318CC9272C76751794 /* FBSDKWebDialog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKWebDialog.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/WebDialog/FBSDKWebDialog.m; sourceTree = "<group>"; };
+		250BFA73BC7AAE1EBDC8798E /* FBSDKGraphRequestDataAttachment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestDataAttachment.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestDataAttachment.h; sourceTree = "<group>"; };
+		2577767784ED9AA0E3FFD643 /* Pods-WeatherCheck-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeatherCheck-resources.sh"; sourceTree = "<group>"; };
+		262390D74375721CD345EA1D /* BFCancellationTokenSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenSource.h; path = Bolts/Common/BFCancellationTokenSource.h; sourceTree = "<group>"; };
+		264B147E3F534FD3A2F0E111 /* FBSDKConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKConstants.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKConstants.m; sourceTree = "<group>"; };
+		2701B80FEB929476CDD7BE19 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27F1E2F6AFF286EDBBFE56B9 /* FBSDKAppEventsState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppEventsState.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsState.m; sourceTree = "<group>"; };
+		2809FD74203F40371EDA9764 /* BFAppLink_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLink_Internal.h; path = Bolts/iOS/BFAppLink_Internal.h; sourceTree = "<group>"; };
+		28DE3672D7A96A52679B1497 /* FBSDKGraphRequestPiggybackManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestPiggybackManager.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestPiggybackManager.h; sourceTree = "<group>"; };
+		2A8D9C713455359987F2CD80 /* FBSDKBridgeAPIProtocolWebV2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIProtocolWebV2.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolWebV2.h; sourceTree = "<group>"; };
+		2BF98748A58F8A1AB57FB5DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2C8AF5BE41E0B88A6536AEA3 /* FBSDKSettings+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKSettings+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKSettings+Internal.h"; sourceTree = "<group>"; };
+		2E8C96FC295A5949A6D26B15 /* BFCancellationTokenSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenSource.m; path = Bolts/Common/BFCancellationTokenSource.m; sourceTree = "<group>"; };
+		2EA942186D8967F214230ED7 /* FBSDKGraphRequest+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKGraphRequest+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequest+Internal.h"; sourceTree = "<group>"; };
+		2EDC536B351ED9C3EC49753D /* BFAppLinkTarget.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkTarget.h; path = Bolts/iOS/BFAppLinkTarget.h; sourceTree = "<group>"; };
+		2F2372752861393187E2B27F /* FBSDKMutableCopying.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKMutableCopying.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKMutableCopying.h; sourceTree = "<group>"; };
+		2FBEC78498D52A9653E81725 /* FBSDKTimeSpentData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKTimeSpentData.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKTimeSpentData.m; sourceTree = "<group>"; };
+		2FC67BD590F9ADF3127DA164 /* FBSDKCoreKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKCoreKit.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit.h; sourceTree = "<group>"; };
+		2FC7AFB9F7CB2642F103C57D /* FBSDKBridgeAPIRequest+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKBridgeAPIRequest+Private.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPIRequest+Private.h"; sourceTree = "<group>"; };
+		3005D64E958AABFE317011E5 /* Pods-WeatherCheck-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		301A86A338CB4A11C0596390 /* FBSDKLogo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKLogo.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKLogo.m; sourceTree = "<group>"; };
+		30B8BE159491148FA4B9B1D5 /* FBSDKCloseIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKCloseIcon.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKCloseIcon.m; sourceTree = "<group>"; };
+		30F7B75D0417542979AF99F8 /* BFURL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFURL.h; path = Bolts/iOS/BFURL.h; sourceTree = "<group>"; };
+		3215492D75816FDD608E8582 /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
+		32C13C383736411308301A13 /* FBSDKAppEventsDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppEventsDeviceInfo.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsDeviceInfo.m; sourceTree = "<group>"; };
+		3350162582A2DC33CD7BB966 /* Pods-WeatherCheck-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		3356D662815E1EAC9DB49122 /* FBSDKAppEvents+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKAppEvents+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEvents+Internal.h"; sourceTree = "<group>"; };
+		33ABBFB12A8963AD4DBE122B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36C64226977CF0C5B16B72F4 /* FBSDKKeychainStoreViaBundleID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKKeychainStoreViaBundleID.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKKeychainStoreViaBundleID.m; sourceTree = "<group>"; };
+		37ACB8A1245FA8F38C73FF5C /* FBSDKDialogConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKDialogConfiguration.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKDialogConfiguration.m; sourceTree = "<group>"; };
+		37F69FB54A628BC39A0BA265 /* Pods-WeatherCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck.debug.xcconfig"; sourceTree = "<group>"; };
+		3894223704C1DBB89FECBF45 /* FBSDKMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKMath.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKMath.h; sourceTree = "<group>"; };
+		3967AF8A83D5D630EAEBE639 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		39DBF82C1EC1CA8F26039BC8 /* FBSDKBridgeAPIProtocolWebV2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPIProtocolWebV2.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolWebV2.m; sourceTree = "<group>"; };
+		3AB20B4B079D759F88EC7F5E /* FBSDKErrorRecoveryAttempter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKErrorRecoveryAttempter.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ErrorRecovery/FBSDKErrorRecoveryAttempter.h; sourceTree = "<group>"; };
+		3DFD971291F677E5BF960EED /* Pods-WeatherCheck-Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-Bolts-dummy.m"; sourceTree = "<group>"; };
+		3EA05D8624B18FC4E7203A4C /* BFAppLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLink.m; path = Bolts/iOS/BFAppLink.m; sourceTree = "<group>"; };
+		408CFDF88185C61B186F5D4D /* FBSDKGraphRequestPiggybackManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequestPiggybackManager.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestPiggybackManager.m; sourceTree = "<group>"; };
+		42F2F7323FC982A10563B7DF /* FBSDKGraphErrorRecoveryProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphErrorRecoveryProcessor.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.m; sourceTree = "<group>"; };
+		430A101BF93505CBBCBBD39A /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		45B79AA13E7FB144AA11404F /* Pods-WeatherCheck-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		4776833550EDA03A1D3867F5 /* BFTaskCompletionSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTaskCompletionSource.m; path = Bolts/Common/BFTaskCompletionSource.m; sourceTree = "<group>"; };
+		4A10998C17B3AE9934939398 /* FBSDKCopying.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKCopying.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKCopying.h; sourceTree = "<group>"; };
+		4AA7EB7C8ED1D8DF3492A3FB /* Pods-WeatherCheck-FBSDKCoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck-FBSDKCoreKit.modulemap"; sourceTree = "<group>"; };
+		4AD3BE390C701A202B20D257 /* FBSDKWebDialogView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKWebDialogView.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/WebDialog/FBSDKWebDialogView.h; sourceTree = "<group>"; };
+		4B21819C95D0A2D65F837C87 /* FBSDKCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKCrypto.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Cryptography/FBSDKCrypto.h; sourceTree = "<group>"; };
+		4E8E0F9F7095BDE9198A2D9D /* FBSDKBridgeAPICrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPICrypto.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPICrypto.h; sourceTree = "<group>"; };
+		4EE2AE9F965F80EBFDF7D564 /* FBSDKKeychainStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKKeychainStore.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKKeychainStore.m; sourceTree = "<group>"; };
+		4FC454E4BCE4D8D72CB337C3 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		51DD9AEA1AB282C94C4242C4 /* FBSDKErrorRecoveryAttempter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKErrorRecoveryAttempter.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ErrorRecovery/FBSDKErrorRecoveryAttempter.m; sourceTree = "<group>"; };
+		525F4FAE59FFA11946A30D20 /* FBSDKBridgeAPIProtocolType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIProtocolType.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPIProtocolType.h; sourceTree = "<group>"; };
+		526096E629666E6EA92A1ACC /* FBSDKAppLinkUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppLinkUtility.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkUtility.m; sourceTree = "<group>"; };
+		528597545DEAE04389703B30 /* BFMeasurementEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFMeasurementEvent.h; path = Bolts/iOS/BFMeasurementEvent.h; sourceTree = "<group>"; };
+		54E73C09DABF26F162098740 /* FBSDKServerConfigurationManager+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKServerConfigurationManager+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKServerConfigurationManager+Internal.h"; sourceTree = "<group>"; };
+		555D0E189D8EAD3C7C086D5C /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		5813514ABD9803CF3DB6AD38 /* FBSDKServerConfigurationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKServerConfigurationManager.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKServerConfigurationManager.m; sourceTree = "<group>"; };
+		581698AC26E49BEB38C29F52 /* FBSDKViewImpressionTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKViewImpressionTracker.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKViewImpressionTracker.h; sourceTree = "<group>"; };
+		5A1838B1F6D2228C5B3C45C8 /* BFCancellationToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationToken.h; path = Bolts/Common/BFCancellationToken.h; sourceTree = "<group>"; };
+		5BDC5DB9D3001E273A9C8F24 /* FBSDKBridgeAPICrypto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPICrypto.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPICrypto.m; sourceTree = "<group>"; };
+		5C480D0B40B4F41986A02FC4 /* FBSDKApplicationDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKApplicationDelegate.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKApplicationDelegate.m; sourceTree = "<group>"; };
+		5C4D56A0487B12F8D053B2A1 /* Pods-WeatherCheck-FBSDKCoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-FBSDKCoreKit-dummy.m"; sourceTree = "<group>"; };
+		5E23D201C8D4E10C5FF11D6C /* FBSDKGraphRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequest.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequest.h; sourceTree = "<group>"; };
+		603EE6EA5B142AE60887194F /* FBSDKAppLinkResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppLinkResolver.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.h; sourceTree = "<group>"; };
+		60B6547660CC8A80B4BE11C3 /* FBSDKAccessTokenCacheV3_17.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAccessTokenCacheV3_17.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV3_17.m; sourceTree = "<group>"; };
+		630865EBC1F8207B6D504504 /* FBSDKAppEventsStateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppEventsStateManager.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsStateManager.m; sourceTree = "<group>"; };
+		6313750107FE5122E7956194 /* BFAppLinkNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkNavigation.h; path = Bolts/iOS/BFAppLinkNavigation.h; sourceTree = "<group>"; };
+		650A1212A8D75E5827CDBC9A /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6518382B8B80D70877DDEA83 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6707FC5C5E8E194174133501 /* FBSDKAudioResourceLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAudioResourceLoader.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKAudioResourceLoader.h; sourceTree = "<group>"; };
+		67634F5532A738B2C9721A11 /* FBSDKApplicationDelegate+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKApplicationDelegate+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKApplicationDelegate+Internal.h"; sourceTree = "<group>"; };
+		68DBBDA7A25525010589CB7C /* FBSDKPaymentObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKPaymentObserver.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKPaymentObserver.m; sourceTree = "<group>"; };
+		69398652249E85A01FD994A9 /* FBSDKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKError.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKError.h; sourceTree = "<group>"; };
+		6A4BC6F0A11FA775C91E0401 /* BFURL_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFURL_Internal.h; path = Bolts/iOS/BFURL_Internal.h; sourceTree = "<group>"; };
+		6A565A26F5A2F6C99EC15779 /* Pods-WeatherCheck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck.modulemap"; sourceTree = "<group>"; };
+		6D0E2CB201376223521367DD /* FBSDKKeychainStoreViaBundleID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKKeychainStoreViaBundleID.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKKeychainStoreViaBundleID.h; sourceTree = "<group>"; };
+		70C63623FF134A98A39C071D /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
+		7197073A4EE7574EF87CB1EC /* FBSDKDialogConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKDialogConfiguration.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKDialogConfiguration.h; sourceTree = "<group>"; };
+		72C194484D74B8345297FAA5 /* FBSDKAccessTokenCacheV3_17.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessTokenCacheV3_17.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV3_17.h; sourceTree = "<group>"; };
+		72E26A10DBA8146939005329 /* FBSDKBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBase64.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Base64/FBSDKBase64.m; sourceTree = "<group>"; };
+		72FFFCF46AEE4206C0FD6585 /* FBSDKButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKButton.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.h; sourceTree = "<group>"; };
+		7430DDCA4895DC1F4A86AA19 /* Pods-WeatherCheck-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		746EE45F31BD8DC4E16165E6 /* FBSDKServerConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKServerConfiguration.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKServerConfiguration.m; sourceTree = "<group>"; };
+		755E5008BE638C552149DD2F /* FBSDKProfilePictureView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKProfilePictureView.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKProfilePictureView.m; sourceTree = "<group>"; };
+		7793F3041BD71DECDE59078A /* FBSDKAccessTokenCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessTokenCache.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCache.h; sourceTree = "<group>"; };
+		7B951B7D1610C58D9A9B234D /* BFAppLinkNavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkNavigation.m; path = Bolts/iOS/BFAppLinkNavigation.m; sourceTree = "<group>"; };
+		7C541386EDCB45542D338F1D /* Pods-WeatherCheck-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		7C8FEA8ABEC7FC60C45E03A8 /* FBSDKAppEventsStateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppEventsStateManager.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsStateManager.h; sourceTree = "<group>"; };
+		7D1C85327BE16CD3032490F8 /* FBSDKGraphErrorRecoveryProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphErrorRecoveryProcessor.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.h; sourceTree = "<group>"; };
+		7D2BEDBDBF9DAC7D6029CE6E /* FBSDKAppEventsDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppEventsDeviceInfo.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsDeviceInfo.h; sourceTree = "<group>"; };
+		7DB43D5473A583579F1A74F9 /* FBSDKSystemAccountStoreAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKSystemAccountStoreAdapter.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKSystemAccountStoreAdapter.h; sourceTree = "<group>"; };
+		7DC1EFA31F436BF3189DE04C /* FBSDKTypeUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKTypeUtility.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKTypeUtility.m; sourceTree = "<group>"; };
+		7DE1247E00587939BEA5954A /* Pods-WeatherCheck-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherCheck-acknowledgements.plist"; sourceTree = "<group>"; };
+		7E525E4ECCA3F2814028F12F /* FBSDKInternalUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKInternalUtility.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKInternalUtility.h; sourceTree = "<group>"; };
+		7F7E87BF0D24513EED4CD941 /* FBSDKError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKError.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKError.m; sourceTree = "<group>"; };
+		7FE5DDE4A0B5F710AF75444A /* FBSDKGraphRequestConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequestConnection.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestConnection.m; sourceTree = "<group>"; };
+		810C8960EF192028D4BE7CD7 /* FBSDKAccessToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAccessToken.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.m; sourceTree = "<group>"; };
+		8172E016C1C9C373600B18E6 /* Pods-WeatherCheck-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-dummy.m"; sourceTree = "<group>"; };
+		833592C15BD78740FF731A86 /* FBSDKErrorRecoveryConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKErrorRecoveryConfiguration.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKErrorRecoveryConfiguration.h; sourceTree = "<group>"; };
+		84F5A8031E1432535F50458A /* FBSDKGraphRequestBody.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequestBody.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestBody.m; sourceTree = "<group>"; };
+		85088A4B583CBB3DD0EE208C /* FBSDKTestUsersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKTestUsersManager.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKTestUsersManager.h; sourceTree = "<group>"; };
+		855CD613428220F8C45DCA6A /* FBSDKServerConfigurationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKServerConfigurationManager.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKServerConfigurationManager.h; sourceTree = "<group>"; };
+		86803DEE1A6A2C1FDC0A7067 /* FBSDKBridgeAPIProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIProtocol.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPIProtocol.h; sourceTree = "<group>"; };
+		86E18EBD00E3440CF7C1E536 /* Pods-WeatherCheck-FBSDKCoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-FBSDKCoreKit.xcconfig"; sourceTree = "<group>"; };
+		86F55DB9A23C3FE6994E3A37 /* Pods-WeatherCheck-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck-Alamofire.modulemap"; sourceTree = "<group>"; };
+		8764CA961252F75256DC41AB /* FBSDKInternalUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKInternalUtility.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKInternalUtility.m; sourceTree = "<group>"; };
+		8ADF53D3892F01D92ADA1BA2 /* FBSDKGraphRequestMetadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequestMetadata.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestMetadata.m; sourceTree = "<group>"; };
+		8C5504D076B0B9C9BB556D73 /* FBSDKBridgeAPIResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPIResponse.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKBridgeAPIResponse.m; sourceTree = "<group>"; };
+		8D56766565DDCECADE85003E /* FBSDKErrorConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKErrorConfiguration.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKErrorConfiguration.m; sourceTree = "<group>"; };
+		8E42022B8477121EF6E366E0 /* FBSDKGraphRequestMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestMetadata.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestMetadata.h; sourceTree = "<group>"; };
+		8EE21AB59FDC62075D424F0A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8F38C0962D599D8EB4BB72F0 /* FBSDKColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKColor.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKColor.h; sourceTree = "<group>"; };
+		9084D1E35FF100F98705B6F9 /* FBSDKProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKProfile.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKProfile.h; sourceTree = "<group>"; };
+		9094E68531FF49CEAC28DBB7 /* FBSDKAccessTokenCacheV3.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAccessTokenCacheV3.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV3.m; sourceTree = "<group>"; };
+		90CED90C940347F828A4AFF0 /* FBSDKAppEventsUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppEventsUtility.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKAppEventsUtility.m; sourceTree = "<group>"; };
+		95184557355D15AD159080CA /* FBSDKProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKProfile.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKProfile.m; sourceTree = "<group>"; };
+		955F84C7EBEA448C894D878F /* FBSDKLogo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKLogo.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKLogo.h; sourceTree = "<group>"; };
+		95CFD69E17056ED03EBE7FBD /* FBSDKAccessTokenCacheV3_21.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAccessTokenCacheV3_21.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV3_21.m; sourceTree = "<group>"; };
+		96301FB08969964BC1F416C6 /* FBSDKTestUsersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKTestUsersManager.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKTestUsersManager.m; sourceTree = "<group>"; };
+		969310C7A3A0D54F872069EF /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		96DBD26AFAFCE9221177242F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		974D6BDB3C488923A4A56686 /* FBSDKGraphRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequest.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequest.m; sourceTree = "<group>"; };
+		9988AE35740D2D3A337B8237 /* BFCancellationTokenRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenRegistration.m; path = Bolts/Common/BFCancellationTokenRegistration.m; sourceTree = "<group>"; };
+		9A24AEEECF33DC851DC9ED61 /* FBSDKWebDialogView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKWebDialogView.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/WebDialog/FBSDKWebDialogView.m; sourceTree = "<group>"; };
+		9AB1748046FF13F08A3D2BF2 /* FBSDKBoltsMeasurementEventListener.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBoltsMeasurementEventListener.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppLink/FBSDKBoltsMeasurementEventListener.m; sourceTree = "<group>"; };
+		9B3BD9B0D6F6744FA3209E6F /* FBSDKTriStateBOOL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKTriStateBOOL.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKTriStateBOOL.h; sourceTree = "<group>"; };
+		9BAE65003919FD7EBFA8552C /* FBSDKCoreKit+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKCoreKit+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKCoreKit+Internal.h"; sourceTree = "<group>"; };
+		9E1B8C11B35E1612A920EDB0 /* BFCancellationToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationToken.m; path = Bolts/Common/BFCancellationToken.m; sourceTree = "<group>"; };
+		9E5BA31A2616AE137F2E502D /* Pods-WeatherCheck-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		9E80041F4C4833C457041CDE /* FBSDKBridgeAPIProtocolWebV1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIProtocolWebV1.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolWebV1.h; sourceTree = "<group>"; };
+		A17093C2B4F526D8006C3966 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A23BC6C30257D88BC697BDD0 /* BFCancellationTokenRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenRegistration.h; path = Bolts/Common/BFCancellationTokenRegistration.h; sourceTree = "<group>"; };
+		A24DD32AACC4513A29F5FD69 /* FBSDKBridgeAPIProtocolNativeV1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBridgeAPIProtocolNativeV1.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolNativeV1.h; sourceTree = "<group>"; };
+		A6828469D52D7022AB2F9669 /* BFMeasurementEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFMeasurementEvent.m; path = Bolts/iOS/BFMeasurementEvent.m; sourceTree = "<group>"; };
+		A6BB1A2D4CC9F775829ADF43 /* BFAppLinkReturnToRefererView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkReturnToRefererView.m; path = Bolts/iOS/BFAppLinkReturnToRefererView.m; sourceTree = "<group>"; };
+		A9DCDC4B823CA0C519E6C6B8 /* FBSDKApplicationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKApplicationDelegate.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKApplicationDelegate.h; sourceTree = "<group>"; };
+		AA8AAE4E63F993E5A62CB832 /* FBSDKURLConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKURLConnection.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKURLConnection.h; sourceTree = "<group>"; };
+		AC16473EC1737F5C84222109 /* FBSDKConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKConstants.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKConstants.h; sourceTree = "<group>"; };
+		AD97571A85C92C0910E1191A /* FBSDKPaymentObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKPaymentObserver.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppEvents/FBSDKPaymentObserver.h; sourceTree = "<group>"; };
+		AEC6A0187CA99CE3550E059B /* Pods-WeatherCheck-Bolts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WeatherCheck-Bolts.modulemap"; sourceTree = "<group>"; };
+		AFEC1E40636074E365FEB125 /* _FBSDKTemporaryErrorRecoveryAttempter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _FBSDKTemporaryErrorRecoveryAttempter.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ErrorRecovery/_FBSDKTemporaryErrorRecoveryAttempter.m; sourceTree = "<group>"; };
+		B03315EF8F7EAF655EEC86C1 /* BFWebViewAppLinkResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFWebViewAppLinkResolver.m; path = Bolts/iOS/BFWebViewAppLinkResolver.m; sourceTree = "<group>"; };
+		B0926F79EC0148BC80C840A6 /* BFExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFExecutor.h; path = Bolts/Common/BFExecutor.h; sourceTree = "<group>"; };
+		B1F1599F3DEF9ADEC8CC7867 /* FBSDKDynamicFrameworkLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKDynamicFrameworkLoader.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKDynamicFrameworkLoader.h; sourceTree = "<group>"; };
+		B398475D2DDF5E7418E44AC0 /* FBSDKAccessTokenCacheV4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessTokenCacheV4.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV4.h; sourceTree = "<group>"; };
+		B3C356AC8D9AB0064AF52245 /* BFWebViewAppLinkResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFWebViewAppLinkResolver.h; path = Bolts/iOS/BFWebViewAppLinkResolver.h; sourceTree = "<group>"; };
+		B5A3F01CB86E8252FD94AD58 /* FBSDKViewImpressionTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKViewImpressionTracker.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKViewImpressionTracker.m; sourceTree = "<group>"; };
+		B8263F6290050328FB8F71CC /* Pods-WeatherCheck-FBSDKCoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-FBSDKCoreKit-prefix.pch"; sourceTree = "<group>"; };
+		BAB92152765150318AAFCBC5 /* BFAppLinkResolving.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkResolving.h; path = Bolts/iOS/BFAppLinkResolving.h; sourceTree = "<group>"; };
+		BC261F8F15B648889C860CA9 /* FBSDKWebDialog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKWebDialog.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/WebDialog/FBSDKWebDialog.h; sourceTree = "<group>"; };
+		BD15A4DE62A5C114A3C8FF84 /* Pods-WeatherCheck-Bolts-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-Bolts-Private.xcconfig"; sourceTree = "<group>"; };
+		BEB9D4C78E049748ED595A17 /* Pods-WeatherCheck-Bolts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-Bolts-umbrella.h"; sourceTree = "<group>"; };
+		C0058F760245715B3C4F117C /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		C1ADD73BBDD982C0869A40BE /* BFAppLinkReturnToRefererView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkReturnToRefererView.h; path = Bolts/iOS/BFAppLinkReturnToRefererView.h; sourceTree = "<group>"; };
+		C5CCBE91B8DADB1A52600B74 /* FBSDKAudioResourceLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAudioResourceLoader.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKAudioResourceLoader.m; sourceTree = "<group>"; };
+		C64FED2590A40F180566E14F /* Pods-WeatherCheck-FBSDKCoreKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-FBSDKCoreKit-Private.xcconfig"; sourceTree = "<group>"; };
+		C9079254CED120409C6C9AF0 /* FBSDKAppEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAppEvents.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAppEvents.h; sourceTree = "<group>"; };
+		C9389E44E4577696E3B36B1E /* Pods-WeatherCheck-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		C9A85FFA0F14A9006969DBB5 /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
+		CB110E31683CD61E63539D44 /* Pods-WeatherCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck.release.xcconfig"; sourceTree = "<group>"; };
+		CCB18BC2244FE27E7003C8DC /* FBSDKMath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKMath.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKMath.m; sourceTree = "<group>"; };
+		CD739195536CF03C4AE694D1 /* FBSDKProfile+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKProfile+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKProfile+Internal.h"; sourceTree = "<group>"; };
+		CE80D46FA9F70B7BD8867B00 /* FBSDKBoltsMeasurementEventListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBoltsMeasurementEventListener.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/AppLink/FBSDKBoltsMeasurementEventListener.h; sourceTree = "<group>"; };
+		CEA7158FFDA7F7E3E3CF6F59 /* FBSDKButton+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKButton+Subclass.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKButton+Subclass.h"; sourceTree = "<group>"; };
+		CFDE6770D3E63E56EC28F468 /* FBSDKDynamicFrameworkLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKDynamicFrameworkLoader.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKDynamicFrameworkLoader.m; sourceTree = "<group>"; };
+		D01F79A715DBBB9301D0CC4A /* FBSDKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKIcon.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKIcon.h; sourceTree = "<group>"; };
+		D140DD722790C0BADC52A6E2 /* FBSDKMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKMacros.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKMacros.h; sourceTree = "<group>"; };
+		D32F7E46BD9C6475AAB6EF2D /* BoltsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoltsVersion.h; path = Bolts/Common/BoltsVersion.h; sourceTree = "<group>"; };
+		D41BE038590C2029D885A272 /* BFAppLinkTarget.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkTarget.m; path = Bolts/iOS/BFAppLinkTarget.m; sourceTree = "<group>"; };
+		D5835308241269149B46FBD3 /* BFAppLinkReturnToRefererController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFAppLinkReturnToRefererController.h; path = Bolts/iOS/BFAppLinkReturnToRefererController.h; sourceTree = "<group>"; };
+		D643232D964CEB0E5527559A /* FBSDKGraphRequestDataAttachment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKGraphRequestDataAttachment.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestDataAttachment.m; sourceTree = "<group>"; };
+		D7287C0B32BF7FFF97703505 /* FBSDKMaleSilhouetteIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKMaleSilhouetteIcon.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKMaleSilhouetteIcon.m; sourceTree = "<group>"; };
+		D87886D0A5E6360AE4D96380 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		D90CFE87A2AC075CF62B1707 /* FBSDKBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKBase64.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Base64/FBSDKBase64.h; sourceTree = "<group>"; };
+		D91E24056BBE8760D820816F /* Pods-WeatherCheck-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		DA339524F6A64424AEE96058 /* FBSDKAccessTokenCacheV4.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAccessTokenCacheV4.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV4.m; sourceTree = "<group>"; };
+		DAE972D45F76F7EF6BBF36E7 /* FBSDKErrorConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKErrorConfiguration.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKErrorConfiguration.h; sourceTree = "<group>"; };
+		DAFE000BF96DE58377DD47E4 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherCheck-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		DB0FE9AE75233EBA35B622CD /* FBSDKUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKUtility.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKUtility.h; sourceTree = "<group>"; };
+		DBEE65D208EA0BD885D3722D /* _FBSDKTemporaryErrorRecoveryAttempter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _FBSDKTemporaryErrorRecoveryAttempter.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ErrorRecovery/_FBSDKTemporaryErrorRecoveryAttempter.h; sourceTree = "<group>"; };
+		DC5AB06DF5363DC67BC0A9E1 /* FBSDKButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKButton.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.m; sourceTree = "<group>"; };
+		DD12A325C30DF047CCC74E97 /* Pods-WeatherCheck-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeatherCheck-frameworks.sh"; sourceTree = "<group>"; };
+		DD9D9306825278AA36FF1DEE /* FBSDKTypeUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKTypeUtility.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKTypeUtility.h; sourceTree = "<group>"; };
+		DFC1B6FEFE4B9526EFB8F747 /* Pods-WeatherCheck-FBSDKCoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-FBSDKCoreKit-umbrella.h"; sourceTree = "<group>"; };
+		E0B401178558F15F8C8F8493 /* FBSDKColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKColor.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKColor.m; sourceTree = "<group>"; };
+		E0C99F1325DC2707EFA6B099 /* FBSDKBridgeAPIProtocolWebV1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKBridgeAPIProtocolWebV1.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/ProtocolVersions/FBSDKBridgeAPIProtocolWebV1.m; sourceTree = "<group>"; };
+		E27831A463DB1270A753BF20 /* FBSDKURLOpening.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKURLOpening.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/BridgeAPI/FBSDKURLOpening.h; sourceTree = "<group>"; };
+		E3570D74B52CA5AD4CB6F9DD /* FBSDKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKIcon.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKIcon.m; sourceTree = "<group>"; };
+		E35F942DA49060396A9AA6AC /* FBSDKAppLinkResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppLinkResolver.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.m; sourceTree = "<group>"; };
+		E614A01AD468A45B8D5B7623 /* Pods-WeatherCheck-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherCheck-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		E63AD070236B1D696B825391 /* BFAppLinkReturnToRefererController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFAppLinkReturnToRefererController.m; path = Bolts/iOS/BFAppLinkReturnToRefererController.m; sourceTree = "<group>"; };
+		E753378A50B7181BBCB35185 /* FBSDKAppEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAppEvents.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAppEvents.m; sourceTree = "<group>"; };
+		E9433D5801F2A1BC3673842D /* FBSDKAccessTokenCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKAccessTokenCache.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCache.m; sourceTree = "<group>"; };
+		EA47F3FF4C8A7583AA400FB2 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		EB36A54FF05EE4ED691702FC /* FBSDKCrypto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKCrypto.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Cryptography/FBSDKCrypto.m; sourceTree = "<group>"; };
+		EB58F3CA67B690A73F524EF3 /* FBSDKAccessTokenCacheV3_21.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessTokenCacheV3_21.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV3_21.h; sourceTree = "<group>"; };
+		EC7C7CB1ED6F6078657862D4 /* FBSDKGraphRequestConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestConnection.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestConnection.h; sourceTree = "<group>"; };
+		F000162A0DF6F7DC801CC0CD /* FBSDKCloseIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKCloseIcon.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKCloseIcon.h; sourceTree = "<group>"; };
+		F0310466651285E533C45A79 /* FBSDKSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKSettings.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKSettings.h; sourceTree = "<group>"; };
+		F1E412B217F09B20A95AE400 /* FBSDKLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKLogger.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKLogger.m; sourceTree = "<group>"; };
+		F291278A75ACD0D8F64448B3 /* Pods-WeatherCheck-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherCheck-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F45F7AA4CD0EEE33F27D2DFF /* Bolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bolts.m; path = Bolts/Common/Bolts.m; sourceTree = "<group>"; };
+		F77DA0C6CA8DE1162D975014 /* FBSDKGraphRequestBody.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKGraphRequestBody.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestBody.h; sourceTree = "<group>"; };
+		F94ABD2117BB3D7ED144DBB4 /* FBSDKErrorRecoveryConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKErrorRecoveryConfiguration.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKErrorRecoveryConfiguration.m; sourceTree = "<group>"; };
+		FB4FD33A25A0EEAE1736DFDE /* BFMeasurementEvent_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFMeasurementEvent_Internal.h; path = Bolts/iOS/BFMeasurementEvent_Internal.h; sourceTree = "<group>"; };
+		FB867272D5EAC81ABFE1007B /* FBSDKGraphRequestConnection+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBSDKGraphRequestConnection+Internal.h"; path = "FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequestConnection+Internal.h"; sourceTree = "<group>"; };
+		FBE2B34148772EC40F36D731 /* FBSDKURLConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKURLConnection.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKURLConnection.m; sourceTree = "<group>"; };
+		FC08D0F1F9B8577F9CD00ADC /* BFTaskCompletionSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTaskCompletionSource.h; path = Bolts/Common/BFTaskCompletionSource.h; sourceTree = "<group>"; };
+		FD40003C4376F2DD55CC4DAB /* Pods-WeatherCheck-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherCheck-umbrella.h"; sourceTree = "<group>"; };
+		FD87507A319B54930204D967 /* FBSDKServerConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKServerConfiguration.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/ServerConfiguration/FBSDKServerConfiguration.h; sourceTree = "<group>"; };
+		FDE6AC27ADBAA98991A0D7DF /* FBSDKProfilePictureView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKProfilePictureView.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKProfilePictureView.h; sourceTree = "<group>"; };
+		FF3F47B255BC18EAB4013263 /* FBSDKAccessTokenCacheV3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessTokenCacheV3.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCacheV3.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5318381D14C48582F659501D /* Frameworks */ = {
+		16676B16EF0A91D9EABBB598 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C860D2371733431CAE462B20 /* Foundation.framework in Frameworks */,
+				8B7FF6E6BCE65E3B1829B35C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9782F250F2A2029629321F7B /* Frameworks */ = {
+		58765A7A192931A145DFBB51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EF200AE24DB22975434BD22 /* Foundation.framework in Frameworks */,
+				9B18312157A612EEAA5B29A5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4AB0FDAB655F14302E75460 /* Frameworks */ = {
+		5DD87BAA491D69C5B51DDBB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB15B53FD2D3E00FD624DCE0 /* Foundation.framework in Frameworks */,
+				1586EF9EAB6D76B6208211F2 /* Bolts.framework in Frameworks */,
+				5451600754C5C8A01A1AD225 /* Bolts.framework in Frameworks */,
+				10B070758EB52C71F270FEB4 /* Bolts.framework in Frameworks */,
+				06E3D5CF11EFB9957EBCA425 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4EAED6F83EAF75B80A9CE6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B844F343D13B75C99019E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18FC800A64AB20B655F6866 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53422420EF842C9057A91B16 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BA21B8FBBFA975DE2BC7CC8 /* Pods-WeatherCheck */ = {
+		13460FE1C9FCD0AB637C3347 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				077E87B2DB2C5B118EE49334 /* Info.plist */,
-				68BA505DBFEE9DCAD95BE434 /* Pods-WeatherCheck.modulemap */,
-				66E626F7B79CAD0D62EBF022 /* Pods-WeatherCheck-acknowledgements.markdown */,
-				3E2462DBDCF3D2F64C7DF36C /* Pods-WeatherCheck-acknowledgements.plist */,
-				4993DDB1D63B5060A14FF189 /* Pods-WeatherCheck-dummy.m */,
-				D70D8CFEB77C1D36CF9EF18F /* Pods-WeatherCheck-environment.h */,
-				592A503338866E213BD3AA11 /* Pods-WeatherCheck-frameworks.sh */,
-				F069BEA95DAD4016CFE2D262 /* Pods-WeatherCheck-resources.sh */,
-				DBC4693A09A3887493F58926 /* Pods-WeatherCheck-umbrella.h */,
-				9D1860956FB1E3775729C9B6 /* Pods-WeatherCheck.debug.xcconfig */,
-				A1262FBC1A14C89E0D486A0D /* Pods-WeatherCheck.release.xcconfig */,
-			);
-			name = "Pods-WeatherCheck";
-			path = "Target Support Files/Pods-WeatherCheck";
-			sourceTree = "<group>";
-		};
-		1116ECE656FE4E9BBFB4B182 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DBF4B24C91F6D02A453FE6FC /* Alamofire.framework */,
-				2F538A487E836EA7037A3146 /* Pods_WeatherCheck.framework */,
-				B3B88D6DFFF94A4B158C0238 /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		16F84D1F93344C209CFAB741 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0BA21B8FBBFA975DE2BC7CC8 /* Pods-WeatherCheck */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		64E8D317C9606248AECF6ED5 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				882B1F049EDC8134939C9EAE /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		67EABFA2A0254042B7CE0E85 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				4D1B8C43548EB9D95C6AB4F9 /* SwiftyJSON.swift */,
-				CBA8A1C82CD8118396407451 /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		682129277F773AFFE66EF518 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				64E8D317C9606248AECF6ED5 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6FDAA5B1EDF019C8E8B021A3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9B4620E27E5EED4F538A51E0 /* Info.plist */,
-				33A42B89F61D9F31A245A6BD /* Pods-WeatherCheck-Alamofire.modulemap */,
-				F6D3888B47684DAB2B22A76B /* Pods-WeatherCheck-Alamofire.xcconfig */,
-				E46412329C155093956A8FC1 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */,
-				F51A9983DA95239D59EC8777 /* Pods-WeatherCheck-Alamofire-dummy.m */,
-				EED5BAF5F038F9FB8A14A213 /* Pods-WeatherCheck-Alamofire-prefix.pch */,
-				BBC9AFC83E0933C7B53D3DA1 /* Pods-WeatherCheck-Alamofire-umbrella.h */,
+				0FB80EA2BAF069D24E2A0F71 /* Info.plist */,
+				86F55DB9A23C3FE6994E3A37 /* Pods-WeatherCheck-Alamofire.modulemap */,
+				45B79AA13E7FB144AA11404F /* Pods-WeatherCheck-Alamofire.xcconfig */,
+				DAFE000BF96DE58377DD47E4 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */,
+				C9389E44E4577696E3B36B1E /* Pods-WeatherCheck-Alamofire-dummy.m */,
+				3350162582A2DC33CD7BB966 /* Pods-WeatherCheck-Alamofire-prefix.pch */,
+				7C541386EDCB45542D338F1D /* Pods-WeatherCheck-Alamofire-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-WeatherCheck-Alamofire";
 			sourceTree = "<group>";
 		};
-		89531AA64384F7BC4F41DD99 /* Alamofire */ = {
+		16C0E15439CF579F76195E53 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1D85F8B716EF27A5C48AFC96 /* Alamofire.swift */,
-				D4D6B710C070B78F6FA6102E /* Download.swift */,
-				34EA2B7F58E41A33AE0645DE /* Manager.swift */,
-				B6051C7211CE3E115D7944EE /* ParameterEncoding.swift */,
-				0CDFC5DC7DD0175C2FC1C717 /* Request.swift */,
-				2D88FBAD8C4B861C7DF76043 /* ResponseSerialization.swift */,
-				D5F44342A9402AA7F96EE68B /* Upload.swift */,
-				CFAE243AEF35D3A1BF29C5F1 /* Validation.swift */,
-				6FDAA5B1EDF019C8E8B021A3 /* Support Files */,
+				2BF98748A58F8A1AB57FB5DC /* Foundation.framework */,
 			);
-			path = Alamofire;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		CBA8A1C82CD8118396407451 /* Support Files */ = {
+		18FBF48272B06A08993DBB5A /* Bolts */ = {
 			isa = PBXGroup;
 			children = (
-				10362DD24C9FCFC0766A3C87 /* Info.plist */,
-				0EB43FAE7AA564DBBC0CA35C /* Pods-WeatherCheck-SwiftyJSON.modulemap */,
-				C9348869F0DCD7BD77D60BFD /* Pods-WeatherCheck-SwiftyJSON.xcconfig */,
-				A4E05228CAFE921CDA21DD95 /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */,
-				E8D1E2C2B98231221D3723CA /* Pods-WeatherCheck-SwiftyJSON-dummy.m */,
-				73D6BA56D1516A4F967FF9BE /* Pods-WeatherCheck-SwiftyJSON-prefix.pch */,
-				B220B15BBEFC2D76A8CC8B6F /* Pods-WeatherCheck-SwiftyJSON-umbrella.h */,
+				9B26FF1662056A22597A86D3 /* AppLinks */,
+				44B522CA6C885E911F97B07C /* Support Files */,
+				E96F0B650D2D3B4D6CFDC175 /* Tasks */,
+			);
+			path = Bolts;
+			sourceTree = "<group>";
+		};
+		1E363BF42765109BA3FA0894 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				33ABBFB12A8963AD4DBE122B /* Info.plist */,
+				3005D64E958AABFE317011E5 /* Pods-WeatherCheck-SwiftyJSON.modulemap */,
+				9E5BA31A2616AE137F2E502D /* Pods-WeatherCheck-SwiftyJSON.xcconfig */,
+				555D0E189D8EAD3C7C086D5C /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */,
+				E614A01AD468A45B8D5B7623 /* Pods-WeatherCheck-SwiftyJSON-dummy.m */,
+				D91E24056BBE8760D820816F /* Pods-WeatherCheck-SwiftyJSON-prefix.pch */,
+				7430DDCA4895DC1F4A86AA19 /* Pods-WeatherCheck-SwiftyJSON-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-WeatherCheck-SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		E3B7C68591061EA692D252BB = {
+		1F3C4D385AA3B0E3B21E914B /* Pods-WeatherCheck */ = {
 			isa = PBXGroup;
 			children = (
-				144AD13871E408A0A68BC231 /* Podfile */,
-				682129277F773AFFE66EF518 /* Frameworks */,
-				F790F3889149B4DC9FE8607E /* Pods */,
-				1116ECE656FE4E9BBFB4B182 /* Products */,
-				16F84D1F93344C209CFAB741 /* Targets Support Files */,
+				A17093C2B4F526D8006C3966 /* Info.plist */,
+				6A565A26F5A2F6C99EC15779 /* Pods-WeatherCheck.modulemap */,
+				F291278A75ACD0D8F64448B3 /* Pods-WeatherCheck-acknowledgements.markdown */,
+				7DE1247E00587939BEA5954A /* Pods-WeatherCheck-acknowledgements.plist */,
+				8172E016C1C9C373600B18E6 /* Pods-WeatherCheck-dummy.m */,
+				1C42D39370B22685741E906A /* Pods-WeatherCheck-environment.h */,
+				DD12A325C30DF047CCC74E97 /* Pods-WeatherCheck-frameworks.sh */,
+				2577767784ED9AA0E3FFD643 /* Pods-WeatherCheck-resources.sh */,
+				FD40003C4376F2DD55CC4DAB /* Pods-WeatherCheck-umbrella.h */,
+				37F69FB54A628BC39A0BA265 /* Pods-WeatherCheck.debug.xcconfig */,
+				CB110E31683CD61E63539D44 /* Pods-WeatherCheck.release.xcconfig */,
+			);
+			name = "Pods-WeatherCheck";
+			path = "Target Support Files/Pods-WeatherCheck";
+			sourceTree = "<group>";
+		};
+		44B522CA6C885E911F97B07C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B59804E4C7A4568C46FFACF /* Info.plist */,
+				AEC6A0187CA99CE3550E059B /* Pods-WeatherCheck-Bolts.modulemap */,
+				22E449A416F7F3F2E4C0534B /* Pods-WeatherCheck-Bolts.xcconfig */,
+				BD15A4DE62A5C114A3C8FF84 /* Pods-WeatherCheck-Bolts-Private.xcconfig */,
+				3DFD971291F677E5BF960EED /* Pods-WeatherCheck-Bolts-dummy.m */,
+				04C71F9B514D112BA2691BE1 /* Pods-WeatherCheck-Bolts-prefix.pch */,
+				BEB9D4C78E049748ED595A17 /* Pods-WeatherCheck-Bolts-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-WeatherCheck-Bolts";
+			sourceTree = "<group>";
+		};
+		4EE151931331BF596FDD3B76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C765070136E21025A6296658 /* Alamofire */,
+				18FBF48272B06A08993DBB5A /* Bolts */,
+				99EC709F7019CDDCDBED80B0 /* FBSDKCoreKit */,
+				CAF94F469A14AD843519C0C6 /* Firebase */,
+				E6B052BE8BFB1091FDA08EE4 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		500D4387C8F6A34C0260AED3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6518382B8B80D70877DDEA83 /* Bolts.framework */,
+				16C0E15439CF579F76195E53 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FBE477075701ECDF113CE84 /* arc */ = {
+			isa = PBXGroup;
+			children = (
+				11A815E2A762F1CF53ED31CC /* FBSDKAccessToken.h */,
+				810C8960EF192028D4BE7CD7 /* FBSDKAccessToken.m */,
+				7793F3041BD71DECDE59078A /* FBSDKAccessTokenCache.h */,
+				E9433D5801F2A1BC3673842D /* FBSDKAccessTokenCache.m */,
+				FF3F47B255BC18EAB4013263 /* FBSDKAccessTokenCacheV3.h */,
+				9094E68531FF49CEAC28DBB7 /* FBSDKAccessTokenCacheV3.m */,
+				72C194484D74B8345297FAA5 /* FBSDKAccessTokenCacheV3_17.h */,
+				60B6547660CC8A80B4BE11C3 /* FBSDKAccessTokenCacheV3_17.m */,
+				EB58F3CA67B690A73F524EF3 /* FBSDKAccessTokenCacheV3_21.h */,
+				95CFD69E17056ED03EBE7FBD /* FBSDKAccessTokenCacheV3_21.m */,
+				B398475D2DDF5E7418E44AC0 /* FBSDKAccessTokenCacheV4.h */,
+				DA339524F6A64424AEE96058 /* FBSDKAccessTokenCacheV4.m */,
+				0A555B7F22DC8E218A31E0D8 /* FBSDKAccessTokenCaching.h */,
+				C9079254CED120409C6C9AF0 /* FBSDKAppEvents.h */,
+				E753378A50B7181BBCB35185 /* FBSDKAppEvents.m */,
+				3356D662815E1EAC9DB49122 /* FBSDKAppEvents+Internal.h */,
+				7D2BEDBDBF9DAC7D6029CE6E /* FBSDKAppEventsDeviceInfo.h */,
+				32C13C383736411308301A13 /* FBSDKAppEventsDeviceInfo.m */,
+				0BEAE0CB4973E33DF322B7D1 /* FBSDKAppEventsState.h */,
+				27F1E2F6AFF286EDBBFE56B9 /* FBSDKAppEventsState.m */,
+				7C8FEA8ABEC7FC60C45E03A8 /* FBSDKAppEventsStateManager.h */,
+				630865EBC1F8207B6D504504 /* FBSDKAppEventsStateManager.m */,
+				20A0C7A3E1202B588C8B468F /* FBSDKAppEventsUtility.h */,
+				90CED90C940347F828A4AFF0 /* FBSDKAppEventsUtility.m */,
+				603EE6EA5B142AE60887194F /* FBSDKAppLinkResolver.h */,
+				E35F942DA49060396A9AA6AC /* FBSDKAppLinkResolver.m */,
+				2010CCAFA4318CC8DD655984 /* FBSDKAppLinkUtility.h */,
+				526096E629666E6EA92A1ACC /* FBSDKAppLinkUtility.m */,
+				A9DCDC4B823CA0C519E6C6B8 /* FBSDKApplicationDelegate.h */,
+				5C480D0B40B4F41986A02FC4 /* FBSDKApplicationDelegate.m */,
+				67634F5532A738B2C9721A11 /* FBSDKApplicationDelegate+Internal.h */,
+				6707FC5C5E8E194174133501 /* FBSDKAudioResourceLoader.h */,
+				C5CCBE91B8DADB1A52600B74 /* FBSDKAudioResourceLoader.m */,
+				D90CFE87A2AC075CF62B1707 /* FBSDKBase64.h */,
+				72E26A10DBA8146939005329 /* FBSDKBase64.m */,
+				CE80D46FA9F70B7BD8867B00 /* FBSDKBoltsMeasurementEventListener.h */,
+				9AB1748046FF13F08A3D2BF2 /* FBSDKBoltsMeasurementEventListener.m */,
+				4E8E0F9F7095BDE9198A2D9D /* FBSDKBridgeAPICrypto.h */,
+				5BDC5DB9D3001E273A9C8F24 /* FBSDKBridgeAPICrypto.m */,
+				86803DEE1A6A2C1FDC0A7067 /* FBSDKBridgeAPIProtocol.h */,
+				A24DD32AACC4513A29F5FD69 /* FBSDKBridgeAPIProtocolNativeV1.h */,
+				15E2073D9A8EFDF56FAB06C2 /* FBSDKBridgeAPIProtocolNativeV1.m */,
+				525F4FAE59FFA11946A30D20 /* FBSDKBridgeAPIProtocolType.h */,
+				9E80041F4C4833C457041CDE /* FBSDKBridgeAPIProtocolWebV1.h */,
+				E0C99F1325DC2707EFA6B099 /* FBSDKBridgeAPIProtocolWebV1.m */,
+				2A8D9C713455359987F2CD80 /* FBSDKBridgeAPIProtocolWebV2.h */,
+				39DBF82C1EC1CA8F26039BC8 /* FBSDKBridgeAPIProtocolWebV2.m */,
+				08FB034E90578D9D9602CE7A /* FBSDKBridgeAPIRequest.h */,
+				1F15E36C9D81A40F87C1B8EA /* FBSDKBridgeAPIRequest.m */,
+				2FC7AFB9F7CB2642F103C57D /* FBSDKBridgeAPIRequest+Private.h */,
+				1585C43BBCC23620319736D8 /* FBSDKBridgeAPIResponse.h */,
+				8C5504D076B0B9C9BB556D73 /* FBSDKBridgeAPIResponse.m */,
+				72FFFCF46AEE4206C0FD6585 /* FBSDKButton.h */,
+				DC5AB06DF5363DC67BC0A9E1 /* FBSDKButton.m */,
+				CEA7158FFDA7F7E3E3CF6F59 /* FBSDKButton+Subclass.h */,
+				F000162A0DF6F7DC801CC0CD /* FBSDKCloseIcon.h */,
+				30B8BE159491148FA4B9B1D5 /* FBSDKCloseIcon.m */,
+				8F38C0962D599D8EB4BB72F0 /* FBSDKColor.h */,
+				E0B401178558F15F8C8F8493 /* FBSDKColor.m */,
+				AC16473EC1737F5C84222109 /* FBSDKConstants.h */,
+				264B147E3F534FD3A2F0E111 /* FBSDKConstants.m */,
+				4A10998C17B3AE9934939398 /* FBSDKCopying.h */,
+				2FC67BD590F9ADF3127DA164 /* FBSDKCoreKit.h */,
+				9BAE65003919FD7EBFA8552C /* FBSDKCoreKit+Internal.h */,
+				4B21819C95D0A2D65F837C87 /* FBSDKCrypto.h */,
+				EB36A54FF05EE4ED691702FC /* FBSDKCrypto.m */,
+				7197073A4EE7574EF87CB1EC /* FBSDKDialogConfiguration.h */,
+				37ACB8A1245FA8F38C73FF5C /* FBSDKDialogConfiguration.m */,
+				B1F1599F3DEF9ADEC8CC7867 /* FBSDKDynamicFrameworkLoader.h */,
+				69398652249E85A01FD994A9 /* FBSDKError.h */,
+				7F7E87BF0D24513EED4CD941 /* FBSDKError.m */,
+				DAE972D45F76F7EF6BBF36E7 /* FBSDKErrorConfiguration.h */,
+				8D56766565DDCECADE85003E /* FBSDKErrorConfiguration.m */,
+				3AB20B4B079D759F88EC7F5E /* FBSDKErrorRecoveryAttempter.h */,
+				51DD9AEA1AB282C94C4242C4 /* FBSDKErrorRecoveryAttempter.m */,
+				833592C15BD78740FF731A86 /* FBSDKErrorRecoveryConfiguration.h */,
+				F94ABD2117BB3D7ED144DBB4 /* FBSDKErrorRecoveryConfiguration.m */,
+				7D1C85327BE16CD3032490F8 /* FBSDKGraphErrorRecoveryProcessor.h */,
+				42F2F7323FC982A10563B7DF /* FBSDKGraphErrorRecoveryProcessor.m */,
+				5E23D201C8D4E10C5FF11D6C /* FBSDKGraphRequest.h */,
+				974D6BDB3C488923A4A56686 /* FBSDKGraphRequest.m */,
+				2EA942186D8967F214230ED7 /* FBSDKGraphRequest+Internal.h */,
+				F77DA0C6CA8DE1162D975014 /* FBSDKGraphRequestBody.h */,
+				84F5A8031E1432535F50458A /* FBSDKGraphRequestBody.m */,
+				EC7C7CB1ED6F6078657862D4 /* FBSDKGraphRequestConnection.h */,
+				7FE5DDE4A0B5F710AF75444A /* FBSDKGraphRequestConnection.m */,
+				FB867272D5EAC81ABFE1007B /* FBSDKGraphRequestConnection+Internal.h */,
+				250BFA73BC7AAE1EBDC8798E /* FBSDKGraphRequestDataAttachment.h */,
+				D643232D964CEB0E5527559A /* FBSDKGraphRequestDataAttachment.m */,
+				8E42022B8477121EF6E366E0 /* FBSDKGraphRequestMetadata.h */,
+				8ADF53D3892F01D92ADA1BA2 /* FBSDKGraphRequestMetadata.m */,
+				28DE3672D7A96A52679B1497 /* FBSDKGraphRequestPiggybackManager.h */,
+				408CFDF88185C61B186F5D4D /* FBSDKGraphRequestPiggybackManager.m */,
+				D01F79A715DBBB9301D0CC4A /* FBSDKIcon.h */,
+				E3570D74B52CA5AD4CB6F9DD /* FBSDKIcon.m */,
+				7E525E4ECCA3F2814028F12F /* FBSDKInternalUtility.h */,
+				8764CA961252F75256DC41AB /* FBSDKInternalUtility.m */,
+				20ED07D517B0B134F17D033C /* FBSDKKeychainStore.h */,
+				4EE2AE9F965F80EBFDF7D564 /* FBSDKKeychainStore.m */,
+				6D0E2CB201376223521367DD /* FBSDKKeychainStoreViaBundleID.h */,
+				36C64226977CF0C5B16B72F4 /* FBSDKKeychainStoreViaBundleID.m */,
+				0844B3D789DE361F37B96D44 /* FBSDKLogger.h */,
+				F1E412B217F09B20A95AE400 /* FBSDKLogger.m */,
+				955F84C7EBEA448C894D878F /* FBSDKLogo.h */,
+				301A86A338CB4A11C0596390 /* FBSDKLogo.m */,
+				D140DD722790C0BADC52A6E2 /* FBSDKMacros.h */,
+				10F2B55650C1B76D1E56BBE2 /* FBSDKMaleSilhouetteIcon.h */,
+				D7287C0B32BF7FFF97703505 /* FBSDKMaleSilhouetteIcon.m */,
+				3894223704C1DBB89FECBF45 /* FBSDKMath.h */,
+				CCB18BC2244FE27E7003C8DC /* FBSDKMath.m */,
+				2F2372752861393187E2B27F /* FBSDKMutableCopying.h */,
+				AD97571A85C92C0910E1191A /* FBSDKPaymentObserver.h */,
+				68DBBDA7A25525010589CB7C /* FBSDKPaymentObserver.m */,
+				9084D1E35FF100F98705B6F9 /* FBSDKProfile.h */,
+				95184557355D15AD159080CA /* FBSDKProfile.m */,
+				CD739195536CF03C4AE694D1 /* FBSDKProfile+Internal.h */,
+				FDE6AC27ADBAA98991A0D7DF /* FBSDKProfilePictureView.h */,
+				755E5008BE638C552149DD2F /* FBSDKProfilePictureView.m */,
+				FD87507A319B54930204D967 /* FBSDKServerConfiguration.h */,
+				746EE45F31BD8DC4E16165E6 /* FBSDKServerConfiguration.m */,
+				855CD613428220F8C45DCA6A /* FBSDKServerConfigurationManager.h */,
+				5813514ABD9803CF3DB6AD38 /* FBSDKServerConfigurationManager.m */,
+				54E73C09DABF26F162098740 /* FBSDKServerConfigurationManager+Internal.h */,
+				F0310466651285E533C45A79 /* FBSDKSettings.h */,
+				05D2925ED9BC0E780BE522AE /* FBSDKSettings.m */,
+				2C8AF5BE41E0B88A6536AEA3 /* FBSDKSettings+Internal.h */,
+				7DB43D5473A583579F1A74F9 /* FBSDKSystemAccountStoreAdapter.h */,
+				01BB509E3DFAB215313273B0 /* FBSDKSystemAccountStoreAdapter.m */,
+				85088A4B583CBB3DD0EE208C /* FBSDKTestUsersManager.h */,
+				96301FB08969964BC1F416C6 /* FBSDKTestUsersManager.m */,
+				1C71725AA204037923A31048 /* FBSDKTimeSpentData.h */,
+				2FBEC78498D52A9653E81725 /* FBSDKTimeSpentData.m */,
+				9B3BD9B0D6F6744FA3209E6F /* FBSDKTriStateBOOL.h */,
+				2229D1CD3F7217DD69A8B8E7 /* FBSDKTriStateBOOL.m */,
+				DD9D9306825278AA36FF1DEE /* FBSDKTypeUtility.h */,
+				7DC1EFA31F436BF3189DE04C /* FBSDKTypeUtility.m */,
+				1C3E0718D88CA09B29DE083C /* FBSDKUIUtility.h */,
+				AA8AAE4E63F993E5A62CB832 /* FBSDKURLConnection.h */,
+				FBE2B34148772EC40F36D731 /* FBSDKURLConnection.m */,
+				E27831A463DB1270A753BF20 /* FBSDKURLOpening.h */,
+				DB0FE9AE75233EBA35B622CD /* FBSDKUtility.h */,
+				1E9085A2D42F770DA5B2431A /* FBSDKUtility.m */,
+				581698AC26E49BEB38C29F52 /* FBSDKViewImpressionTracker.h */,
+				B5A3F01CB86E8252FD94AD58 /* FBSDKViewImpressionTracker.m */,
+				BC261F8F15B648889C860CA9 /* FBSDKWebDialog.h */,
+				24C319318CC9272C76751794 /* FBSDKWebDialog.m */,
+				4AD3BE390C701A202B20D257 /* FBSDKWebDialogView.h */,
+				9A24AEEECF33DC851DC9ED61 /* FBSDKWebDialogView.m */,
+				DBEE65D208EA0BD885D3722D /* _FBSDKTemporaryErrorRecoveryAttempter.h */,
+				AFEC1E40636074E365FEB125 /* _FBSDKTemporaryErrorRecoveryAttempter.m */,
+			);
+			name = arc;
+			sourceTree = "<group>";
+		};
+		8FBA63A425FA28167A2F29B4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				19A87333EB4494C6C546A08E /* Info.plist */,
+				4AA7EB7C8ED1D8DF3492A3FB /* Pods-WeatherCheck-FBSDKCoreKit.modulemap */,
+				86E18EBD00E3440CF7C1E536 /* Pods-WeatherCheck-FBSDKCoreKit.xcconfig */,
+				C64FED2590A40F180566E14F /* Pods-WeatherCheck-FBSDKCoreKit-Private.xcconfig */,
+				5C4D56A0487B12F8D053B2A1 /* Pods-WeatherCheck-FBSDKCoreKit-dummy.m */,
+				B8263F6290050328FB8F71CC /* Pods-WeatherCheck-FBSDKCoreKit-prefix.pch */,
+				DFC1B6FEFE4B9526EFB8F747 /* Pods-WeatherCheck-FBSDKCoreKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-WeatherCheck-FBSDKCoreKit";
+			sourceTree = "<group>";
+		};
+		8FEDCE25AD0344E32C11C7C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10FFD92F4C53BF699ED8DEAB /* Alamofire.framework */,
+				650A1212A8D75E5827CDBC9A /* Bolts.framework */,
+				2701B80FEB929476CDD7BE19 /* FBSDKCoreKit.framework */,
+				0F7552BFA2DEF8685B78FCC5 /* Pods_WeatherCheck.framework */,
+				96DBD26AFAFCE9221177242F /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99EC709F7019CDDCDBED80B0 /* FBSDKCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				8FBA63A425FA28167A2F29B4 /* Support Files */,
+				7FBE477075701ECDF113CE84 /* arc */,
+				C3F9983169D2203DFABE21C9 /* no-arc */,
+			);
+			path = FBSDKCoreKit;
+			sourceTree = "<group>";
+		};
+		9B26FF1662056A22597A86D3 /* AppLinks */ = {
+			isa = PBXGroup;
+			children = (
+				01DF3EAC0C58CD3BCAE6D1BB /* BFAppLink.h */,
+				3EA05D8624B18FC4E7203A4C /* BFAppLink.m */,
+				6313750107FE5122E7956194 /* BFAppLinkNavigation.h */,
+				7B951B7D1610C58D9A9B234D /* BFAppLinkNavigation.m */,
+				BAB92152765150318AAFCBC5 /* BFAppLinkResolving.h */,
+				D5835308241269149B46FBD3 /* BFAppLinkReturnToRefererController.h */,
+				E63AD070236B1D696B825391 /* BFAppLinkReturnToRefererController.m */,
+				C1ADD73BBDD982C0869A40BE /* BFAppLinkReturnToRefererView.h */,
+				A6BB1A2D4CC9F775829ADF43 /* BFAppLinkReturnToRefererView.m */,
+				0757AB02250015E0C6A52A0E /* BFAppLinkReturnToRefererView_Internal.h */,
+				2EDC536B351ED9C3EC49753D /* BFAppLinkTarget.h */,
+				D41BE038590C2029D885A272 /* BFAppLinkTarget.m */,
+				2809FD74203F40371EDA9764 /* BFAppLink_Internal.h */,
+				528597545DEAE04389703B30 /* BFMeasurementEvent.h */,
+				A6828469D52D7022AB2F9669 /* BFMeasurementEvent.m */,
+				FB4FD33A25A0EEAE1736DFDE /* BFMeasurementEvent_Internal.h */,
+				30F7B75D0417542979AF99F8 /* BFURL.h */,
+				0AF9905D42359298D0F9E72E /* BFURL.m */,
+				6A4BC6F0A11FA775C91E0401 /* BFURL_Internal.h */,
+				B3C356AC8D9AB0064AF52245 /* BFWebViewAppLinkResolver.h */,
+				B03315EF8F7EAF655EEC86C1 /* BFWebViewAppLinkResolver.m */,
+			);
+			name = AppLinks;
+			sourceTree = "<group>";
+		};
+		A6CEEAB071E037BEA3F2BD43 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F3C4D385AA3B0E3B21E914B /* Pods-WeatherCheck */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C080E0FDB20468C9CC6E3EE3 = {
+			isa = PBXGroup;
+			children = (
+				8EE21AB59FDC62075D424F0A /* Podfile */,
+				500D4387C8F6A34C0260AED3 /* Frameworks */,
+				4EE151931331BF596FDD3B76 /* Pods */,
+				8FEDCE25AD0344E32C11C7C6 /* Products */,
+				A6CEEAB071E037BEA3F2BD43 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F790F3889149B4DC9FE8607E /* Pods */ = {
+		C3F9983169D2203DFABE21C9 /* no-arc */ = {
 			isa = PBXGroup;
 			children = (
-				89531AA64384F7BC4F41DD99 /* Alamofire */,
-				67EABFA2A0254042B7CE0E85 /* SwiftyJSON */,
+				CFDE6770D3E63E56EC28F468 /* FBSDKDynamicFrameworkLoader.m */,
 			);
-			name = Pods;
+			name = "no-arc";
+			sourceTree = "<group>";
+		};
+		C765070136E21025A6296658 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				C0058F760245715B3C4F117C /* Alamofire.swift */,
+				EA47F3FF4C8A7583AA400FB2 /* Download.swift */,
+				430A101BF93505CBBCBBD39A /* Manager.swift */,
+				3967AF8A83D5D630EAEBE639 /* ParameterEncoding.swift */,
+				D87886D0A5E6360AE4D96380 /* Request.swift */,
+				210F7E31A7FF2B26B38B7562 /* ResponseSerialization.swift */,
+				21CD8131077D576D2E6D0EF2 /* Upload.swift */,
+				4FC454E4BCE4D8D72CB337C3 /* Validation.swift */,
+				13460FE1C9FCD0AB637C3347 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		CAF94F469A14AD843519C0C6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		E6B052BE8BFB1091FDA08EE4 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				969310C7A3A0D54F872069EF /* SwiftyJSON.swift */,
+				1E363BF42765109BA3FA0894 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		E96F0B650D2D3B4D6CFDC175 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				5A1838B1F6D2228C5B3C45C8 /* BFCancellationToken.h */,
+				9E1B8C11B35E1612A920EDB0 /* BFCancellationToken.m */,
+				A23BC6C30257D88BC697BDD0 /* BFCancellationTokenRegistration.h */,
+				9988AE35740D2D3A337B8237 /* BFCancellationTokenRegistration.m */,
+				262390D74375721CD345EA1D /* BFCancellationTokenSource.h */,
+				2E8C96FC295A5949A6D26B15 /* BFCancellationTokenSource.m */,
+				B0926F79EC0148BC80C840A6 /* BFExecutor.h */,
+				C9A85FFA0F14A9006969DBB5 /* BFExecutor.m */,
+				07D03331A1CBD88295F85A81 /* BFTask.h */,
+				3215492D75816FDD608E8582 /* BFTask.m */,
+				FC08D0F1F9B8577F9CD00ADC /* BFTaskCompletionSource.h */,
+				4776833550EDA03A1D3867F5 /* BFTaskCompletionSource.m */,
+				70C63623FF134A98A39C071D /* Bolts.h */,
+				F45F7AA4CD0EEE33F27D2DFF /* Bolts.m */,
+				D32F7E46BD9C6475AAB6EF2D /* BoltsVersion.h */,
+			);
+			name = Tasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9985C5F78D32A7E09C01D0BC /* Headers */ = {
+		11CBBF4F87DCBC05E0413191 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				409E5EF8E5828A4D5A21B7E3 /* Pods-WeatherCheck-umbrella.h in Headers */,
+				FDF5FAB2F5DDAFB670AA0B71 /* Pods-WeatherCheck-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C16B742E269EBDF1FC95C1B2 /* Headers */ = {
+		49CB529151535FB0A2C28A78 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1C92352CEEACDC104BD896 /* Pods-WeatherCheck-Alamofire-umbrella.h in Headers */,
+				33C42F196B00F4DCBDDDDE39 /* Pods-WeatherCheck-Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC48080FB79A5E91216D30A6 /* Headers */ = {
+		69961182768BA175EB61DC09 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A00909B7B9070C4F80BFF40 /* Pods-WeatherCheck-SwiftyJSON-umbrella.h in Headers */,
+				D8795BC1CA19A6B0052DD1D1 /* Pods-WeatherCheck-SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97985825324BDF08D3F11CBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551660F0241119068E9D5286 /* FBSDKAccessToken.h in Headers */,
+				3D57598389575BB9F8ADC46D /* FBSDKAccessTokenCache.h in Headers */,
+				6C27FEC88B00AA28DC732A4A /* FBSDKAccessTokenCacheV3.h in Headers */,
+				F6F6B04B86D964C261FDCEED /* FBSDKAccessTokenCacheV3_17.h in Headers */,
+				9569D93A084956CBFFD1F598 /* FBSDKAccessTokenCacheV3_21.h in Headers */,
+				DC2EE8D8C9A77629C0707D35 /* FBSDKAccessTokenCacheV4.h in Headers */,
+				5FF67E7621F9F2C2F3B1751C /* FBSDKAccessTokenCaching.h in Headers */,
+				6E4C4FFA96C9C9DC01AD8BD1 /* FBSDKAppEvents+Internal.h in Headers */,
+				80CEE03F2E8854182BF23CCD /* FBSDKAppEvents.h in Headers */,
+				0515C37ACBD7A97907DC90B2 /* FBSDKAppEventsDeviceInfo.h in Headers */,
+				AA863601E4A91998CC17CECB /* FBSDKAppEventsState.h in Headers */,
+				94F108AA388937DD9471F776 /* FBSDKAppEventsStateManager.h in Headers */,
+				31972B8A34BB16D9A38EC0C4 /* FBSDKAppEventsUtility.h in Headers */,
+				F0E7CFFFE639F3F39B53CABD /* FBSDKAppLinkResolver.h in Headers */,
+				5ACA4E6B4DAE22A13051CA7C /* FBSDKAppLinkUtility.h in Headers */,
+				76439E5761C1326E4C42209F /* FBSDKApplicationDelegate+Internal.h in Headers */,
+				AB4E270A9D6ADD4F236CCBB7 /* FBSDKApplicationDelegate.h in Headers */,
+				FCFFFC554FC6E03457971C86 /* FBSDKAudioResourceLoader.h in Headers */,
+				FB8AD8D39A5D92678CFA3ABE /* FBSDKBase64.h in Headers */,
+				9F4892200B224FD15752636B /* FBSDKBoltsMeasurementEventListener.h in Headers */,
+				ED9C09C0DF29F76FFACDCD6D /* FBSDKBridgeAPICrypto.h in Headers */,
+				73424C608FB72D6E64A2D1C1 /* FBSDKBridgeAPIProtocol.h in Headers */,
+				BFAE74B7E2DBA27F356F5C61 /* FBSDKBridgeAPIProtocolNativeV1.h in Headers */,
+				5CD747B84C64AEE8EE54D2B3 /* FBSDKBridgeAPIProtocolType.h in Headers */,
+				87D5D6F8DA5E171AB348FA02 /* FBSDKBridgeAPIProtocolWebV1.h in Headers */,
+				32D105A1A073B19161045B12 /* FBSDKBridgeAPIProtocolWebV2.h in Headers */,
+				0EE6BBD1E3C2CCF4E22FC530 /* FBSDKBridgeAPIRequest+Private.h in Headers */,
+				498BAB144160D87D59DA53AD /* FBSDKBridgeAPIRequest.h in Headers */,
+				3F6D7674B36041793D56C774 /* FBSDKBridgeAPIResponse.h in Headers */,
+				17534003C31B3FD0115529AB /* FBSDKButton+Subclass.h in Headers */,
+				7D9F448D408A83288D28F02A /* FBSDKButton.h in Headers */,
+				D5038B6829E40C1A17FB546F /* FBSDKCloseIcon.h in Headers */,
+				E359581AC1C9EA4FFE46FE8C /* FBSDKColor.h in Headers */,
+				6B841728C37F95EB846FB6D0 /* FBSDKConstants.h in Headers */,
+				8CB99143086EEA6F6B904B34 /* FBSDKCopying.h in Headers */,
+				3E5A178935DBE5B9462E31E5 /* FBSDKCoreKit+Internal.h in Headers */,
+				9CE65B9063B587A94D867043 /* FBSDKCoreKit.h in Headers */,
+				DFADC1897E2CB424A1FD69BE /* FBSDKCrypto.h in Headers */,
+				8C9E59AFD4826DD8E9B08597 /* FBSDKDialogConfiguration.h in Headers */,
+				FF6F1D22DAA3DBAD2B182D39 /* FBSDKDynamicFrameworkLoader.h in Headers */,
+				D7DF8C0CE0AA69C554722370 /* FBSDKError.h in Headers */,
+				2531BB00B1D47FDB0170D620 /* FBSDKErrorConfiguration.h in Headers */,
+				ABF379399CAC574C6E28D297 /* FBSDKErrorRecoveryAttempter.h in Headers */,
+				E71B5C6EE3C5DBF05AB8E826 /* FBSDKErrorRecoveryConfiguration.h in Headers */,
+				21178A45E42367225BAAF4C1 /* FBSDKGraphErrorRecoveryProcessor.h in Headers */,
+				D459E2A7F9C095577D09EA8C /* FBSDKGraphRequest+Internal.h in Headers */,
+				63358952E36E39B43AB5F7BB /* FBSDKGraphRequest.h in Headers */,
+				04ACF6EB78DDA84E258484DD /* FBSDKGraphRequestBody.h in Headers */,
+				D7C2B25C5DFF34438550F7D6 /* FBSDKGraphRequestConnection+Internal.h in Headers */,
+				B3FEEBB1EC08C7DBDBEBEB05 /* FBSDKGraphRequestConnection.h in Headers */,
+				61F2549A84BC7A22AD40F23E /* FBSDKGraphRequestDataAttachment.h in Headers */,
+				9398B098823CA8CB1E183E47 /* FBSDKGraphRequestMetadata.h in Headers */,
+				35B8B18F51A8D1C6091A86BA /* FBSDKGraphRequestPiggybackManager.h in Headers */,
+				F78BE49D8AA2EDE1E9E8BDCF /* FBSDKIcon.h in Headers */,
+				021D412A9C226EADED2736F4 /* FBSDKInternalUtility.h in Headers */,
+				67A1AFE7504141EA352D572B /* FBSDKKeychainStore.h in Headers */,
+				6297020859A6DDC9F80E93CE /* FBSDKKeychainStoreViaBundleID.h in Headers */,
+				12E3F42C529FA4DC1CD09843 /* FBSDKLogger.h in Headers */,
+				7FF93A4A5D3AE12C8AC8BE07 /* FBSDKLogo.h in Headers */,
+				180B58470556DAE7D7BF73E3 /* FBSDKMacros.h in Headers */,
+				A0A36C784DE86CABC3DE7C92 /* FBSDKMaleSilhouetteIcon.h in Headers */,
+				7F011ABDB740CCC7D9D15AA7 /* FBSDKMath.h in Headers */,
+				177850D9510B290B629CFD9D /* FBSDKMutableCopying.h in Headers */,
+				F8D7A35B341FBDB945AA0478 /* FBSDKPaymentObserver.h in Headers */,
+				2FC3293116226FD3CF1DADEB /* FBSDKProfile+Internal.h in Headers */,
+				7CD21F08D73AE9D16E227C1C /* FBSDKProfile.h in Headers */,
+				C4CBDAEBC727FF56E82B2099 /* FBSDKProfilePictureView.h in Headers */,
+				CEA0375348015D6E1A2DFFD5 /* FBSDKServerConfiguration.h in Headers */,
+				A24EF390F7C7648F188D10D1 /* FBSDKServerConfigurationManager+Internal.h in Headers */,
+				FA25D9760E6A09BF3DB33B76 /* FBSDKServerConfigurationManager.h in Headers */,
+				E3E0F1F0D6D9C0B83666FE74 /* FBSDKSettings+Internal.h in Headers */,
+				9497C3D9FB0C57978D65D45B /* FBSDKSettings.h in Headers */,
+				6CB845C3570A929B976AD265 /* FBSDKSystemAccountStoreAdapter.h in Headers */,
+				65CFCD5228B3C62FD4140826 /* FBSDKTestUsersManager.h in Headers */,
+				114A870FE38CAABF0BC6A750 /* FBSDKTimeSpentData.h in Headers */,
+				3634BA4B1F0693205F1FAF07 /* FBSDKTriStateBOOL.h in Headers */,
+				8DB2A340CAABBCD7DA35BF2C /* FBSDKTypeUtility.h in Headers */,
+				5593F407480C91206F6D30E4 /* FBSDKUIUtility.h in Headers */,
+				593DF97AB84CBBEAD43D9388 /* FBSDKURLConnection.h in Headers */,
+				3341D33D9925F849973FDBFE /* FBSDKURLOpening.h in Headers */,
+				21A02407E757698C8E8101E6 /* FBSDKUtility.h in Headers */,
+				01C153756743756F4FC45688 /* FBSDKViewImpressionTracker.h in Headers */,
+				9F9E4B9AA28B4260F00354AD /* FBSDKWebDialog.h in Headers */,
+				53E381B7BEB1FFFDD3F6C65A /* FBSDKWebDialogView.h in Headers */,
+				38A60B2F73265675C7C923C8 /* Pods-WeatherCheck-FBSDKCoreKit-umbrella.h in Headers */,
+				D8681B689855217C28EF3A80 /* _FBSDKTemporaryErrorRecoveryAttempter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBCF7010ECEDD8DC5E136414 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37EDA4F4335FE9511D704895 /* BFAppLink.h in Headers */,
+				B5DD32D35C6F7A243EB4194D /* BFAppLinkNavigation.h in Headers */,
+				428ECA712C801F29D2988553 /* BFAppLinkResolving.h in Headers */,
+				16AA383C4498A9701EA688CA /* BFAppLinkReturnToRefererController.h in Headers */,
+				F8E0051888CD1C2200553C92 /* BFAppLinkReturnToRefererView.h in Headers */,
+				3F4E5B2F36B5872C15352582 /* BFAppLinkReturnToRefererView_Internal.h in Headers */,
+				6F2AD217F1779064A7BD9C7A /* BFAppLinkTarget.h in Headers */,
+				50BD2D56B43CE15EC54AC59B /* BFAppLink_Internal.h in Headers */,
+				B8022DE519AE226E2A3FC4CE /* BFCancellationToken.h in Headers */,
+				2F8B738C5F89095F1FA07F03 /* BFCancellationTokenRegistration.h in Headers */,
+				C814B0B5F60C6F67DDAB46AC /* BFCancellationTokenSource.h in Headers */,
+				248AEC284A116AE83559F407 /* BFExecutor.h in Headers */,
+				ACA03F37596C8DE01FB4D146 /* BFMeasurementEvent.h in Headers */,
+				79BED10DAED5C3560D5FCD6A /* BFMeasurementEvent_Internal.h in Headers */,
+				08A5CA504B4C777F12D2D337 /* BFTask.h in Headers */,
+				A72F53305B3D0C8CB3EA71B8 /* BFTaskCompletionSource.h in Headers */,
+				BFDCFEE3F054EE15DB0C4F89 /* BFURL.h in Headers */,
+				A4EF4A064C2AABAB2C05E237 /* BFURL_Internal.h in Headers */,
+				C869A56EAFC8F01D7C4AE111 /* BFWebViewAppLinkResolver.h in Headers */,
+				BB9493E2EC0832CBDFEE36A6 /* Bolts.h in Headers */,
+				34B0FCF7AAA8134E1414055F /* BoltsVersion.h in Headers */,
+				97268E3D83484CD905767C78 /* Pods-WeatherCheck-Bolts-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		411A41A6BC914AA65DDE7781 /* Pods-WeatherCheck-SwiftyJSON */ = {
+		02D603519484184BE628C3D8 /* Pods-WeatherCheck-Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0958961FF0B7AF986922045 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-SwiftyJSON" */;
+			buildConfigurationList = F5D2E8C74BE723434400A4E7 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-Alamofire" */;
 			buildPhases = (
-				49B5ED75477965E437BB02F0 /* Sources */,
-				E4AB0FDAB655F14302E75460 /* Frameworks */,
-				DC48080FB79A5E91216D30A6 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-WeatherCheck-SwiftyJSON";
-			productName = "Pods-WeatherCheck-SwiftyJSON";
-			productReference = B3B88D6DFFF94A4B158C0238 /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7E2B205B59E4222F1EA2C459 /* Pods-WeatherCheck */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B7778D9ADC60354B1F061FD5 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck" */;
-			buildPhases = (
-				D2FDDCC80A4B3013B9F24411 /* Sources */,
-				9782F250F2A2029629321F7B /* Frameworks */,
-				9985C5F78D32A7E09C01D0BC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E8E33065F84E98ABC3B9176D /* PBXTargetDependency */,
-				4D6F3C22D125F3BDE68FD6F9 /* PBXTargetDependency */,
-			);
-			name = "Pods-WeatherCheck";
-			productName = "Pods-WeatherCheck";
-			productReference = 2F538A487E836EA7037A3146 /* Pods_WeatherCheck.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A446A277056D112B4404BFD2 /* Pods-WeatherCheck-Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 70C05406D858902D798F6217 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-Alamofire" */;
-			buildPhases = (
-				40C39D4F282FB86B47F28F0F /* Sources */,
-				5318381D14C48582F659501D /* Frameworks */,
-				C16B742E269EBDF1FC95C1B2 /* Headers */,
+				F15B47F632EFB11DDA727ED3 /* Sources */,
+				58765A7A192931A145DFBB51 /* Frameworks */,
+				49CB529151535FB0A2C28A78 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -322,91 +1126,309 @@
 			);
 			name = "Pods-WeatherCheck-Alamofire";
 			productName = "Pods-WeatherCheck-Alamofire";
-			productReference = DBF4B24C91F6D02A453FE6FC /* Alamofire.framework */;
+			productReference = 10FFD92F4C53BF699ED8DEAB /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		12605331EBE2A0EEB605F371 /* Pods-WeatherCheck-SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D5FC73E86592661D5F80069 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-SwiftyJSON" */;
+			buildPhases = (
+				A4510B9341B8C27F1ADBFD73 /* Sources */,
+				E18FC800A64AB20B655F6866 /* Frameworks */,
+				69961182768BA175EB61DC09 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WeatherCheck-SwiftyJSON";
+			productName = "Pods-WeatherCheck-SwiftyJSON";
+			productReference = 96DBD26AFAFCE9221177242F /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1C3E142397B76E0808B71FCB /* Pods-WeatherCheck-Bolts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90639A549F3D7F5296B2A7A4 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-Bolts" */;
+			buildPhases = (
+				5AFC7280A3F6BB32C7AC3829 /* Sources */,
+				D4EAED6F83EAF75B80A9CE6B /* Frameworks */,
+				EBCF7010ECEDD8DC5E136414 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WeatherCheck-Bolts";
+			productName = "Pods-WeatherCheck-Bolts";
+			productReference = 650A1212A8D75E5827CDBC9A /* Bolts.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8080303865051F67970C9ACF /* Pods-WeatherCheck-FBSDKCoreKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8E6E87A1E9389948E3CC235 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-FBSDKCoreKit" */;
+			buildPhases = (
+				357D490B12C79F9E04CCA7FA /* Sources */,
+				5DD87BAA491D69C5B51DDBB8 /* Frameworks */,
+				97985825324BDF08D3F11CBB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				127CA10AB528A42B4C3FF43D /* PBXTargetDependency */,
+			);
+			name = "Pods-WeatherCheck-FBSDKCoreKit";
+			productName = "Pods-WeatherCheck-FBSDKCoreKit";
+			productReference = 2701B80FEB929476CDD7BE19 /* FBSDKCoreKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD97E8869EA3E3169AEBCAD2 /* Pods-WeatherCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF3CB650F950C3AE65D9D18 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck" */;
+			buildPhases = (
+				D0EF53AC559A6C82903E498F /* Sources */,
+				16676B16EF0A91D9EABBB598 /* Frameworks */,
+				11CBBF4F87DCBC05E0413191 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FA92D514DCDC4BF5B12EC72 /* PBXTargetDependency */,
+				5E7474D6778BC16B681A293E /* PBXTargetDependency */,
+				C875AD8D3C7C5081A74028FC /* PBXTargetDependency */,
+				2272C09FE9B8D2D059A65BE8 /* PBXTargetDependency */,
+			);
+			name = "Pods-WeatherCheck";
+			productName = "Pods-WeatherCheck";
+			productReference = 0F7552BFA2DEF8685B78FCC5 /* Pods_WeatherCheck.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2FE7718993EA76DF1B92A539 /* Project object */ = {
+		189A57B4D0B1C488E522AEF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = D8F6D04A1BF5842AB05BED57 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 223BE55ACEA2B3895BEA24EA /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E3B7C68591061EA692D252BB;
-			productRefGroup = 1116ECE656FE4E9BBFB4B182 /* Products */;
+			mainGroup = C080E0FDB20468C9CC6E3EE3;
+			productRefGroup = 8FEDCE25AD0344E32C11C7C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7E2B205B59E4222F1EA2C459 /* Pods-WeatherCheck */,
-				A446A277056D112B4404BFD2 /* Pods-WeatherCheck-Alamofire */,
-				411A41A6BC914AA65DDE7781 /* Pods-WeatherCheck-SwiftyJSON */,
+				DD97E8869EA3E3169AEBCAD2 /* Pods-WeatherCheck */,
+				02D603519484184BE628C3D8 /* Pods-WeatherCheck-Alamofire */,
+				1C3E142397B76E0808B71FCB /* Pods-WeatherCheck-Bolts */,
+				8080303865051F67970C9ACF /* Pods-WeatherCheck-FBSDKCoreKit */,
+				12605331EBE2A0EEB605F371 /* Pods-WeatherCheck-SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		40C39D4F282FB86B47F28F0F /* Sources */ = {
+		357D490B12C79F9E04CCA7FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC819D0F66B153080262BB2 /* Alamofire.swift in Sources */,
-				9B3468BAA4828E0ECBE4F0A7 /* Download.swift in Sources */,
-				BD7B9B2821C14230D85E14D5 /* Manager.swift in Sources */,
-				F2BDD383FDAE1B480585F4E1 /* ParameterEncoding.swift in Sources */,
-				AA721FD64391A1D668B628D6 /* Pods-WeatherCheck-Alamofire-dummy.m in Sources */,
-				DB5FC75DF411C29C47F80F63 /* Request.swift in Sources */,
-				EE66DB8743FBC0B2DE8E90E4 /* ResponseSerialization.swift in Sources */,
-				6A668CD90253973BD3AFA1EE /* Upload.swift in Sources */,
-				623FF8984DB8E1E35361AC12 /* Validation.swift in Sources */,
+				772EE1CEE3863B86D1887621 /* FBSDKAccessToken.m in Sources */,
+				97469E1635EA72BD9C9A92E1 /* FBSDKAccessTokenCache.m in Sources */,
+				D8433AE474E7395F0D05EB0F /* FBSDKAccessTokenCacheV3.m in Sources */,
+				0421DE70DFC67D9412B9CFEC /* FBSDKAccessTokenCacheV3_17.m in Sources */,
+				E962BE199C80A21D35EF28BC /* FBSDKAccessTokenCacheV3_21.m in Sources */,
+				E7F62B965FBA7F8E0F7115F0 /* FBSDKAccessTokenCacheV4.m in Sources */,
+				B303D3BDEBD9BFDB530A2A5F /* FBSDKAppEvents.m in Sources */,
+				7CB7730B884A8184C1F0BBAD /* FBSDKAppEventsDeviceInfo.m in Sources */,
+				03AECB3EC00354BC3F7038C9 /* FBSDKAppEventsState.m in Sources */,
+				ACDCC03BACE357ED52A2C96D /* FBSDKAppEventsStateManager.m in Sources */,
+				D165DDAAE136BB406B659F8A /* FBSDKAppEventsUtility.m in Sources */,
+				798DD07135FB50EFFA6D2FE5 /* FBSDKAppLinkResolver.m in Sources */,
+				1275D52B5752DC6D725137AC /* FBSDKAppLinkUtility.m in Sources */,
+				3FA8E5BAAD2A353027324392 /* FBSDKApplicationDelegate.m in Sources */,
+				8537D28D47CCA1BF3B2E3356 /* FBSDKAudioResourceLoader.m in Sources */,
+				FC6E864B47AD0CDBBB31BE80 /* FBSDKBase64.m in Sources */,
+				BCDABFC39CDCEA1C9CC59993 /* FBSDKBoltsMeasurementEventListener.m in Sources */,
+				AF4E83BD62EAE0D4897998EC /* FBSDKBridgeAPICrypto.m in Sources */,
+				3428B46CCC6CCB20DD0AA0F4 /* FBSDKBridgeAPIProtocolNativeV1.m in Sources */,
+				70373F8BB6CAA01A39EC21FC /* FBSDKBridgeAPIProtocolWebV1.m in Sources */,
+				AC5EBDB71A50E4189F62CBC3 /* FBSDKBridgeAPIProtocolWebV2.m in Sources */,
+				92D839E74B6FA505107847D1 /* FBSDKBridgeAPIRequest.m in Sources */,
+				6E1EAFDD88218AA8DD76AEB4 /* FBSDKBridgeAPIResponse.m in Sources */,
+				BA322A6A781925C59A8D0A1A /* FBSDKButton.m in Sources */,
+				C0A0762727E717671254F40C /* FBSDKCloseIcon.m in Sources */,
+				B04C218892E7D4BDBE4F3267 /* FBSDKColor.m in Sources */,
+				EC95FA33C3D547595EA4166B /* FBSDKConstants.m in Sources */,
+				6CE118B7FE2C8B51F65940F7 /* FBSDKCrypto.m in Sources */,
+				2F018E0E016EBF8F66D3AEAD /* FBSDKDialogConfiguration.m in Sources */,
+				93872B1B1E32990C54D155CF /* FBSDKDynamicFrameworkLoader.m in Sources */,
+				496314E421CD2DE2CE7F59B7 /* FBSDKError.m in Sources */,
+				EEA41CDD6BEB5076B8B8F4E0 /* FBSDKErrorConfiguration.m in Sources */,
+				AF73F9B55041F86F98D807B0 /* FBSDKErrorRecoveryAttempter.m in Sources */,
+				843D5756F7F12E3D168EEC26 /* FBSDKErrorRecoveryConfiguration.m in Sources */,
+				171985BE64B44B47C6D1080C /* FBSDKGraphErrorRecoveryProcessor.m in Sources */,
+				BB95C616D6A2FB6AE04FAD88 /* FBSDKGraphRequest.m in Sources */,
+				B872AAE45F222DA1D13DD7B3 /* FBSDKGraphRequestBody.m in Sources */,
+				EFF9C89CB2CB3708290334BA /* FBSDKGraphRequestConnection.m in Sources */,
+				E793D543EF87B82AB2B339DA /* FBSDKGraphRequestDataAttachment.m in Sources */,
+				A98B46B8255215D039691066 /* FBSDKGraphRequestMetadata.m in Sources */,
+				ECCC480BB2AEF74F3836A096 /* FBSDKGraphRequestPiggybackManager.m in Sources */,
+				3FFD2A2CE713E9D1F4DBCE44 /* FBSDKIcon.m in Sources */,
+				DDDC95C3EDAB25C25C747D26 /* FBSDKInternalUtility.m in Sources */,
+				BF572D4DDBB34B1629B382B6 /* FBSDKKeychainStore.m in Sources */,
+				B9649884FB20127979CE3943 /* FBSDKKeychainStoreViaBundleID.m in Sources */,
+				5A313924ACAB6657B241F40D /* FBSDKLogger.m in Sources */,
+				1F466C4125188E089A03ABBA /* FBSDKLogo.m in Sources */,
+				C638FEF351A4C56C79F27F1D /* FBSDKMaleSilhouetteIcon.m in Sources */,
+				E812755995E4E788BA735458 /* FBSDKMath.m in Sources */,
+				00E0A0C01EF4F55472EA4913 /* FBSDKPaymentObserver.m in Sources */,
+				F1369431D7001A9CBAA9221F /* FBSDKProfile.m in Sources */,
+				4C51B4444509BF9D6CE1FF71 /* FBSDKProfilePictureView.m in Sources */,
+				7CF23FB5577E6750E8AA0D0A /* FBSDKServerConfiguration.m in Sources */,
+				1F45A7ECAD76C6FA279898BC /* FBSDKServerConfigurationManager.m in Sources */,
+				8D1CE5041F3823CBC5939D6D /* FBSDKSettings.m in Sources */,
+				4CB94ADA8AACA88347D6DC3D /* FBSDKSystemAccountStoreAdapter.m in Sources */,
+				9410B8945122932F06BC00AE /* FBSDKTestUsersManager.m in Sources */,
+				5E0EC777525E4BF861787880 /* FBSDKTimeSpentData.m in Sources */,
+				B4BFBE32FE6031441B3578BF /* FBSDKTriStateBOOL.m in Sources */,
+				FD5879FAB0DB013EA8E41708 /* FBSDKTypeUtility.m in Sources */,
+				A7F6DDEF7F27B730D8BD8421 /* FBSDKURLConnection.m in Sources */,
+				650111DCE9091678AA300150 /* FBSDKUtility.m in Sources */,
+				B960B576979D90289F6D6858 /* FBSDKViewImpressionTracker.m in Sources */,
+				A5DCDAA5664C44136A8BC3BE /* FBSDKWebDialog.m in Sources */,
+				579E26114C860B813CF6A2BF /* FBSDKWebDialogView.m in Sources */,
+				07909D9C4A20D832EC7A8712 /* Pods-WeatherCheck-FBSDKCoreKit-dummy.m in Sources */,
+				E6BEF52C3E65DE513EC104C4 /* _FBSDKTemporaryErrorRecoveryAttempter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49B5ED75477965E437BB02F0 /* Sources */ = {
+		5AFC7280A3F6BB32C7AC3829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1675290DF9BBC9F0B1DB59F /* Pods-WeatherCheck-SwiftyJSON-dummy.m in Sources */,
-				2A25FA01C88F664963FEDDA9 /* SwiftyJSON.swift in Sources */,
+				E22B8749F9A07F69262CA74F /* BFAppLink.m in Sources */,
+				A073085BCEB1293D9BD43BEC /* BFAppLinkNavigation.m in Sources */,
+				DF1149F1AC523923332C8685 /* BFAppLinkReturnToRefererController.m in Sources */,
+				9269FDFF8C906792C171731D /* BFAppLinkReturnToRefererView.m in Sources */,
+				B230728C0CC62114984E2211 /* BFAppLinkTarget.m in Sources */,
+				1EDCD9102238B537AB101221 /* BFCancellationToken.m in Sources */,
+				14B569D7100F341060F20B2F /* BFCancellationTokenRegistration.m in Sources */,
+				699D6D8B5018594B01861029 /* BFCancellationTokenSource.m in Sources */,
+				3416644EC9F9880D145B801A /* BFExecutor.m in Sources */,
+				135A46FDD54CB06BA93B5F57 /* BFMeasurementEvent.m in Sources */,
+				72637AC89FC1719271ADD319 /* BFTask.m in Sources */,
+				5056152ACC90FD6F435D6F98 /* BFTaskCompletionSource.m in Sources */,
+				E0586C168DF939344689F4BC /* BFURL.m in Sources */,
+				FFF6D9489A7973B2697DD1B6 /* BFWebViewAppLinkResolver.m in Sources */,
+				EB15FF0D2E01BDF4ACC1837A /* Bolts.m in Sources */,
+				197195E272AD2D4F090C972D /* Pods-WeatherCheck-Bolts-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2FDDCC80A4B3013B9F24411 /* Sources */ = {
+		A4510B9341B8C27F1ADBFD73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE294F9F9CDE11B49932A0F /* Pods-WeatherCheck-dummy.m in Sources */,
+				429918DAC3A53ED19C10BB30 /* Pods-WeatherCheck-SwiftyJSON-dummy.m in Sources */,
+				0F997EB4D85B006F1245CB0C /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EF53AC559A6C82903E498F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9CE064D784F3BEE9E3DF9CE /* Pods-WeatherCheck-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15B47F632EFB11DDA727ED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E785E7F62E6DBAA7A3CD625 /* Alamofire.swift in Sources */,
+				6D5808F71400C2A81A3950A3 /* Download.swift in Sources */,
+				F191DAD503AE57B7A2915591 /* Manager.swift in Sources */,
+				F5308936B0E84FB31AFD0037 /* ParameterEncoding.swift in Sources */,
+				EB9E5FD64A99F44A483B6182 /* Pods-WeatherCheck-Alamofire-dummy.m in Sources */,
+				F9228ED87368D8AC29BDC6C6 /* Request.swift in Sources */,
+				E629A46AEAB0A1BC5B4AE403 /* ResponseSerialization.swift in Sources */,
+				D14DC21C9F64DF2AFE28E050 /* Upload.swift in Sources */,
+				CB1B7C57732A1DB9CBE870FF /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4D6F3C22D125F3BDE68FD6F9 /* PBXTargetDependency */ = {
+		127CA10AB528A42B4C3FF43D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WeatherCheck-Bolts";
+			target = 1C3E142397B76E0808B71FCB /* Pods-WeatherCheck-Bolts */;
+			targetProxy = 6183D72ED53FC9BCA55C30E2 /* PBXContainerItemProxy */;
+		};
+		2272C09FE9B8D2D059A65BE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-WeatherCheck-SwiftyJSON";
-			target = 411A41A6BC914AA65DDE7781 /* Pods-WeatherCheck-SwiftyJSON */;
-			targetProxy = 3AEF76146F0270A4C0B092EB /* PBXContainerItemProxy */;
+			target = 12605331EBE2A0EEB605F371 /* Pods-WeatherCheck-SwiftyJSON */;
+			targetProxy = F831C74A5CC77B2DB8108DA0 /* PBXContainerItemProxy */;
 		};
-		E8E33065F84E98ABC3B9176D /* PBXTargetDependency */ = {
+		5E7474D6778BC16B681A293E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WeatherCheck-Bolts";
+			target = 1C3E142397B76E0808B71FCB /* Pods-WeatherCheck-Bolts */;
+			targetProxy = 56B5A42F7116C3D679785CDC /* PBXContainerItemProxy */;
+		};
+		7FA92D514DCDC4BF5B12EC72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-WeatherCheck-Alamofire";
-			target = A446A277056D112B4404BFD2 /* Pods-WeatherCheck-Alamofire */;
-			targetProxy = E80E4EE2AA5C7AE5463D9E0A /* PBXContainerItemProxy */;
+			target = 02D603519484184BE628C3D8 /* Pods-WeatherCheck-Alamofire */;
+			targetProxy = 768D8F5A3B2A0CB6E3B5E15E /* PBXContainerItemProxy */;
+		};
+		C875AD8D3C7C5081A74028FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WeatherCheck-FBSDKCoreKit";
+			target = 8080303865051F67970C9ACF /* Pods-WeatherCheck-FBSDKCoreKit */;
+			targetProxy = A41AA0536FB3812A44EC7660 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0B181492ADDAD4D9DAABD7C5 /* Release */ = {
+		43968B2DA0A66FED9EEBC230 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E46412329C155093956A8FC1 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */;
+			baseConfigurationReference = 555D0E189D8EAD3C7C086D5C /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-WeatherCheck-SwiftyJSON/Pods-WeatherCheck-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck-SwiftyJSON/Pods-WeatherCheck-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64F709F68A231C3D34C48DB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAFE000BF96DE58377DD47E4 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -431,7 +1453,61 @@
 			};
 			name = Release;
 		};
-		725395D59B3E57E61EE73E97 /* Debug */ = {
+		667E8B0D5F43E730500ED504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD15A4DE62A5C114A3C8FF84 /* Pods-WeatherCheck-Bolts-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-WeatherCheck-Bolts/Pods-WeatherCheck-Bolts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck-Bolts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck-Bolts/Pods-WeatherCheck-Bolts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Bolts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74494FAAB6E040BBF31C06B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD15A4DE62A5C114A3C8FF84 /* Pods-WeatherCheck-Bolts-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-WeatherCheck-Bolts/Pods-WeatherCheck-Bolts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck-Bolts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck-Bolts/Pods-WeatherCheck-Bolts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Bolts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B55E95959CD435C3BEA4E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -470,9 +1546,38 @@
 			};
 			name = Debug;
 		};
-		AA3B643E255511622E6C5FFC /* Debug */ = {
+		7D5C709B99AE25CE2A703AF6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E46412329C155093956A8FC1 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */;
+			baseConfigurationReference = CB110E31683CD61E63539D44 /* Pods-WeatherCheck.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_WeatherCheck;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		86822926C37548861B3942C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAFE000BF96DE58377DD47E4 /* Pods-WeatherCheck-Alamofire-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -498,34 +1603,7 @@
 			};
 			name = Debug;
 		};
-		C3E46CFD43BBA334DBCF658C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4E05228CAFE921CDA21DD95 /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-WeatherCheck-SwiftyJSON/Pods-WeatherCheck-SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck-SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck-SwiftyJSON/Pods-WeatherCheck-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DCB7E4D12D9595A799404E17 /* Release */ = {
+		8B556905FEEAA64453D6BAF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -559,9 +1637,93 @@
 			};
 			name = Release;
 		};
-		DDF6FF95C1BB53C92EB30576 /* Debug */ = {
+		8B9FA9AB010DFFD0C8E29FB9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4E05228CAFE921CDA21DD95 /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */;
+			baseConfigurationReference = C64FED2590A40F180566E14F /* Pods-WeatherCheck-FBSDKCoreKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-WeatherCheck-FBSDKCoreKit/Pods-WeatherCheck-FBSDKCoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck-FBSDKCoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck-FBSDKCoreKit/Pods-WeatherCheck-FBSDKCoreKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FBSDKCoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		99B724CC68AC05B52BF08916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C64FED2590A40F180566E14F /* Pods-WeatherCheck-FBSDKCoreKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-WeatherCheck-FBSDKCoreKit/Pods-WeatherCheck-FBSDKCoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck-FBSDKCoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck-FBSDKCoreKit/Pods-WeatherCheck-FBSDKCoreKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FBSDKCoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6253134D70A13EBBEBC5393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F69FB54A628BC39A0BA265 /* Pods-WeatherCheck.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_WeatherCheck;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEBE323058B1305A00CD327C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 555D0E189D8EAD3C7C086D5C /* Pods-WeatherCheck-SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -576,68 +1738,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck-SwiftyJSON/Pods-WeatherCheck-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F58987B4F5DFA6C9BFC2638F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D1860956FB1E3775729C9B6 /* Pods-WeatherCheck.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_WeatherCheck;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FBB044144DE0F81BF545FB4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1262FBC1A14C89E0D486A0D /* Pods-WeatherCheck.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-WeatherCheck/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_WeatherCheck;
+				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -649,43 +1751,61 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		70C05406D858902D798F6217 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-Alamofire" */ = {
+		223BE55ACEA2B3895BEA24EA /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA3B643E255511622E6C5FFC /* Debug */,
-				0B181492ADDAD4D9DAABD7C5 /* Release */,
+				7B55E95959CD435C3BEA4E9B /* Debug */,
+				8B556905FEEAA64453D6BAF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7778D9ADC60354B1F061FD5 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck" */ = {
+		8D5FC73E86592661D5F80069 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F58987B4F5DFA6C9BFC2638F /* Debug */,
-				FBB044144DE0F81BF545FB4B /* Release */,
+				43968B2DA0A66FED9EEBC230 /* Debug */,
+				BEBE323058B1305A00CD327C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8F6D04A1BF5842AB05BED57 /* Build configuration list for PBXProject "Pods" */ = {
+		90639A549F3D7F5296B2A7A4 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-Bolts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				725395D59B3E57E61EE73E97 /* Debug */,
-				DCB7E4D12D9595A799404E17 /* Release */,
+				667E8B0D5F43E730500ED504 /* Debug */,
+				74494FAAB6E040BBF31C06B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0958961FF0B7AF986922045 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-SwiftyJSON" */ = {
+		BFF3CB650F950C3AE65D9D18 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF6FF95C1BB53C92EB30576 /* Debug */,
-				C3E46CFD43BBA334DBCF658C /* Release */,
+				A6253134D70A13EBBEBC5393 /* Debug */,
+				7D5C709B99AE25CE2A703AF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8E6E87A1E9389948E3CC235 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-FBSDKCoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B724CC68AC05B52BF08916 /* Debug */,
+				8B9FA9AB010DFFD0C8E29FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5D2E8C74BE723434400A4E7 /* Build configuration list for PBXNativeTarget "Pods-WeatherCheck-Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86822926C37548861B3942C3 /* Debug */,
+				64F709F68A231C3D34C48DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2FE7718993EA76DF1B92A539 /* Project object */;
+	rootObject = 189A57B4D0B1C488E522AEF1 /* Project object */;
 }

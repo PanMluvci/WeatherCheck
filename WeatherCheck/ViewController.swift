@@ -10,12 +10,13 @@ import UIKit
 import CoreLocation
 import Alamofire
 import SwiftyJSON
-
+import FBSDKCoreKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var weather: Weather?
     var passingData = String("")
+    var errorFound : Bool = false
     
     let locationManager = CLLocationManager()
     let locValue = CLLocationCoordinate2D()
@@ -35,8 +36,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var statusImageView: UIImageView!
     @IBOutlet var srollingInfoLabel: UIScrollView!
-
-   // @IBOutlet var searchCityBtn: UIBarButtonItem!
+    
     /*
     *   Navigate and open LocationViewController after pressing the button
     */
@@ -46,33 +46,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(openLocationVC, animated: true)
     }
     
+    /*
+    *   Navigate and open StoredCityViewController after pressing the button
+    */
     @IBAction func navigationBtnToStoredCityVC(sender: AnyObject) {
         
-        let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("StoredCityVC") as! StoredCityPickerViewController
-        self.navigationController?.pushViewController(openLocationVC, animated: true)
+        let openStoredCityVC = self.storyboard?.instantiateViewControllerWithIdentifier("StoredCityVC") as! StoredCityPickerViewController
+        self.navigationController?.pushViewController(openStoredCityVC, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBarHidden = true
-       // srollingInfoLabel.
-        srollingInfoLabel.contentSize.height = 600
-       // descriptionLabel.layer.borderWidth = 0.5
-       // descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
-       // self.locationManager.startUpdatingLocation()
-        self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
-        self.navigationController!.toolbar.layer.borderWidth = 0.5
-        self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
-        self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
-        
-        self.navigationController!.toolbar.hidden = false
-        //searchingForCity(passingData)
-        
+
+        searchingForCity(passingData)
+        buttonSkinView()
     }
+     /*
+    func fbLogin(){
+        let ref = Firebase(url: "https://weathercheck.firebaseio.com")
+        
+        ref.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                // user authenticated
+                println(authData)
+            } else {
+                // No user is signed in
+            }
+        })
+    
+    }*/
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -88,6 +91,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
             self.locationManager.startUpdatingLocation()
+            self.locationManager.delegate = self
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.requestWhenInUseAuthorization()
         }
     }
     /*
@@ -96,8 +102,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func getWeatherData(urlString: String) {
         
         Alamofire.request(.GET, urlString, parameters: nil) .responseJSON { (req, res, json, error) in
+            
             if(error != nil) {
                 NSLog("Error: \(error)")
+                return
             } else {
                 var weatherJson = JSON(json!)
                 
@@ -112,11 +120,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 var description = weatherJson["weather"][0]["description"].stringValue
                 var pressure = weatherJson["main", "pressure"].int
                 var humidity = weatherJson["main", "humidity"].int
-               // var visibility = weatherJson["visibility"].int
                 var wind = weatherJson["wind", "speed"].double
                 var clouds = weatherJson["clouds", "all"].int
                 var infoImage = weatherJson["weather"][0]["icon"].stringValue
-
                 
                 self.weather = Weather(name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!, pres: pressure!, humi: humidity!, wind: wind!, clou:clouds!, img: infoImage)
 
@@ -129,41 +135,33 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     *   Seting weather values get from class Weather.swift, to labels in storyboard.
     */
     func setLabels() {
-        //Name of city
         if let name = self.weather?.name{
             self.townLabel.text = name
         }
-        //Cloudy, sunny etc.
         if let country = self.weather?.coun{
             self.countryLabel.text = country
         }
-        
         if let description = self.weather?.desc{
             self.descriptionLabel.text = description
         }
-        
         if let minTemperature = self.weather?.minT{
             let celsiusTemp = ((minTemperature - 273.15))
             let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
             let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
             self.minTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
         }
-        
         if let maxTemperature = self.weather?.maxT{
             let celsiusTemp = ((maxTemperature - 273.15))
             let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
             let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
             self.maxTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
         }
-        
-        //Temperature in city
         if let temp = self.weather?.temp{
             let celsiusTemp = ((temp - 273.15))
             let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
             let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
             self.temperatureLabel.text = myStringRoundedCelsiusTemp + ("°C")
         }
-        
         if let sunRise = self.weather?.sunR{
             self.sunRiseLabel.text = stringFromTimeInterval(sunRise)
         }
@@ -183,12 +181,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.cloudsLabel.text = ("\(clouds) %")
         }
         if let img = self.weather?.img{
-            
             statusImageView.image = UIImage(named: img)
         }
-        
-        
-    }
+}
     
     /*
     *   Store current location of device, then make and call ulr with position details. Then stop update location.
@@ -196,16 +191,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
         var locValue:CLLocationCoordinate2D = manager.location.coordinate
+        
         getWeatherData("http://api.openweathermap.org/data/2.5/weather?lat=" + "\(locValue.latitude)" + "&lon=" + "\(locValue.longitude)")
         self.locationManager.stopUpdatingLocation()
     }
     
     /*
-     *   handler for err
+     *   Location was interupted or err occured.
      */
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("ERR " + error.localizedDescription)
-        //dopsat handler
+        //println("ERR " + error.localizedDescription)
+        locationManager.stopUpdatingLocation()
+        if ((error) != nil) {
+            if (errorFound == false) {
+                errorFound = true
+                print(error)
+            }
+        }else{
+            getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Linz")
+        }
     }
     
     /*
@@ -220,11 +224,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let hoursAndMinutes: String = "\(hour):\(minutes)"
         return hoursAndMinutes
     }
+    
     /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var destViewController: LocationViewController = segue.destinationViewController as! LocationViewController
-        destViewController.data =
-    }
+    *   Add skins for buttons, background, scrollpanel
     */
+    func buttonSkinView(){
+        self.navigationController?.navigationBarHidden = true
+        srollingInfoLabel.contentSize.height = 300
+        descriptionLabel.layer.borderWidth = 0.5
+        descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        
+        self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
+        self.navigationController!.toolbar.layer.borderWidth = 0.5
+        self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
+        self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
+    }
 }
 
