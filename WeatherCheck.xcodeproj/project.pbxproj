@@ -18,6 +18,7 @@
 		CC5027A31B4FC94F008E89F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5027A11B4FC94F008E89F8 /* LaunchScreen.xib */; };
 		CC5027AF1B4FC94F008E89F8 /* WeatherCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5027AE1B4FC94F008E89F8 /* WeatherCheckTests.swift */; };
 		CC9185521B526F6D00F16D2D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9185511B526F6D00F16D2D /* Weather.swift */; };
+		CCF542751B5E32AF00DE5688 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CCF542741B5E32AF00DE5688 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		CC5027AD1B4FC94F008E89F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5027AE1B4FC94F008E89F8 /* WeatherCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCheckTests.swift; sourceTree = "<group>"; };
 		CC9185511B526F6D00F16D2D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		CCF542741B5E32AF00DE5688 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		F35B15D6E8733E1028C17A2B /* Pods-WeatherCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCheck.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				CC1FC4F21B5B911C00B3DC01 /* Controller */,
 				CC50279F1B4FC94F008E89F8 /* Images.xcassets */,
 				CC5027981B4FC94F008E89F8 /* AppDelegate.swift */,
+				CCF542741B5E32AF00DE5688 /* .gitignore */,
 				CC50279C1B4FC94F008E89F8 /* Main.storyboard */,
 				CC2598171B5D394600F42F0D /* WeatherCheck-Bridging-Header.h */,
 				CC5027A11B4FC94F008E89F8 /* LaunchScreen.xib */,
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF542751B5E32AF00DE5688 /* .gitignore in Resources */,
 				CC3E571B1B595E5C00B44E90 /* Main.storyboard in Resources */,
 				CC5027A31B4FC94F008E89F8 /* LaunchScreen.xib in Resources */,
 				CC5027A01B4FC94F008E89F8 /* Images.xcassets in Resources */,
