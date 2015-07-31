@@ -20,6 +20,7 @@ class LocationViewController: UIViewController{
     @IBAction func backItemBtnToolBar(sender: AnyObject) {
         let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
         self.navigationController?.pushViewController(openLocationVC, animated: true)
+        openLocationVC.auth = true
     }
     
     @IBAction func searchButton(sender: UIButton) {
@@ -55,6 +56,7 @@ class LocationViewController: UIViewController{
         }else{
             fixedText = fixTheText
             destViewController.passingData = fixedText
+            destViewController.auth = true
         }
     }
     

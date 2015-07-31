@@ -12,25 +12,25 @@ import CoreData
 
 class StoredCityPickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
-
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet var backgroundImageView: UIImageView!
-    
     var myList : Array<AnyObject> = []
     var passedCityNameFromTable = ""
+    var valueToPass = "Berlin"
+    
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var backgroundImageView: UIImageView!
     
     @IBAction func backItemBtnToolBar(sender: AnyObject) {
         let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
         self.navigationController?.pushViewController(openLocationVC, animated: true)
+        openLocationVC.auth = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonSkin()
-        
         tableView.delegate = self
         tableView.dataSource = self
-
+        
     }
     
     override func viewDidAppear(animated: Bool){
@@ -43,10 +43,6 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         
         tableView.reloadData()
     }
-
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
     
     /**
     *   Return a number of rows in Table
@@ -55,35 +51,52 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         
         return myList.count
     }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    /*
+    *   Add all stored cities from database to the row in table. Use capital letters style.
+    */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let CellID: NSString = "Cell"
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellID as String) as! UITableViewCell
         
         if let ip = indexPath as NSIndexPath? {
-            
+            //adding values to cells
             var data: NSManagedObject = myList[ip.row] as! NSManagedObject
-            cell.textLabel?.text = data.valueForKeyPath("name") as? String
+            var s = data.valueForKeyPath("name") as? String
+            var fixedText = s!.stringByReplacingOccurrencesOfString("%20", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            cell.textLabel?.text = fixedText.uppercaseString
             
         }
-        
         return cell
     }
     
+    /*
+    *   Add value from selected row for searched city. Call segue.
+    */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
-        let indexPath = tableView.indexPathForSelectedRow();
         
-        let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell!
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+        //optional => unwrap
+        let text = cell?.textLabel?.text
+        if let text = text {
+            passedCityNameFromTable = text
+            valueToPass = text
+            performSegueWithIdentifier("tableData", sender: self)
+        }
         
-        passedCityNameFromTable == currentCell!.textLabel!.text
-        println(passedCityNameFromTable)
-
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
+    
+    /*
+    *   Delete the row you dont want to see in list.
+    */
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
@@ -104,19 +117,17 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     }
     
     /**
-    *   Passing data from text input, about searching city to mainViewController. Fixed space issue in city name.
+    *   Pass data from text input, about searching city to ViewController. Fix space issue in city name.
     */
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        var destViewController: ViewController = (segue.destinationViewController as? ViewController)!
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         
-        if passedCityNameFromTable.isEmpty == true{
+        if (segue.identifier == "tableData") {
             
-            println("TRUE")
-        }else{
-            destViewController.passingData = passedCityNameFromTable
-            println(passedCityNameFromTable)
+            var viewController = segue.destinationViewController as! ViewController
+            var fixedText = valueToPass.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            viewController.passingData = fixedText
         }
-            
+        
     }
     
     /*

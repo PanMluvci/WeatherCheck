@@ -11,12 +11,16 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
+
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var weather: Weather?
     var passingData = String("")
     var errorFound : Bool = false
+    var auth = Bool(false)
     
     let locationManager = CLLocationManager()
     let locValue = CLLocationCoordinate2D()
@@ -42,7 +46,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     */
     @IBAction func navigationBtnToLocationVC(sender: AnyObject) {
         
-        let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("LocationVC") as! LocationViewController
+        let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("LocationVC") as! SearchLocationViewController
         self.navigationController?.pushViewController(openLocationVC, animated: true)
     }
     
@@ -57,26 +61,91 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         searchingForCity(passingData)
         buttonSkinView()
+        //logOut()
+        if auth == false{
+           // authFB()
+            
+        }
     }
-     /*
-    func fbLogin(){
+    
+    /*
+    *   Auth the user with facebook.
+    */
+    func authFB(){
+        let ref = Firebase(url: "https://weathercheck.firebaseio.com")
+        let facebookLogin = FBSDKLoginManager()
+        
+        facebookLogin.logInWithReadPermissions(["email"], handler: {
+            (facebookResult, facebookError) -> Void in
+            
+            if facebookError != nil {
+                println("Facebook login failed. Error \(facebookError)")
+            } else if facebookResult.isCancelled {
+                println("Facebook login was cancelled.")
+            } else {
+                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                
+                ref.authWithOAuthProvider("facebook", token: accessToken,
+                    withCompletionBlock: { error, authData in
+                        
+                        if error != nil {
+                            println("Login failed. \(error)")
+                        } else {
+                            println("Logged in! \(authData.uid)")
+                            self.fbSave(authData.uid)
+                            
+                        }
+                        self.fbLoad()
+                })
+            }
+        })
+        
+    }
+    
+    func fbSave(dataFb : NSString){
+        let ref = Firebase(url: "https://weathercheck.firebaseio.com")
+        var faceBookUser = ["uid": dataFb]
+        var faceBookUserSettings = []
+        //var gracehop = ["full_name": "Grace Hopper", "date_of_birth": "December 9, 1906"]
+        
+        var usersRef = ref.childByAppendingPath("users")
+        
+        var users = ["facebookuser": faceBookUser]
+        usersRef.setValue(users)
+    }
+    
+    func fbLoad(){
+        // Get a reference to our posts
         let ref = Firebase(url: "https://weathercheck.firebaseio.com")
         
-        ref.observeAuthEventWithBlock({ authData in
-            if authData != nil {
-                // user authenticated
-                println(authData)
-            } else {
-                // No user is signed in
+        // Retrieve new posts as they are added to your database
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            println(snapshot.value.objectForKey("facebookuser"))
+            
+            //println(snapshot.value.objectForKey("gracehop"))
+        })
+        
+        // download the entire group list :(
+        ref.observeSingleEventOfType(.Value, withBlock: {
+            snapshot in
+            var result = "is not"
+            
+            // iterate all the elements :((
+            var children = snapshot.children
+            while let child = children.nextObject() as? FDataSnapshot {
+                if child.key == "uid" {
+                    result = "is"
+                    println(child.key)
+                    break
+                }
             }
         })
     
-    }*/
+    }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -97,14 +166,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     /*
-    *
+    *   Get all important weather values.
     */
     func getWeatherData(urlString: String) {
         
         Alamofire.request(.GET, urlString, parameters: nil) .responseJSON { (req, res, json, error) in
             
             if(error != nil) {
-                NSLog("Error: \(error)")
                 return
             } else {
                 var weatherJson = JSON(json!)
@@ -197,7 +265,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     /*
-     *   Location was interupted or err occured.
+     *   Location was interupted or err occured. Get Linz weather instead.
      */
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         //println("ERR " + error.localizedDescription)
@@ -240,5 +308,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
         self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
     }
+    
+ 
 }
 

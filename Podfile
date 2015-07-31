@@ -6,8 +6,10 @@ target 'WeatherCheck' do
 
   pod 'SwiftyJSON', '~> 2.2'
   pod 'Alamofire', '~> 1.2'	
-pod "FBSDKCoreKit"
 pod 'Firebase', '>= 2.3.3'
+pod "FBSDKCoreKit"
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
 
 end
 
