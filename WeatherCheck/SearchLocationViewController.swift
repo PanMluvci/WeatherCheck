@@ -16,13 +16,19 @@ class SearchLocationViewController: UIViewController {
         
         @IBOutlet var backGroundImageView: UIImageView!
         @IBOutlet var cityInputTxtField: UITextField!
-        
+    
+    /*
+    *   Open MainVC view. Send true to fb.auth
+    */
         @IBAction func backItemBtnToolBar(sender: AnyObject) {
-            let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
-            self.navigationController?.pushViewController(openLocationVC, animated: true)
-            openLocationVC.auth = true
+            let openMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
+            self.navigationController?.pushViewController(openMainVC, animated: true)
+            openMainVC.auth = true
         }
-        
+    
+    /*
+    *   Search for the city, inpud value store in local db.
+    */
         @IBAction func searchButton(sender: UIButton) {
             if fixedText.isEmpty == false{
                 var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
@@ -53,6 +59,8 @@ class SearchLocationViewController: UIViewController {
             if fixTheText.isEmpty == true{
                 
                 destViewController.passingData = "Berlin"
+                destViewController.auth = true
+
             }else{
                 fixedText = fixTheText
                 destViewController.passingData = fixedText

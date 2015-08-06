@@ -20,9 +20,9 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet var backgroundImageView: UIImageView!
     
     @IBAction func backItemBtnToolBar(sender: AnyObject) {
-        let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
-        self.navigationController?.pushViewController(openLocationVC, animated: true)
-        openLocationVC.auth = true
+        let openMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
+        self.navigationController?.pushViewController(openMainVC, animated: true)
+        openMainVC.auth = true
     }
     
     override func viewDidLoad() {
@@ -123,9 +123,10 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         
         if (segue.identifier == "tableData") {
             
-            var viewController = segue.destinationViewController as! ViewController
+            var mainVC = segue.destinationViewController as! ViewController
             var fixedText = valueToPass.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            viewController.passingData = fixedText
+            mainVC.passingData = fixedText
+            mainVC.auth = true
         }
         
     }

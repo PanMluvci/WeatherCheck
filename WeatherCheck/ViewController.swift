@@ -65,7 +65,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         buttonSkinView()
         //logOut()
         if auth == false{
-           // authFB()
+            authFB()
             
         }
     }
@@ -104,6 +104,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    /*
+    * unfinished fb save values for user.
+    */
     func fbSave(dataFb : NSString){
         let ref = Firebase(url: "https://weathercheck.firebaseio.com")
         var faceBookUser = ["uid": dataFb]
@@ -115,7 +118,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         var users = ["facebookuser": faceBookUser]
         usersRef.setValue(users)
     }
-    
+     /*
+    * unfinished fb load values for user.
+    */
     func fbLoad(){
         // Get a reference to our posts
         let ref = Firebase(url: "https://weathercheck.firebaseio.com")
@@ -153,7 +158,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     /*
     * Search for the city's weather status.
-    * If no start value in searched city, then use the current location.
+    * If no start value in searched city, use the current location.
     */
     func searchingForCity(data:String){
         if(passingData.isEmpty == false){
@@ -166,7 +171,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     /*
-    *   Get all important weather values.
+    *   Get all important current weather values.
     */
     func getWeatherData(urlString: String) {
         
@@ -175,9 +180,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if(error != nil) {
                 return
             } else {
+    
+            /*for (key: String, subJson: JSON) in weatherJson {
+                unfinished forecast iteration
+                
+                
+            }*/
                 var weatherJson = JSON(json!)
                 
-                //var id = weatherJson["id"].int
                 var cityName = weatherJson["name"].string
                 var country = weatherJson["sys", "country"].string
                 var sunRise = weatherJson["sys", "sunrise"].double
