@@ -7,24 +7,19 @@
 //
 
 import UIKit
-import CoreLocation
 import Alamofire
 import SwiftyJSON
-import FBSDKCoreKit
-import FBSDKLoginKit
-import FBSDKShareKit
 
-
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController {
     
-    var weather: Weather?
-    var passingData = String("")
-    var errorFound : Bool = false
-    var auth = Bool(false)
+    private var weather: Weather?
+    private var locationManager: LocationManager?
+    let timeInterval = TimeInterval()
+    //private var locationManager = LocationManager()
     
-    let locationManager = CLLocationManager()
-    let locValue = CLLocationCoordinate2D()
-    
+     var passingData = String("")
+    private var errorFound : Bool = false
+     var auth = Bool(false)
     @IBOutlet var townLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!
@@ -63,93 +58,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         searchingForCity(passingData)
         buttonSkinView()
-        //logOut()
+        
+        self.locationManager = LocationManager()
+        println(locationManager?.locValue.longitude)
+        
         if auth == false{
-            authFB()
+            //CLLocationManagerDelegateauthFB()
             
         }
-    }
-    
-    /*
-    *   Auth the user with facebook.
-    */
-    func authFB(){
-        let ref = Firebase(url: "https://weathercheck.firebaseio.com")
-        let facebookLogin = FBSDKLoginManager()
-        
-        facebookLogin.logInWithReadPermissions(["email"], handler: {
-            (facebookResult, facebookError) -> Void in
-            
-            if facebookError != nil {
-                println("Facebook login failed. Error \(facebookError)")
-            } else if facebookResult.isCancelled {
-                println("Facebook login was cancelled.")
-            } else {
-                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-                
-                ref.authWithOAuthProvider("facebook", token: accessToken,
-                    withCompletionBlock: { error, authData in
-                        
-                        if error != nil {
-                            println("Login failed. \(error)")
-                        } else {
-                            println("Logged in! \(authData.uid)")
-                            self.fbSave(authData.uid)
-                            
-                        }
-                        self.fbLoad()
-                })
-            }
-        })
         
     }
     
-    /*
-    * unfinished fb save values for user.
-    */
-    func fbSave(dataFb : NSString){
-        let ref = Firebase(url: "https://weathercheck.firebaseio.com")
-        var faceBookUser = ["uid": dataFb]
-        var faceBookUserSettings = []
-        //var gracehop = ["full_name": "Grace Hopper", "date_of_birth": "December 9, 1906"]
-        
-        var usersRef = ref.childByAppendingPath("users")
-        
-        var users = ["facebookuser": faceBookUser]
-        usersRef.setValue(users)
-    }
-     /*
-    * unfinished fb load values for user.
-    */
-    func fbLoad(){
-        // Get a reference to our posts
-        let ref = Firebase(url: "https://weathercheck.firebaseio.com")
-        
-        // Retrieve new posts as they are added to your database
-        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            println(snapshot.value.objectForKey("facebookuser"))
-            
-            //println(snapshot.value.objectForKey("gracehop"))
-        })
-        
-        // download the entire group list :(
-        ref.observeSingleEventOfType(.Value, withBlock: {
-            snapshot in
-            var result = "is not"
-            
-            // iterate all the elements :((
-            var children = snapshot.children
-            while let child = children.nextObject() as? FDataSnapshot {
-                if child.key == "uid" {
-                    result = "is"
-                    println(child.key)
-                    break
-                }
-            }
-        })
-    
-    }
-    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -164,10 +84,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if(passingData.isEmpty == false){
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
-            self.locationManager.startUpdatingLocation()
-            self.locationManager.delegate = self
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.requestWhenInUseAuthorization()
+            println("ELSE")
+            //println("ALatitude: \(locationManager!.locValue.latitude) Longtitude: \(locationManager!.locValue.longitude)")
+         
         }
     }
     /*
@@ -210,9 +129,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     /*
-    *   Seting weather values get from class Weather.swift, to labels in storyboard.
+    *   Seting weather values get from class Weather.swift, to labels in storyboard. ZUSTANE
     */
-    func setLabels() {
+    private func setLabels() {
         if let name = self.weather?.name{
             self.townLabel.text = name
         }
@@ -241,10 +160,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.temperatureLabel.text = myStringRoundedCelsiusTemp + ("°C")
         }
         if let sunRise = self.weather?.sunR{
-            self.sunRiseLabel.text = stringFromTimeInterval(sunRise)
+            self.sunRiseLabel.text = timeInterval.stringFromTimeInterval(sunRise)
         }
         if let sunSet = self.weather?.sunS{
-            self.sunSetLabel.text = stringFromTimeInterval(sunSet)
+            self.sunSetLabel.text = timeInterval.stringFromTimeInterval(sunSet)
         }
         if let pressure = self.weather?.pres{
             self.pressurelabel.text = ("\(pressure) kPa")
@@ -263,60 +182,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
 }
     
-    /*
-    *   Store current location of device, then make and call ulr with position details. Then stop update location.
-    */
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        
-        var locValue:CLLocationCoordinate2D = manager.location.coordinate
-        
-        getWeatherData("http://api.openweathermap.org/data/2.5/weather?lat=" + "\(locValue.latitude)" + "&lon=" + "\(locValue.longitude)")
-        self.locationManager.stopUpdatingLocation()
-    }
     
-    /*
-     *   Location was interupted or err occured. Get Linz weather instead.
-     */
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        //println("ERR " + error.localizedDescription)
-        locationManager.stopUpdatingLocation()
-        if ((error) != nil) {
-            if (errorFound == false) {
-                errorFound = true
-                print(error)
-            }
-        }else{
-            getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Linz")
-        }
-    }
-    
-    /*
-    *   TimeStamp value will be converted to format (hour:minute)
-    */
-    func stringFromTimeInterval(timeStamp:NSTimeInterval) -> String {
-        let date = NSDate(timeIntervalSince1970: timeStamp)
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
-        let hour = components.hour
-        let minutes = components.minute
-        let hoursAndMinutes: String = "\(hour):\(minutes)"
-        return hoursAndMinutes
-    }
     
     /*
     *   Add skins for buttons, background, scrollpanel
     */
     func buttonSkinView(){
         self.navigationController?.navigationBarHidden = true
-        srollingInfoLabel.contentSize.height = 300
-        descriptionLabel.layer.borderWidth = 0.5
-        descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
-        
-        
         self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         self.navigationController!.toolbar.layer.borderWidth = 0.5
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
+       
         self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
+        
+        srollingInfoLabel.contentSize.height = 300
+        
+        descriptionLabel.layer.borderWidth = 0.5
+        descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
+        
     }
     
  

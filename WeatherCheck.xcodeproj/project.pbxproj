@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55BC6C8547D844C2C304DAD1 /* Pods_WeatherCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96AD2E6FE6852917A1CFD23 /* Pods_WeatherCheck.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CC1931481BA1A2B9001FAAC0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1931471BA1A2B9001FAAC0 /* LocationManager.swift */; };
 		CC1FC4F11B5B900D00B3DC01 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC1FC4EF1B5B900D00B3DC01 /* Model.xcdatamodeld */; };
 		CC3E57191B59509900B44E90 /* StoredCityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E57181B59509900B44E90 /* StoredCityPickerViewController.swift */; };
 		CC3E571B1B595E5C00B44E90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC50279C1B4FC94F008E89F8 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 		CC5027A31B4FC94F008E89F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5027A11B4FC94F008E89F8 /* LaunchScreen.xib */; };
 		CC5027AF1B4FC94F008E89F8 /* WeatherCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5027AE1B4FC94F008E89F8 /* WeatherCheckTests.swift */; };
 		CC9185521B526F6D00F16D2D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9185511B526F6D00F16D2D /* Weather.swift */; };
+		CCE9E8A91BA55A84002CAD2F /* FaceBookAuthentization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE9E8A81BA55A84002CAD2F /* FaceBookAuthentization.swift */; };
+		CCE9E8AB1BA55D04002CAD2F /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE9E8AA1BA55D04002CAD2F /* TimeInterval.swift */; };
 		CCF542751B5E32AF00DE5688 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CCF542741B5E32AF00DE5688 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,7 @@
 /* Begin PBXFileReference section */
 		5C42DC81C4AC76044D31CC75 /* Pods-WeatherCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		A96AD2E6FE6852917A1CFD23 /* Pods_WeatherCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1931471BA1A2B9001FAAC0 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CC1FC4F01B5B900D00B3DC01 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CC3E57181B59509900B44E90 /* StoredCityPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredCityPickerViewController.swift; sourceTree = "<group>"; };
 		CC43511C1B69054E009E29DC /* SearchLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		CC5027AD1B4FC94F008E89F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5027AE1B4FC94F008E89F8 /* WeatherCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCheckTests.swift; sourceTree = "<group>"; };
 		CC9185511B526F6D00F16D2D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		CCE9E8A81BA55A84002CAD2F /* FaceBookAuthentization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookAuthentization.swift; sourceTree = "<group>"; };
+		CCE9E8AA1BA55D04002CAD2F /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		CCF542741B5E32AF00DE5688 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		F35B15D6E8733E1028C17A2B /* Pods-WeatherCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCheck.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherCheck/Pods-WeatherCheck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,15 +109,11 @@
 			children = (
 				CC1FC4EF1B5B900D00B3DC01 /* Model.xcdatamodeld */,
 				CC9185511B526F6D00F16D2D /* Weather.swift */,
+				CC1931471BA1A2B9001FAAC0 /* LocationManager.swift */,
+				CCE9E8A81BA55A84002CAD2F /* FaceBookAuthentization.swift */,
+				CCE9E8AA1BA55D04002CAD2F /* TimeInterval.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		CC1FC4F41B5B914800B3DC01 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		CC50278A1B4FC94F008E89F8 = {
@@ -137,7 +139,6 @@
 		CC5027951B4FC94F008E89F8 /* WeatherCheck */ = {
 			isa = PBXGroup;
 			children = (
-				CC1FC4F41B5B914800B3DC01 /* View */,
 				CC1FC4F31B5B913400B3DC01 /* Model */,
 				CC1FC4F21B5B911C00B3DC01 /* Controller */,
 				CC50279F1B4FC94F008E89F8 /* Images.xcassets */,
@@ -327,9 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE9E8A91BA55A84002CAD2F /* FaceBookAuthentization.swift in Sources */,
+				CCE9E8AB1BA55D04002CAD2F /* TimeInterval.swift in Sources */,
 				CC43511D1B69054E009E29DC /* SearchLocationViewController.swift in Sources */,
 				CC50279B1B4FC94F008E89F8 /* ViewController.swift in Sources */,
 				CC3E57191B59509900B44E90 /* StoredCityPickerViewController.swift in Sources */,
+				CC1931481BA1A2B9001FAAC0 /* LocationManager.swift in Sources */,
 				CC9185521B526F6D00F16D2D /* Weather.swift in Sources */,
 				CC5027991B4FC94F008E89F8 /* AppDelegate.swift in Sources */,
 				CC1FC4F11B5B900D00B3DC01 /* Model.xcdatamodeld in Sources */,
