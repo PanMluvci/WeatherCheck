@@ -12,14 +12,15 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     
-    private var weather: Weather?
-    private var locationManager: LocationManager?
-    let timeInterval = TimeInterval()
-    //private var locationManager = LocationManager()
+    var weather : Weather?
+     private let timeInterval = TimeInterval()
+     private let locationManager = LocationManager()
+     private let weatherData = WeatherData()
     
      var passingData = String("")
-    private var errorFound : Bool = false
+     var errorFound : Bool = false
      var auth = Bool(false)
+    
     @IBOutlet var townLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
     /*
     *   Navigate and open LocationViewController after pressing the button
     */
-    @IBAction func navigationBtnToLocationVC(sender: AnyObject) {
+    @IBAction func switchToLocationVC(sender: AnyObject) {
         
         let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("LocationVC") as! SearchLocationViewController
         self.navigationController?.pushViewController(openLocationVC, animated: true)
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
     /*
     *   Navigate and open StoredCityViewController after pressing the button
     */
-    @IBAction func navigationBtnToStoredCityVC(sender: AnyObject) {
+    @IBAction func switchToStoredCityVC(sender: AnyObject) {
         
         let openStoredCityVC = self.storyboard?.instantiateViewControllerWithIdentifier("StoredCityVC") as! StoredCityPickerViewController
         self.navigationController?.pushViewController(openStoredCityVC, animated: true)
@@ -56,17 +57,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
+        
         searchingForCity(passingData)
         buttonSkinView()
-        
-        self.locationManager = LocationManager()
-        println(locationManager?.locValue.longitude)
-        
-        if auth == false{
-            //CLLocationManagerDelegateauthFB()
-            
-        }
-        
     }
     
    
@@ -84,110 +79,73 @@ class ViewController: UIViewController {
         if(passingData.isEmpty == false){
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
-            println("ELSE")
+            print("ELSE")
             //println("ALatitude: \(locationManager!.locValue.latitude) Longtitude: \(locationManager!.locValue.longitude)")
          
         }
     }
     /*
-    *   Get all important current weather values.
+    *   Get all important current weather values. MODEL
     */
     func getWeatherData(urlString: String) {
+       
+        //self.weatherData.getWeatherData(urlString)
+        //self.weather = Weather(name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!, pres: pressure!, humi: humidity!, wind: wind!, clou:clouds!, img: infoImage)
+        self.setLabels()
         
-        Alamofire.request(.GET, urlString, parameters: nil) .responseJSON { (req, res, json, error) in
-            
-            if(error != nil) {
-                return
-            } else {
-    
-            /*for (key: String, subJson: JSON) in weatherJson {
-                unfinished forecast iteration
-                
-                
-            }*/
-                var weatherJson = JSON(json!)
-                
-                var cityName = weatherJson["name"].string
-                var country = weatherJson["sys", "country"].string
-                var sunRise = weatherJson["sys", "sunrise"].double
-                var sunSet = weatherJson["sys", "sunset"].double
-                var temperature = weatherJson["main", "temp"].double
-                var minTemperature = weatherJson["main", "temp_min"].double
-                var maxTemperature = weatherJson["main", "temp_max"].double
-                var description = weatherJson["weather"][0]["description"].stringValue
-                var pressure = weatherJson["main", "pressure"].int
-                var humidity = weatherJson["main", "humidity"].int
-                var wind = weatherJson["wind", "speed"].double
-                var clouds = weatherJson["clouds", "all"].int
-                var infoImage = weatherJson["weather"][0]["icon"].stringValue
-                
-                self.weather = Weather(name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!, pres: pressure!, humi: humidity!, wind: wind!, clou:clouds!, img: infoImage)
-
-                self.setLabels()
-            }
-        }
     }
     
     /*
     *   Seting weather values get from class Weather.swift, to labels in storyboard. ZUSTANE
     */
-    private func setLabels() {
-        if let name = self.weather?.name{
+     func setLabels() {
+        if let name = self.weatherData.weather?.name{
             self.townLabel.text = name
         }
-        if let country = self.weather?.coun{
+        if let country = self.weatherData.weather?.coun{
             self.countryLabel.text = country
         }
-        if let description = self.weather?.desc{
+        if let description = self.weatherData.weather?.desc{
             self.descriptionLabel.text = description
         }
-        if let minTemperature = self.weather?.minT{
-            let celsiusTemp = ((minTemperature - 273.15))
-            let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
-            let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
-            self.minTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
+        if let minTemperature = self.weatherData.weather?.minT{
+            self.minTempLabel.text = timeInterval.roundTemperature(minTemperature)
         }
-        if let maxTemperature = self.weather?.maxT{
-            let celsiusTemp = ((maxTemperature - 273.15))
-            let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
-            let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
-            self.maxTempLabel.text = myStringRoundedCelsiusTemp + ("°C")
+        if let maxTemperature = self.weatherData.weather?.maxT{
+            self.maxTempLabel.text = timeInterval.roundTemperature(maxTemperature)
         }
-        if let temp = self.weather?.temp{
-            let celsiusTemp = ((temp - 273.15))
-            let roundCelsiusTemp = Int(round(10*celsiusTemp)/10)
-            let myStringRoundedCelsiusTemp = roundCelsiusTemp.description
-            self.temperatureLabel.text = myStringRoundedCelsiusTemp + ("°C")
+        if let temp = self.weatherData.weather?.temp{
+            self.temperatureLabel.text = timeInterval.roundTemperature(temp)
         }
-        if let sunRise = self.weather?.sunR{
+        if let sunRise = self.weatherData.weather?.sunR{
             self.sunRiseLabel.text = timeInterval.stringFromTimeInterval(sunRise)
         }
-        if let sunSet = self.weather?.sunS{
+        if let sunSet = self.weatherData.weather?.sunS{
             self.sunSetLabel.text = timeInterval.stringFromTimeInterval(sunSet)
         }
-        if let pressure = self.weather?.pres{
+        if let pressure = self.weatherData.weather?.pres{
             self.pressurelabel.text = ("\(pressure) kPa")
         }
-        if let humidity = self.weather?.humi{
+        if let humidity = self.weatherData.weather?.humi{
             self.humidityLabel.text = ("\(humidity) %")
         }
-        if let wind = self.weather?.wind {
+        if let wind = self.weatherData.weather?.wind {
             self.windLabel.text = ("\(wind) km/h")
         }
-        if let clouds = self.weather?.clou{
+        if let clouds = self.weatherData.weather?.clou{
             self.cloudsLabel.text = ("\(clouds) %")
         }
-        if let img = self.weather?.img{
+        if let img = self.weatherData.weather?.img{
             statusImageView.image = UIImage(named: img)
         }
-}
+    }
     
     
     
     /*
     *   Add skins for buttons, background, scrollpanel
     */
-    func buttonSkinView(){
+    private func buttonSkinView(){
         self.navigationController?.navigationBarHidden = true
         self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         self.navigationController!.toolbar.layer.borderWidth = 0.5
@@ -200,6 +158,10 @@ class ViewController: UIViewController {
         descriptionLabel.layer.borderWidth = 0.5
         descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
         
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
  

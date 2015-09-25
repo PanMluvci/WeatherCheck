@@ -13,7 +13,7 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
-    private let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     var locValue = CLLocationCoordinate2D()
     
     private var errorFound : Bool = false
@@ -31,29 +31,30 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     /*
     *   Store current location of device, then make and call ulr with position details. Then stop update location.
     */
-    private func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-         locValue = manager.location.coordinate
+         locValue = manager.location!.coordinate
        // getWeatherData("http://api.openweathermap.org/data/2.5/weather?lat=" + "\(locValue.latitude)" + "&lon=" + "\(locValue.longitude)")
         
-        println("Latitude: \(locValue.latitude) Longtitude: \(locValue.longitude)")
+        //println("Latitude: \(locValue.latitude) Longtitude: \(locValue.longitude)")
     }
     
     /*
     *   Location was interupted or err occured. Get Linz weather instead.
     */
+    /*
     private func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         
         if ((error) != nil) {
             if (errorFound == false) {
                 errorFound = true
-                print("Nastala chyba + \(error)")
+                print("Nastala chyba + \(error)", terminator: "")
             }
         }else{
             //getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Linz")
         }
         
         
-    }
+    }*/
     
 }

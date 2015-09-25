@@ -35,11 +35,11 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     
     override func viewDidAppear(animated: Bool){
         
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        var context: NSManagedObjectContext = appDelegate.managedObjectContext!
-        var request = NSFetchRequest(entityName: "City")
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let request = NSFetchRequest(entityName: "City")
         
-        myList = context.executeFetchRequest(request, error: nil)!
+        myList = try! context.executeFetchRequest(request)
         
         tableView.reloadData()
     }
@@ -61,13 +61,13 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let CellID: NSString = "Cell"
-        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellID as String) as! UITableViewCell
+        let cell: UITableViewCell = (tableView.dequeueReusableCellWithIdentifier(CellID as String) as UITableViewCell?)!
         
         if let ip = indexPath as NSIndexPath? {
             //adding values to cells
-            var data: NSManagedObject = myList[ip.row] as! NSManagedObject
-            var s = data.valueForKeyPath("name") as? String
-            var fixedText = s!.stringByReplacingOccurrencesOfString("%20", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            let data: NSManagedObject = myList[ip.row] as! NSManagedObject
+            let s = data.valueForKeyPath("name") as? String
+            let fixedText = s!.stringByReplacingOccurrencesOfString("%20", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
             cell.textLabel?.text = fixedText.uppercaseString
             
         }
@@ -108,11 +108,15 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
                 myList.removeAtIndex(indexPath.row)
                 tv.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
             }
-            
+            /*
             var error: NSError? = nil
-            if !context.save(&error){
+            do {
+                try context.save()
+            } catch let error1 as NSError {
+                error = error1
                 abort()
-            }
+            }*/
+            
         }
     }
     
@@ -123,8 +127,8 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         
         if (segue.identifier == "tableData") {
             
-            var mainVC = segue.destinationViewController as! ViewController
-            var fixedText = valueToPass.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            let mainVC = segue.destinationViewController as! ViewController
+            let fixedText = valueToPass.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.LiteralSearch, range: nil)
             mainVC.passingData = fixedText
             mainVC.auth = true
         }
@@ -139,5 +143,9 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         self.navigationController!.toolbar.layer.borderWidth = 0.5
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 }

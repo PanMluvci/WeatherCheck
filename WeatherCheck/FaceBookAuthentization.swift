@@ -5,9 +5,7 @@
 //  Created by Josef Antoni on 13.09.15.
 //  Copyright (c) 2015 Josef Antoni. All rights reserved.
 //
-import FBSDKCoreKit
-import FBSDKLoginKit
-import FBSDKShareKit
+
 import Foundation
 
 class FaceBookAuthentization {
