@@ -163,5 +163,98 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherCheck/ViewController.swift"
+            timestampString = "464946559.776388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherCheck.ViewController.descriptionLabel.getter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "WeatherCheck"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pan_Mluvci/Dropbox/Programova%CC%81ni%CC%81/WeatherCheck/WeatherCheck/ViewController.swift"
+                  timestampString = "464946559.799117"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherCheck.ViewController.descriptionLabel.setter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "WeatherCheck"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pan_Mluvci/Dropbox/Programova%CC%81ni%CC%81/WeatherCheck/WeatherCheck/ViewController.swift"
+                  timestampString = "464946559.799745"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherCheck.ViewController.descriptionLabel.materializeForSet : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "WeatherCheck"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pan_Mluvci/Dropbox/Programova%CC%81ni%CC%81/WeatherCheck/WeatherCheck/ViewController.swift"
+                  timestampString = "464946559.800055"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherCheck.ViewController.init (WeatherCheck.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; WeatherCheck.ViewController"
+                  moduleName = "WeatherCheck"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pan_Mluvci/Dropbox/Programova%CC%81ni%CC%81/WeatherCheck/WeatherCheck/ViewController.swift"
+                  timestampString = "464946559.800218"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "597">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherCheck.ViewController.init (WeatherCheck.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;WeatherCheck.ViewController&gt;"
+                  moduleName = "WeatherCheck"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Pan_Mluvci/Dropbox/Programova%CC%81ni%CC%81/WeatherCheck/WeatherCheck/ViewController.swift"
+                  timestampString = "464946559.800357"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "512">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
