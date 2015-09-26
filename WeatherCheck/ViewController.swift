@@ -150,14 +150,14 @@ class ViewController: UIViewController {
         self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         self.navigationController!.toolbar.layer.borderWidth = 0.5
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
-       
+       /*
         self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         
-        srollingInfoLabel.contentSize.height = 300
+        srollingInfoLabel.contentSize.height = 150
         
         descriptionLabel.layer.borderWidth = 0.5
         descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
-        
+        */
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
