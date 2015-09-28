@@ -58,7 +58,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
+         getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
+         
+       
         
         searchingForCity(passingData)
         buttonSkinView()
@@ -80,7 +82,7 @@ class ViewController: UIViewController {
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
             print("ELSE")
-            //println("ALatitude: \(locationManager!.locValue.latitude) Longtitude: \(locationManager!.locValue.longitude)")
+            print("ALatitude: \(locationManager.locValue.latitude) Longtitude: \(locationManager.locValue.longitude)")
          
         }
     }
@@ -89,7 +91,7 @@ class ViewController: UIViewController {
     */
     func getWeatherData(urlString: String) {
        
-        //self.weatherData.getWeatherData(urlString)
+        self.weatherData.getWeatherData(urlString)
         //self.weather = Weather(name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!, pres: pressure!, humi: humidity!, wind: wind!, clou:clouds!, img: infoImage)
         self.setLabels()
         
@@ -161,7 +163,7 @@ class ViewController: UIViewController {
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+        return UIStatusBarStyle.LightContent
     }
     
  

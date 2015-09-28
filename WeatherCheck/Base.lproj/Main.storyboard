@@ -25,6 +25,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-Md-0Ii" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="20" width="600" height="266"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-fk-jgZ">
+                                        <rect key="frame" x="20" y="20" width="560" height="226"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncj-7F-Kgd">
                                         <rect key="frame" x="20" y="49" width="560" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
@@ -46,11 +49,17 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ped-WR-0MF" firstAttribute="centerX" secondItem="bqI-Md-0Ii" secondAttribute="centerX" id="EB5-dE-bBu"/>
+                                    <constraint firstAttribute="bottom" secondItem="uL0-fk-jgZ" secondAttribute="bottom" constant="20" symbolic="YES" id="FnC-8V-agT"/>
                                     <constraint firstItem="0KM-ZL-diZ" firstAttribute="top" secondItem="ped-WR-0MF" secondAttribute="bottom" constant="25" id="RVY-Cb-GeO"/>
+                                    <constraint firstAttribute="trailing" secondItem="uL0-fk-jgZ" secondAttribute="trailing" constant="20" symbolic="YES" id="VRp-2U-pd0"/>
+                                    <constraint firstItem="uL0-fk-jgZ" firstAttribute="leading" secondItem="bqI-Md-0Ii" secondAttribute="leading" constant="20" symbolic="YES" id="XX1-MJ-kBM"/>
                                     <constraint firstAttribute="trailing" secondItem="ped-WR-0MF" secondAttribute="trailing" constant="20" symbolic="YES" id="YZO-OX-Jk2"/>
                                     <constraint firstItem="Ncj-7F-Kgd" firstAttribute="leading" secondItem="bqI-Md-0Ii" secondAttribute="leading" constant="20" symbolic="YES" id="aui-qj-aQi"/>
                                     <constraint firstItem="ped-WR-0MF" firstAttribute="centerY" secondItem="bqI-Md-0Ii" secondAttribute="centerY" id="cui-n5-Ipa"/>
+                                    <constraint firstItem="uL0-fk-jgZ" firstAttribute="centerX" secondItem="bqI-Md-0Ii" secondAttribute="centerX" id="erX-iu-td4"/>
                                     <constraint firstItem="ped-WR-0MF" firstAttribute="top" secondItem="Ncj-7F-Kgd" secondAttribute="bottom" constant="20" id="f6Z-nr-HRc"/>
+                                    <constraint firstItem="uL0-fk-jgZ" firstAttribute="top" secondItem="bqI-Md-0Ii" secondAttribute="top" constant="20" symbolic="YES" id="fbx-7K-tsZ"/>
+                                    <constraint firstItem="uL0-fk-jgZ" firstAttribute="centerY" secondItem="bqI-Md-0Ii" secondAttribute="centerY" id="fxn-ZH-oLJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Ncj-7F-Kgd" secondAttribute="trailing" constant="20" symbolic="YES" id="k74-Vv-tMf"/>
                                     <constraint firstAttribute="trailing" secondItem="0KM-ZL-diZ" secondAttribute="trailing" constant="20" symbolic="YES" id="nJG-Y3-y8m"/>
                                     <constraint firstItem="0KM-ZL-diZ" firstAttribute="leading" secondItem="bqI-Md-0Ii" secondAttribute="leading" constant="20" symbolic="YES" id="pEX-gT-KyF"/>
@@ -318,9 +327,17 @@
                         <outlet property="backgroundImageView" destination="SVd-kE-bNx" id="igb-18-URZ"/>
                         <outlet property="countryLabel" destination="0KM-ZL-diZ" id="biM-E4-t0d"/>
                         <outlet property="descriptionLabel" destination="w3x-PJ-XCJ" id="t8L-zy-ATI"/>
+                        <outlet property="humidityLabel" destination="Z0g-lf-f1d" id="Kda-2J-vaR"/>
+                        <outlet property="maxTempLabel" destination="uhG-td-B7h" id="0U6-mY-tXE"/>
+                        <outlet property="minTempLabel" destination="DUb-TV-R39" id="Y9B-j6-pqe"/>
+                        <outlet property="pressurelabel" destination="KFg-Pr-Iz5" id="tH4-qa-GXo"/>
                         <outlet property="srollingInfoLabel" destination="MO2-Bx-6Ji" id="3iN-Wo-fGD"/>
+                        <outlet property="statusImageView" destination="uL0-fk-jgZ" id="2JP-9H-kTT"/>
+                        <outlet property="sunRiseLabel" destination="58u-nb-2ng" id="qbC-Nh-Evo"/>
+                        <outlet property="sunSetLabel" destination="2uJ-3z-EG3" id="ijs-t4-UG6"/>
                         <outlet property="temperatureLabel" destination="ped-WR-0MF" id="1RE-gQ-lB6"/>
                         <outlet property="townLabel" destination="Ncj-7F-Kgd" id="mMy-ZH-H6x"/>
+                        <outlet property="windLabel" destination="FYL-5c-7tE" id="ktB-tC-Lxw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -695,6 +712,9 @@
             <point key="canvasLocation" x="-289.5" y="593.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="01d" width="256" height="256"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Yx4-fZ-298"/>
     </inferredMetricsTieBreakers>
