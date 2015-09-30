@@ -81,8 +81,8 @@ class ViewController: UIViewController {
         if(passingData.isEmpty == false){
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
-            print("ELSE")
-            print("ALatitude: \(locationManager.locValue.latitude) Longtitude: \(locationManager.locValue.longitude)")
+            print("SearchingForCity()ELSE")
+
          
         }
     }
@@ -91,7 +91,9 @@ class ViewController: UIViewController {
     */
     func getWeatherData(urlString: String) {
        
-        self.weatherData.getWeatherData(urlString)
+        self.weatherData.getData(urlString)
+        //nic se nevrací protože metoda je VOID
+        
         //self.weather = Weather(name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!, pres: pressure!, humi: humidity!, wind: wind!, clou:clouds!, img: infoImage)
         self.setLabels()
         
