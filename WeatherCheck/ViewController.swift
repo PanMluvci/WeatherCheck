@@ -86,60 +86,62 @@ class ViewController: UIViewController {
          
         }
     }
+    
     /*
     *   Get all important current weather values. MODEL
     */
     func getWeatherData(urlString: String) {
        
-        self.weatherData.getData(urlString)
-        //nic se nevrací protože metoda je VOID
-        
-        //self.weather = Weather(name: cityName!, temp: temperature!, desc: description, coun: country!, minT: minTemperature!, maxT: maxTemperature!, sunR: sunRise!, sunS: sunSet!, pres: pressure!, humi: humidity!, wind: wind!, clou:clouds!, img: infoImage)
-        self.setLabels()
+        weatherData.getWeatherData(urlString) { (cityName,country, sunRise, sunSet, temperature, minTemperature, maxTemperature, description, pressure, humidity, wind, clouds, infoImage)  in
+                        
+            self.weather = Weather(name: cityName, temp: temperature, desc: description, coun: country, minT: minTemperature, maxT: maxTemperature, sunR: sunRise, sunS: sunSet, pres: pressure, humi: humidity, wind: wind, clou:clouds, img: infoImage)
+            
+            self.setLabels()
+        }
         
     }
     
     /*
-    *   Seting weather values get from class Weather.swift, to labels in storyboard. ZUSTANE
+    *   Seting weather values get from class Weather.swift, to labels in storyboard. 
     */
      func setLabels() {
-        if let name = self.weatherData.weather?.name{
+        if let name = self.weather?.name{
             self.townLabel.text = name
         }
-        if let country = self.weatherData.weather?.coun{
+        if let country = self.weather?.coun{
             self.countryLabel.text = country
         }
-        if let description = self.weatherData.weather?.desc{
+        if let description = self.weather?.desc{
             self.descriptionLabel.text = description
         }
-        if let minTemperature = self.weatherData.weather?.minT{
+        if let minTemperature = self.weather?.minT{
             self.minTempLabel.text = timeInterval.roundTemperature(minTemperature)
         }
-        if let maxTemperature = self.weatherData.weather?.maxT{
+        if let maxTemperature = self.weather?.maxT{
             self.maxTempLabel.text = timeInterval.roundTemperature(maxTemperature)
         }
-        if let temp = self.weatherData.weather?.temp{
+        if let temp = self.weather?.temp{
             self.temperatureLabel.text = timeInterval.roundTemperature(temp)
         }
-        if let sunRise = self.weatherData.weather?.sunR{
+        if let sunRise = self.weather?.sunR{
             self.sunRiseLabel.text = timeInterval.stringFromTimeInterval(sunRise)
         }
-        if let sunSet = self.weatherData.weather?.sunS{
+        if let sunSet = self.weather?.sunS{
             self.sunSetLabel.text = timeInterval.stringFromTimeInterval(sunSet)
         }
-        if let pressure = self.weatherData.weather?.pres{
+        if let pressure = self.weather?.pres{
             self.pressurelabel.text = ("\(pressure) kPa")
         }
-        if let humidity = self.weatherData.weather?.humi{
+        if let humidity = self.weather?.humi{
             self.humidityLabel.text = ("\(humidity) %")
         }
-        if let wind = self.weatherData.weather?.wind {
+        if let wind = self.weather?.wind {
             self.windLabel.text = ("\(wind) km/h")
         }
-        if let clouds = self.weatherData.weather?.clou{
+        if let clouds = self.weather?.clou{
             self.cloudsLabel.text = ("\(clouds) %")
         }
-        if let img = self.weatherData.weather?.img{
+        if let img = self.weather?.img{
             statusImageView.image = UIImage(named: img)
         }
     }

@@ -168,7 +168,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nM3-pw-sda">
-                                                        <rect key="frame" x="20" y="233" width="560" height="21"/>
+                                                        <rect key="frame" x="20" y="221" width="560" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-tm-8D8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
@@ -210,7 +210,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spS-Od-BRG">
-                                                        <rect key="frame" x="20" y="274" width="560" height="21"/>
+                                                        <rect key="frame" x="20" y="262" width="560" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uu0-db-RTl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
@@ -230,14 +230,37 @@
                                                             <constraint firstItem="Z0g-lf-f1d" firstAttribute="leading" secondItem="Uu0-db-RTl" secondAttribute="trailing" id="oOB-my-qcc"/>
                                                         </constraints>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW5-eg-jhS">
+                                                        <rect key="frame" x="20" y="291" width="560" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloudiness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyb-DS-rnz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-yc-tTF">
+                                                                <rect key="frame" x="280" y="0.0" width="280" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="dyb-DS-rnz" firstAttribute="width" secondItem="Chd-yc-tTF" secondAttribute="width" id="dlH-bT-slk"/>
+                                                            <constraint firstItem="Chd-yc-tTF" firstAttribute="leading" secondItem="dyb-DS-rnz" secondAttribute="trailing" id="me2-ez-9AY"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="prG-ZW-Dj1" secondAttribute="trailing" constant="20" symbolic="YES" id="05N-95-94e"/>
                                                     <constraint firstItem="eP5-jn-YEK" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="0Jd-Cw-Dl6"/>
                                                     <constraint firstItem="j2B-LM-v8k" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="9ku-Zc-dEf"/>
                                                     <constraint firstItem="prG-ZW-Dj1" firstAttribute="top" secondItem="eP5-jn-YEK" secondAttribute="bottom" constant="20" id="ANv-pg-Gek"/>
+                                                    <constraint firstItem="QW5-eg-jhS" firstAttribute="top" secondItem="spS-Od-BRG" secondAttribute="bottom" constant="8" symbolic="YES" id="Bod-rv-5EM"/>
                                                     <constraint firstAttribute="trailing" secondItem="eP5-jn-YEK" secondAttribute="trailing" constant="20" symbolic="YES" id="FQU-yZ-AxW"/>
                                                     <constraint firstItem="nM3-pw-sda" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="FvT-6J-NhG"/>
+                                                    <constraint firstItem="QW5-eg-jhS" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="Mbx-yh-cRo"/>
                                                     <constraint firstAttribute="trailing" secondItem="gbq-4S-sZy" secondAttribute="trailing" constant="20" symbolic="YES" id="QIM-Qf-IDz"/>
                                                     <constraint firstItem="spS-Od-BRG" firstAttribute="top" secondItem="nM3-pw-sda" secondAttribute="bottom" constant="20" id="R09-R1-eAN"/>
                                                     <constraint firstItem="spS-Od-BRG" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="SuA-mU-eYb"/>
@@ -245,6 +268,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="j2B-LM-v8k" secondAttribute="trailing" constant="20" symbolic="YES" id="cgr-Dt-tu5"/>
                                                     <constraint firstItem="eP5-jn-YEK" firstAttribute="top" secondItem="j2B-LM-v8k" secondAttribute="bottom" constant="8" symbolic="YES" id="eHk-Dt-2zT"/>
                                                     <constraint firstItem="w3x-PJ-XCJ" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" id="eQI-ja-aQs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QW5-eg-jhS" secondAttribute="trailing" constant="20" symbolic="YES" id="eVg-RB-BtR"/>
                                                     <constraint firstItem="vQB-20-U3T" firstAttribute="top" secondItem="w3x-PJ-XCJ" secondAttribute="bottom" constant="20" id="fd9-I3-z4n"/>
                                                     <constraint firstAttribute="trailing" secondItem="spS-Od-BRG" secondAttribute="trailing" constant="20" symbolic="YES" id="g6O-Kd-wz7"/>
                                                     <constraint firstAttribute="trailing" secondItem="nM3-pw-sda" secondAttribute="trailing" constant="20" symbolic="YES" id="h5r-hE-5R6"/>
@@ -253,7 +277,7 @@
                                                     <constraint firstItem="gbq-4S-sZy" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="lPC-gn-tCK"/>
                                                     <constraint firstAttribute="height" constant="330" id="nNl-tG-dBv"/>
                                                     <constraint firstItem="w3x-PJ-XCJ" firstAttribute="top" secondItem="GXm-f9-u1R" secondAttribute="top" id="sgk-Uh-8PT"/>
-                                                    <constraint firstItem="nM3-pw-sda" firstAttribute="top" secondItem="prG-ZW-Dj1" secondAttribute="bottom" constant="20" id="vAy-H1-sDG"/>
+                                                    <constraint firstItem="nM3-pw-sda" firstAttribute="top" secondItem="prG-ZW-Dj1" secondAttribute="bottom" constant="8" symbolic="YES" id="vAy-H1-sDG"/>
                                                     <constraint firstItem="vQB-20-U3T" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="w7v-PG-Cjm"/>
                                                     <constraint firstItem="prG-ZW-Dj1" firstAttribute="leading" secondItem="GXm-f9-u1R" secondAttribute="leading" constant="20" symbolic="YES" id="yQa-SD-V9K"/>
                                                     <constraint firstItem="j2B-LM-v8k" firstAttribute="top" secondItem="gbq-4S-sZy" secondAttribute="bottom" constant="20" id="yr5-6g-htG"/>
@@ -325,6 +349,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="SVd-kE-bNx" id="igb-18-URZ"/>
+                        <outlet property="cloudsLabel" destination="Chd-yc-tTF" id="a5w-b5-OUw"/>
                         <outlet property="countryLabel" destination="0KM-ZL-diZ" id="biM-E4-t0d"/>
                         <outlet property="descriptionLabel" destination="w3x-PJ-XCJ" id="t8L-zy-ATI"/>
                         <outlet property="humidityLabel" destination="Z0g-lf-f1d" id="Kda-2J-vaR"/>
