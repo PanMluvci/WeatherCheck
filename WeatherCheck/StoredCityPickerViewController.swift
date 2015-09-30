@@ -47,18 +47,18 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     /**
     *   Return a number of rows in Table
     */
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    @objc internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return myList.count
     }
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    @objc internal func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     /*
     *   Add all stored cities from database to the row in table. Use capital letters style.
     */
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+   @objc internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let CellID: NSString = "Cell"
         let cell: UITableViewCell = (tableView.dequeueReusableCellWithIdentifier(CellID as String) as UITableViewCell?)!
@@ -120,7 +120,7 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         }
     }
     
-    /**
+    /*
     *   Pass data from text input, about searching city to ViewController. Fix space issue in city name.
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
@@ -138,13 +138,16 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     /*
     *   Skin update for search buttons.
     */
-    func buttonSkin(){
+    private func buttonSkin(){
         self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         self.navigationController!.toolbar.layer.borderWidth = 0.5
         self.navigationController!.toolbar.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
+    /*
+    *   Return white status bar.
+    */
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }

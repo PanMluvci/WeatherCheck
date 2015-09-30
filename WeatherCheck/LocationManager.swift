@@ -13,10 +13,9 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
+    
     let locationManager = CLLocationManager()
     var locValue = CLLocationCoordinate2D()
-    
-    private var errorFound : Bool = false
     
     override init(){
         super.init()
@@ -31,30 +30,24 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     /*
     *   Store current location of device, then make and call ulr with position details. Then stop update location.
     */
-     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+       func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation], completionHandler: (Double?, Double) -> ()) {
         
          locValue = manager.location!.coordinate
-       // getWeatherData("http://api.openweathermap.org/data/2.5/weather?lat=" + "\(locValue.latitude)" + "&lon=" + "\(locValue.longitude)")
+        let long: Double = locValue.longitude
+        let lati: Double = locValue.latitude
         
-        //println("Latitude: \(locValue.latitude) Longtitude: \(locValue.longitude)")
+        print("\(locValue.latitude)" + "\(locValue.longitude)")
+        
+        completionHandler(long, lati)
+        
     }
-    
     /*
     *   Location was interupted or err occured. Get Linz weather instead.
     */
-    /*
-    private func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+     @objc internal func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         
-        if ((error) != nil) {
-            if (errorFound == false) {
-                errorFound = true
-                print("Nastala chyba + \(error)", terminator: "")
-            }
-        }else{
-            //getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Linz")
-        }
+        print("Nastala chyba v Location Manager: + \(error)", terminator: "")
         
-        
-    }*/
+    }
     
 }

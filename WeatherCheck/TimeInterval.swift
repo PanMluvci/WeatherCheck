@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class TimeInterval {
     /*
     *   TimeStamp value will be converted to format (hour:minute)

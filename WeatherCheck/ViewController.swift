@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     
-    var weather : Weather?
+     private var weather : Weather?
      private let timeInterval = TimeInterval()
      private let locationManager = LocationManager()
      private let weatherData = WeatherData()
@@ -57,16 +57,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
-         
-       
-        
+
         searchingForCity(passingData)
         buttonSkinView()
+        
+        //locationManager.locationManager( manager: _, locations: _) { (long, lati)  in
+            
+            
+       // }
+        
     }
     
-   
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.srollingInfoLabel.flashScrollIndicators()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,12 +82,11 @@ class ViewController: UIViewController {
     * Search for the city's weather status.
     * If no start value in searched city, use the current location.
     */
-    func searchingForCity(data:String){
+    private func searchingForCity(data:String){
         if(passingData.isEmpty == false){
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
-            print("SearchingForCity()ELSE")
-
+            getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
          
         }
     }
@@ -90,7 +94,7 @@ class ViewController: UIViewController {
     /*
     *   Get all important current weather values. MODEL
     */
-    func getWeatherData(urlString: String) {
+    private func getWeatherData(urlString: String) {
        
         weatherData.getWeatherData(urlString) { (cityName,country, sunRise, sunSet, temperature, minTemperature, maxTemperature, description, pressure, humidity, wind, clouds, infoImage)  in
                         
@@ -102,9 +106,9 @@ class ViewController: UIViewController {
     }
     
     /*
-    *   Seting weather values get from class Weather.swift, to labels in storyboard. 
+    *   Seting weather values get from class Weather.swift, to labels in storyboard.
     */
-     func setLabels() {
+     private func setLabels() {
         if let name = self.weather?.name{
             self.townLabel.text = name
         }
@@ -159,8 +163,6 @@ class ViewController: UIViewController {
        
         self.backgroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
         
-        //srollingInfoLabel.contentSize.height = 450
-        
         descriptionLabel.layer.borderWidth = 0.5
         descriptionLabel.layer.borderColor = UIColor.whiteColor().CGColor
 
@@ -169,7 +171,5 @@ class ViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-    
  
 }
-

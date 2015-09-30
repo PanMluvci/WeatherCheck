@@ -74,14 +74,14 @@ class SearchLocationViewController: UIViewController {
         /*
         *   Hide keaboard.
         */
-         func DismissKeyboard(){
+        private func DismissKeyboard(){
             view.endEditing(true)
         }
         
         /*
         *   Update skin of search buttons.
         */
-         func buttonSkin(){
+        private func buttonSkin(){
             self.backGroundImageView.backgroundColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
             self.navigationController!.toolbar.barTintColor = UIColor(red: 117/255, green:209/255, blue: 255/255, alpha: 1)
             self.navigationController!.toolbar.layer.borderWidth = 0.5
