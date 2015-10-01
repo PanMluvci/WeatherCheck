@@ -14,40 +14,58 @@ import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
     
-    let locationManager = CLLocationManager()
-    var locValue = CLLocationCoordinate2D()
+    private let locationManager = CLLocationManager()
+    var locValue:CLLocationCoordinate2D = CLLocationCoordinate2D()
     
     override init(){
         super.init()
         
-        self.locationManager.startUpdatingLocation()
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.delegate = self
-        
+        setupLocationManager()
     }
 
     /*
     *   Store current location of device, then make and call ulr with position details. Then stop update location.
     */
-       func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation], completionHandler: (Double?, Double) -> ()) {
+      @objc internal func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-         locValue = manager.location!.coordinate
-        let long: Double = locValue.longitude
-        let lati: Double = locValue.latitude
-        
+        locValue = manager.location!.coordinate
         print("\(locValue.latitude)" + "\(locValue.longitude)")
-        
-        completionHandler(long, lati)
         
     }
     /*
     *   Location was interupted or err occured. Get Linz weather instead.
     */
-     @objc internal func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+      @objc internal func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         
         print("Nastala chyba v Location Manager: + \(error)", terminator: "")
         
+    }
+    func getLocation() -> (Double){
+        return locValue.latitude
+    }
+    
+     private func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways{
+            
+            locationManager.startUpdatingLocation()
+            
+        }else{
+            locationManager.requestWhenInUseAuthorization()
+            
+        }
+    }
+    
+    @objc internal func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        
+        if status == CLAuthorizationStatus.AuthorizedWhenInUse || status == CLAuthorizationStatus.AuthorizedAlways {
+            
+            locationManager.startUpdatingLocation()
+            
+        }
     }
     
 }

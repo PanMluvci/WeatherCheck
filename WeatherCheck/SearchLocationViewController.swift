@@ -18,12 +18,11 @@ class SearchLocationViewController: UIViewController {
         @IBOutlet var cityInputTxtField: UITextField!
     
     /*
-    *   Open MainVC view. Send true to fb.auth
+    *   Open MainVC view. 
     */
         @IBAction func backItemBtnToolBar(sender: AnyObject) {
             let openMainVC = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! ViewController
             self.navigationController?.pushViewController(openMainVC, animated: true)
-            openMainVC.auth = true
         }
     
     /*
@@ -32,7 +31,7 @@ class SearchLocationViewController: UIViewController {
         @IBAction func searchButton(sender: UIButton) {
             if fixedText.isEmpty == false{
                 let appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-                let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+                let context: NSManagedObjectContext = appDelegate.managedObjectContext
                 
                 let newUser: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("City", inManagedObjectContext: context)
                 newUser.setValue(fixedText, forKey: "name")
@@ -62,19 +61,17 @@ class SearchLocationViewController: UIViewController {
             if fixTheText.isEmpty == true{
                 
                 destViewController.passingData = "Berlin"
-                destViewController.auth = true
 
             }else{
                 fixedText = fixTheText
                 destViewController.passingData = fixedText
-                destViewController.auth = true
             }
         }
         
         /*
         *   Hide keaboard.
         */
-        private func DismissKeyboard(){
+        func DismissKeyboard(){
             view.endEditing(true)
         }
         

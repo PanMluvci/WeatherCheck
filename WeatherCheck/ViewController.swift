@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     /*
     *   Navigate and open LocationViewController after pressing the button
     */
-    @IBAction func switchToLocationVC(sender: AnyObject) {
+    @IBAction private func switchToLocationVC(sender: AnyObject) {
         
         let openLocationVC = self.storyboard?.instantiateViewControllerWithIdentifier("LocationVC") as! SearchLocationViewController
         self.navigationController?.pushViewController(openLocationVC, animated: true)
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     /*
     *   Navigate and open StoredCityViewController after pressing the button
     */
-    @IBAction func switchToStoredCityVC(sender: AnyObject) {
+    @IBAction private func switchToStoredCityVC(sender: AnyObject) {
         
         let openStoredCityVC = self.storyboard?.instantiateViewControllerWithIdentifier("StoredCityVC") as! StoredCityPickerViewController
         self.navigationController?.pushViewController(openStoredCityVC, animated: true)
@@ -60,17 +60,14 @@ class ViewController: UIViewController {
 
         searchingForCity(passingData)
         buttonSkinView()
-        
-        //locationManager.locationManager( manager: _, locations: _) { (long, lati)  in
-            
-            
-       // }
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.srollingInfoLabel.flashScrollIndicators()
+        
+        let z = locationManager.getLocation()
+        print("Tohle: \(z)")
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,12 +84,15 @@ class ViewController: UIViewController {
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=\(passingData)")
         }else{
             getWeatherData("http://api.openweathermap.org/data/2.5/weather?q=Berlin")
-         
+            
+            //core location
+            
+            
         }
     }
     
     /*
-    *   Get all important current weather values. MODEL
+    *   Get all important current weather values. 
     */
     private func getWeatherData(urlString: String) {
        

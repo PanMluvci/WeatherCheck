@@ -12,9 +12,9 @@ import CoreData
 
 class StoredCityPickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
-    var myList : Array<AnyObject> = []
-    var passedCityNameFromTable = ""
-    var valueToPass = "Berlin"
+    private var myList : Array<AnyObject> = []
+    private var passedCityNameFromTable = String()
+    var valueToPass = "Linz"
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var backgroundImageView: UIImageView!
@@ -36,7 +36,7 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     override func viewDidAppear(animated: Bool){
         
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext
         let request = NSFetchRequest(entityName: "City")
         
         myList = try! context.executeFetchRequest(request)
@@ -62,7 +62,9 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         
         let CellID: NSString = "Cell"
         let cell: UITableViewCell = (tableView.dequeueReusableCellWithIdentifier(CellID as String) as UITableViewCell?)!
-        
+    
+        cell.textLabel!.textColor = UIColor.whiteColor()
+    
         if let ip = indexPath as NSIndexPath? {
             //adding values to cells
             let data: NSManagedObject = myList[ip.row] as! NSManagedObject
@@ -77,7 +79,7 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
     /*
     *   Add value from selected row for searched city. Call segue.
     */
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    @objc internal func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let cell = self.tableView.cellForRowAtIndexPath(indexPath)
         //optional => unwrap
@@ -90,16 +92,16 @@ class StoredCityPickerViewController: UIViewController, UITableViewDataSource, U
         
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    @objc internal func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
     /*
     *   Delete the row you dont want to see in list.
     */
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    @objc internal func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext
         
         if editingStyle == UITableViewCellEditingStyle.Delete{
             if let tv = tableView as UITableView? {
